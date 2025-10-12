@@ -4,8 +4,16 @@
   border: none;
   border-radius: 0;
   min-height: 0;
-  font-family: JetBrainsMono Nerd Font;
+  font-family: "JetBrainsMono Nerd Font", Roboto, Helvetica, Arial, sans-serif;
   font-size: 12px;
+  font-weight: bold;
+}
+
+window#waybar {
+  border-radius: 4px;
+  color: #ffffff;
+  transition-duration: 0.5s;
+  background-color: transparent;
 }
 
 .modules-left {
@@ -68,4 +76,12 @@ tooltip {
 
 #custom-screenrecording-indicator.active {
   color: #a55555;
+}
+
+#custom-fastfetch {
+  color: #7aa2f7;
+  background: transparent;
+  padding: 0 8px;
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 12px;
 }
