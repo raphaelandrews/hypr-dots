@@ -1,27 +1,67 @@
 @import "../omarchy/current/theme/waybar.css";
 
+window#waybar {
+  background: transparent;
+  color: @foreground;
+  border: none;
+}
+
+window#waybar > box {
+  background: transparent;
+  border: none;
+}
+
+tooltip,
+tooltip > box {
+  background-color: alpha(@background, 0.9);
+  color: @foreground;
+  border: none;
+  border-radius: 10px;
+  padding: 6px 8px;
+}
+
+tooltip label {
+  color: @foreground;
+}
+
 * {
+  background-color: transparent;
+  color: @foreground;
   border: none;
   border-radius: 0;
   min-height: 0;
-  font-family: "JetBrainsMono Nerd Font", Roboto, Helvetica, Arial, sans-serif;
-  font-size: 12px;
-  font-weight: bold;
+  font-family: JetBrainsMono Nerd Font;
+  font-size: 13px;
 }
 
-window#waybar {
-  border-radius: 4px;
-  color: #ffffff;
-  transition-duration: 0.5s;
-  background-color: transparent;
-}
-
-.modules-left {
-  margin-left: 8px;
-}
-
+.modules-left,
+.modules-center,
 .modules-right {
+  background-color: alpha(@background, 0.85);
+  border-radius: 12px;
+  padding: 0px 10px;
+  outline: 1px solid alpha(black, 0.12);
+  margin: 6px 10px;
+}
+
+.modules-left > *:not(:last-child),
+.modules-center > *:not(:last-child),
+.modules-right > *:not(:last-child) {
   margin-right: 8px;
+}
+
+#workspaces button.visible {
+}
+#workspaces button:not(.visible) {
+  opacity: 0.6;
+}
+
+#workspaces button,
+#workspaces button:hover,
+#workspaces button:active,
+#workspaces button.focused {
+  background: transparent;
+  box-shadow: none;
 }
 
 #workspaces button {
@@ -43,45 +83,77 @@ window#waybar {
 #pulseaudio,
 #custom-omarchy,
 #custom-screenrecording-indicator,
-#custom-update {
+#custom-update,
+#mpris,
+#clock {
   min-width: 12px;
-  margin: 0 7.5px;
-}
-
-#custom-expand-icon {
-  margin-right: 7px;
-}
-
-tooltip {
-  padding: 2px;
-}
-
-#custom-update {
-  font-size: 10px;
+  padding-right: 8px;
 }
 
 #clock {
+  padding-right: 0px;
+}
+
+#custom-expand-icon {
+  margin-right: 6px;
+}
+#custom-update {
+  font-size: 10px;
+}
+#clock {
   margin-left: 8.75px;
+}
+#custom-screenrecording-indicator {
+  font-size: 10px;
+  margin-left: 8.75px;
+}
+#custom-screenrecording-indicator.active {
+  color: #a55555;
+}
+#mpris {
+  margin-left: 5px;
+}
+
+.modules-left {
+  margin-left: 14px;
+  padding-left: 12px;
+}
+
+#custom-omarchy {
+  padding-right: 4px;
+  padding-left: 2px;
+}
+
+#custom-omarchy + #workspaces {
+  margin-left: 6px;
 }
 
 .hidden {
   opacity: 0;
 }
 
-#custom-screenrecording-indicator {
-  min-width: 12px;
-  margin-left: 8.75px;
-  font-size: 10px;
+#taskbar {
+  background-color: transparent;
 }
 
-#custom-screenrecording-indicator.active {
-  color: #a55555;
+#taskbar button {
+  padding: 0 5px;
+  margin: 0 2px;
+  background-color: transparent;
+  border: none;
+  border-radius: 5px;
 }
 
-#custom-fastfetch {
-  color: #7aa2f7;
-  background: transparent;
-  padding: 0 8px;
-  font-family: "JetBrainsMono Nerd Font";
-  font-size: 12px;
+#taskbar button:first-child {
+  margin-left: 0;
+}
+
+#taskbar button:last-child {
+  margin-right: 0;
+}
+
+#taskbar button:hover,
+#taskbar button.active {
+  background-color: transparent;
+  transition: all 0.5s ease-out;
 }

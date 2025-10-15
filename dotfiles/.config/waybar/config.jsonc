@@ -2,26 +2,30 @@
   "reload_style_on_change": true,
   "layer": "top",
   "position": "top",
-  "height": 30,
-  "spacing": 10,
-  "margin-top": 10,
-  "margin-left": 10,
-  "margin-right": 10,
+  "margin-top": 2,
+  "margin-bottom": -12,
+  "margin-left": 0,
+  "margin-right": 0,
+  "spacing": 5,
+  "height": 34,
   "modules-left": [
     "custom/omarchy",
-    "hyprland/workspaces"
+    "hyprland/workspaces",
+    "wlr/taskbar",
+    "mpris"
   ],
   "modules-center": [
-    "clock",
-    "custom/update",
-    "custom/screenrecording-indicator"
+    "hyprland/window"
   ],
   "modules-right": [
     "group/tray-expander",
     "network",
     "pulseaudio",
     "cpu",
-    "battery"
+    "battery",
+    "custom/update",
+    "custom/screenrecording-indicator",
+    "clock"
   ],
   "hyprland/workspaces": {
     "on-click": "activate",
@@ -47,8 +51,47 @@
       "5": []
     }
   },
+  "mpris": {
+    "format": "{player_icon} {title} - {artist}",
+    "format-paused": "⏸ {title} - {artist}",
+    "format-stopped": "",
+    "player": "Lollypop",
+    "player-icons": {
+      "default": "",
+      "firefox": "",
+      "Firefox": "",
+      "Lollypop": "󰝚",
+      "mpv": "󰍺",
+      "vlc": "󰕼",
+      "VLC": "󰕼",
+      "Spotify": "",
+      "spotify": ""
+    },
+    "escape": false,
+    "max-length": 40,
+    "truncate": "end",
+    "interval": 1,
+    "on-click": "playerctl play-pause",
+    "on-click-right": "playerctl stop",
+    "on-scroll-up": "playerctl previous",
+    "on-scroll-down": "playerctl next"
+  },
+  "hyprland/window": {
+    "format": "{}",
+    "max-length": 40,
+    "separate-outputs": false,
+    "rewrite": {
+      " — Mozilla Firefox$": "",
+      " - Zen Browser$": "",
+      " — Firefox$": "",
+      " - Visual Studio Code$": "",
+      " — Chromium$": ""
+    },
+    "on-click": "hyprctl dispatch togglefloating active",
+    "on-click-right": "hyprctl dispatch fullscreen 0"
+  },
   "custom/omarchy": {
-    "format": "<span font='omarchy'>\ue900</span>",
+    "format": "<span font='JetBrainsMono Nerd Font 14'>󰣇</span>",
     "on-click": "omarchy-menu",
     "tooltip-format": "Omarchy Menu\n\nSuper + Alt + Space"
   },
@@ -64,6 +107,20 @@
     "tooltip-format": "Omarchy update available",
     "signal": 7,
     "interval": 3600
+  },
+  "wlr/taskbar": {
+    "format": "{icon}",
+    "icon-size": 18,
+    "tooltip-format": "{title}",
+    "on-click": "activate",
+    "on-click-middle": "close",
+    "ignore-list": [
+      "Alacritty",
+      "kitty"
+    ],
+    "rewrite": {
+      "Foot Server": "Terminal"
+    }
   },
   "cpu": {
     "interval": 5,
@@ -182,5 +239,16 @@
   "tray": {
     "icon-size": 12,
     "spacing": 12
+  },
+  "custom/waybar-media": {
+    "return-type": "json",
+    "exec": "waybar-media.py status",
+    "on-click": "waybar-media.py playpause",
+    "on-scroll-up": "waybar-media.py previous",
+    "on-scroll-down": "waybar-media.py next",
+    "escape": true
+  },
+  "status-icons": {
+    "paused": "⏸"
   }
 }
