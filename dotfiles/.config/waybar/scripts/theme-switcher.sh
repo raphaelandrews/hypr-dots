@@ -1,86 +1,92 @@
-#!/bin/bash
+#!/usr/bin/env bash
+#
+# Switch waybar themes and export matching fzf colors
+#
+# Author: Jesse Mirabel <github.com/sejjy>
+# Created: August 22, 2025
+# License: MIT
 
-# Theme Switcher Script
-WALLPAPER_DIR="$HOME/new-dotfiles/assets"
-CURRENT_WALLPAPER_FILE="$HOME/.cache/current_wallpaper"
+FILES=(~/.config/waybar/themes/*.css)
+FILE=~/.config/waybar/theme.css
+THEME=$(head -n 1 "$FILE" | awk '{print $2}')
 
-# Collect wallpapers
-mapfile -t WALLPAPERS < <(find "$WALLPAPER_DIR" -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" \) | sort)
+switch-theme() {
+	local i theme
+	local index=-1
 
-if [ ${#WALLPAPERS[@]} -eq 0 ]; then
-  notify-send "Theme Switcher" "No wallpapers found in $WALLPAPER_DIR"
-  exit 1
-fi
+	for i in "${!FILES[@]}"; do
+		theme=$(basename "${FILES[$i]}" .css)
 
-# Helpers
-get_current_index() {
-  [[ -f "$CURRENT_WALLPAPER_FILE" ]] && cat "$CURRENT_WALLPAPER_FILE" || echo "0"
+		if [[ $theme == "$THEME" ]]; then
+			index=$i
+			break
+		fi
+	done
+
+	local new_index
+	case $action in
+		'next') new_index=$(((index + 1) % ${#FILES[@]})) ;;
+		'prev') new_index=$(((index - 1 + ${#FILES[@]}) % ${#FILES[@]})) ;;
+	esac
+
+	local new_theme=${FILES[$new_index]}
+	cp "$new_theme" "$FILE"
 }
 
-apply_theme() {
-  local wallpaper_path="$1"
-  local index="$2"
-  local wallpaper_name
-  wallpaper_name=$(basename "$wallpaper_path")
+export-colors() {
+	local rosewater mauve red lavender text overlay0 surface1 surface0 base
 
-  echo "$index" >"$CURRENT_WALLPAPER_FILE"
+	case $THEME in
+		*'frappe')
+			rosewater='#f2d5cf' mauve='#ca9ee6'    red='#e78284'
+			lavender='#babbf1'  text='#c6d0f5'     overlay0='#737994'
+			surface1='#51576d'  surface0='#414559' base='#303446'
+			;;
+		*'latte')
+			rosewater='#dc8a78' mauve='#8839ef'    red='#d20f39'
+			lavender='#7287fd'  text='#4c4f69'     overlay0='#9ca0b0'
+			surface1='#bcc0cc'  surface0='#ccd0da' base='#eff1f5'
+			;;
+		*'macchiato')
+			rosewater='#f4dbd6' mauve='#c6a0f6'    red='#ed8796'
+			lavender='#b7bdf8'  text='#cad3f5'     overlay0='#6e738d'
+			surface1='#494d64'  surface0='#363a4f' base='#24273a'
+			;;
+		*'mocha')
+			rosewater='#f5e0dc' mauve='#cba6f7'    red='#f38ba8'
+			lavender='#b4befe'  text='#cdd6f4'     overlay0='#6c7086'
+			surface1='#45475a'  surface0='#313244' base='#1e1e2e'
+			;;
+	esac
 
-  # Pick random position for grow animation
-  local positions=("center" "top" "bottom" "left" "right" "top-left" "top-right" "bottom-left" "bottom-right")
-  local random_pos=${positions[$RANDOM % ${#positions[@]}]}
-
-  # Apply wallpaper with random grow origin
-  swww init &>/dev/null || true
-  swww img "$wallpaper_path" \
-    --transition-type grow \
-    --transition-fps 60 \
-    --transition-duration 2.0 \
-    --transition-pos "$random_pos"
-
-  update_hyprlock_wallpaper "$wallpaper_path"
-  notify-send "Theme Switcher" "Applied: $wallpaper_name"
+	export COLORS=(
+		--color="bg+:$surface0,bg:$base,spinner:$rosewater,hl:$red"
+		--color="fg:$text,header:$red,info:$mauve,pointer:$rosewater"
+		--color="marker:$lavender,fg+:$text,prompt:$mauve,hl+:$red"
+		--color="selected-bg:$surface1"
+		--color="border:$overlay0,label:$text"
+	)
 }
 
-update_hyprlock_wallpaper() {
-  local wallpaper_path="$1"
-  local hyprlock_config="$HOME/.config/hypr/hyprlock.conf"
+display-tooltip() {
+	local name=$THEME
+	name="<span text_transform='capitalize'>${name//-/ }</span>"
 
-  [[ ! -f "${hyprlock_config}.backup" ]] && cp "$hyprlock_config" "${hyprlock_config}.backup"
-
-  sed -i "/background {/,/}/{s|path = .*|path = $wallpaper_path|}" "$hyprlock_config"
+	echo "{ \"text\": \"󰍜\", \"tooltip\": \"Theme: $name\" }"
 }
 
-restore_theme() {
-  local index=$(get_current_index)
-  apply_theme "${WALLPAPERS[$index]}" "$index"
+main() {
+	local action=$1
+	case $action in
+		'next' | 'prev')
+			switch-theme
+
+			pkill waybar 2>/dev/null || true
+			nohup waybar >/dev/null 2>&1 &
+			;;
+		fzf) export-colors ;;
+		*) display-tooltip ;;
+	esac
 }
 
-# Main
-case "${1:-next}" in
-"next")
-  next_index=$((($(get_current_index) + 1) % ${#WALLPAPERS[@]}))
-  apply_theme "${WALLPAPERS[$next_index]}" "$next_index"
-  ;;
-"random")
-  random_index=$((RANDOM % ${#WALLPAPERS[@]}))
-  apply_theme "${WALLPAPERS[$random_index]}" "$random_index"
-  ;;
-"restore")
-  restore_theme
-  ;;
-"list")
-  # Show only filenames in wofi
-  selected=$(printf "%s\n" "${WALLPAPERS[@]##*/}" | wofi --dmenu --prompt "Choose Wallpaper" --insensitive)
-
-  if [ -n "$selected" ]; then
-    for i in "${!WALLPAPERS[@]}"; do
-      if [[ "${WALLPAPERS[$i]##*/}" == "$selected" ]]; then
-        apply_theme "${WALLPAPERS[$i]}" "$i"
-        break
-      fi
-    done
-  else
-    notify-send "Theme Switcher" "No wallpaper selected."
-  fi
-  ;;
-esac
+main "$@"

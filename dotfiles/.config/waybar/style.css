@@ -1,159 +1,89 @@
-@import "../omarchy/current/theme/waybar.css";
-
-window#waybar {
-  background: transparent;
-  color: @foreground;
-  border: none;
-}
-
-window#waybar > box {
-  background: transparent;
-  border: none;
-}
-
-tooltip,
-tooltip > box {
-  background-color: alpha(@background, 0.9);
-  color: @foreground;
-  border: none;
-  border-radius: 10px;
-  padding: 6px 8px;
-}
-
-tooltip label {
-  color: @foreground;
-}
+@import "styles/modules-left.css";
+@import "styles/modules-center.css";
+@import "styles/modules-right.css";
+@import "theme.css";
 
 * {
-  background-color: transparent;
-  color: @foreground;
-  border: none;
-  border-radius: 0;
-  min-height: 0;
-  font-family: JetBrainsMono Nerd Font;
-  font-size: 13px;
+	font-family: "JetBrainsMono Nerd Font";
+	font-weight: bold;
+	font-size: 13px;
+	color: @main-fg;
 }
 
-.modules-left,
-.modules-center,
-.modules-right {
-  background-color: alpha(@background, 0.85);
-  border-radius: 12px;
-  padding: 0px 10px;
-  outline: 1px solid alpha(black, 0.12);
-  margin: 6px 10px;
+/* main outline */
+
+window#waybar {
+	background-color: @outline;
 }
 
-.modules-left > *:not(:last-child),
-.modules-center > *:not(:last-child),
-.modules-right > *:not(:last-child) {
-  margin-right: 8px;
+/* main background */
+
+window#waybar > box {
+	margin: 4px;
+	background-color: @main-bg;
 }
 
-#workspaces button.visible {
-}
-#workspaces button:not(.visible) {
-  opacity: 0.6;
+/* hoverables */
+
+#custom-theme_switcher:hover,
+#idle_inhibitor:hover,
+#clock.date:hover,
+#network:hover,
+#bluetooth:hover,
+#custom-system_update:hover,
+#mpris:hover,
+#pulseaudio:hover,
+#wireplumber:hover {
+	color: @hover-fg;
 }
 
-#workspaces button,
-#workspaces button:hover,
-#workspaces button:active,
-#workspaces button.focused {
-  background: transparent;
-  box-shadow: none;
+/* states */
+
+.deactivated,
+.paused,
+#pulseaudio.output.muted,
+#pulseaudio.input.source-muted,
+#wireplumber.muted {
+	color: @hover-fg;
+}
+.warning { color: @warning; }
+.critical { color: @critical; }
+.charging { color: @charging; }
+
+/* dividers */
+
+#custom-left_div,
+#custom-left_inv,
+#custom-right_div,
+#custom-right_inv {
+	font-size: 23.1px;
 }
 
-#workspaces button {
-  all: initial;
-  padding: 0 6px;
-  margin: 0 1.5px;
-  min-width: 9px;
+/* buttons */
+
+button {
+	border-radius: 8px;
+	padding: 0 6px;
+	background: transparent;
+	transition: all 0.5s ease-out;
+}
+button:hover {
+	background-color: @hover-bg;
+	color: @hover-fg;
 }
 
-#workspaces button.empty {
-  opacity: 0.5;
-}
+/* tooltips */
 
-#tray,
-#cpu,
-#battery,
-#network,
-#bluetooth,
-#pulseaudio,
-#custom-omarchy,
-#custom-screenrecording-indicator,
-#custom-update,
-#mpris,
-#clock {
-  min-width: 12px;
-  padding-right: 8px;
+tooltip {
+	border: 2px solid @main-br;
+	border-radius: 10px;
+	background-color: @main-bg;
 }
-
-#clock {
-  padding-right: 0px;
+tooltip label {
+	margin: 2px 4px;
+	font-weight: normal;
 }
-
-#custom-expand-icon {
-  margin-right: 6px;
-}
-#custom-update {
-  font-size: 10px;
-}
-#clock {
-  margin-left: 8.75px;
-}
-#custom-screenrecording-indicator {
-  font-size: 10px;
-  margin-left: 8.75px;
-}
-#custom-screenrecording-indicator.active {
-  color: #a55555;
-}
-#mpris {
-  margin-left: 5px;
-}
-
-.modules-left {
-  margin-left: 14px;
-  padding-left: 12px;
-}
-
-#custom-omarchy {
-  padding-right: 4px;
-  padding-left: 2px;
-}
-
-#custom-omarchy + #workspaces {
-  margin-left: 6px;
-}
-
-.hidden {
-  opacity: 0;
-}
-
-#taskbar {
-  background-color: transparent;
-}
-
-#taskbar button {
-  padding: 0 5px;
-  margin: 0 2px;
-  background-color: transparent;
-  border: none;
-  border-radius: 5px;
-}
-
-#taskbar button:first-child {
-  margin-left: 0;
-}
-
-#taskbar button:last-child {
-  margin-right: 0;
-}
-
-#taskbar button:hover,
-#taskbar button.active {
-  background-color: transparent;
-  transition: all 0.5s ease-out;
+tooltip decoration {
+	border: none;
+	background-color: transparent;
 }
