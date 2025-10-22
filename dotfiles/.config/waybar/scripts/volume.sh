@@ -1,11 +1,4 @@
 #!/usr/bin/env bash
-#
-# Control default input and output device volume using pactl
-#
-# Author: Jesse Mirabel <github.com/sejjy>
-# Created: September 07, 2025
-# License: MIT
-
 VALUE=1
 MIN=0
 MAX=100

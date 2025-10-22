@@ -1,11 +1,4 @@
 #!/usr/bin/env bash
-#
-# Adjust brightness level using brightnessctl
-#
-# Author: Jesse Mirabel <github.com/sejjy>
-# Created: August 28, 2025
-# License: MIT
-
 VALUE=1
 
 print-usage() {
