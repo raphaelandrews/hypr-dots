@@ -149,3 +149,10 @@ if [[ -z $FASTFETCH_RUN ]]; then
   export FASTFETCH_RUN=1
   fastfetch
 fi
+
+# bun completions
+[ -s "/home/raphael/.bun/_bun" ] && source "/home/raphael/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
