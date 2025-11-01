@@ -191,7 +191,7 @@
 
   #################################[ os_icon: os identifier ]##################################
   # OS identifier color.
-  typeset -g POWERLEVEL9K_OS_ICON_FOREGROUND='#7aa2f7'
+  typeset -g POWERLEVEL9K_OS_ICON_FOREGROUND='#4D83F4'
   typeset -g POWERLEVEL9K_OS_ICON_BACKGROUND='#c0caf5'
   # Custom icon.
   # typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION='⭐'
@@ -221,7 +221,7 @@
   typeset -g POWERLEVEL9K_PROMPT_CHAR_LEFT_{LEFT,RIGHT}_WHITESPACE=
   ##################################[ dir: current directory ]##################################
   # Current directory background color.
-  typeset -g POWERLEVEL9K_DIR_BACKGROUND='#7aa2f7'
+  typeset -g POWERLEVEL9K_DIR_BACKGROUND='#4D83F4'
   # Default current directory foreground color.
   typeset -g POWERLEVEL9K_DIR_FOREGROUND='#c0caf5'
   # If directory is too long, shorten some of its segments to the shortest possible unique
