@@ -7,6 +7,10 @@
     "padding": {
       "top": 2,
       "left": 3
+    },
+    "color": {
+      "1": "#c0caf5",
+      "2": "#7aa2f7"
     }
   },
   "display": {
@@ -21,39 +25,39 @@
     {
       "type": "host",
       "key": " PC",
-      "keyColor": "#07C193"
+      "keyColor": "#9ece6a"
     },
     {
       "type": "cpu",
       "key": " ",
       "showPeCoreCount": true,
-      "keyColor": "#07C193"
+      "keyColor": "#9ece6a"
     },
     {
       "type": "gpu",
       "key": " ",
       "detectionMethod": "pci",
-      "keyColor": "#07C193"
+      "keyColor": "#9ece6a"
     },
     {
       "type": "display",
       "key": "󱄄 ",
-      "keyColor": "#07C193"
+      "keyColor": "#9ece6a"
     },
     {
       "type": "disk",
       "key": "󰋊 ",
-      "keyColor": "#07C193"
+      "keyColor": "#9ece6a"
     },
     {
       "type": "memory",
       "key": " ",
-      "keyColor": "#07C193"
+      "keyColor": "#9ece6a"
     },
     {
       "type": "swap",
       "key": "󰓡 ",
-      "keyColor": "#07C193"
+      "keyColor": "#9ece6a"
     },
     "break",
     {
@@ -126,13 +130,13 @@
     {
       "type": "command",
       "key": "󱦟 OS Age",
-      "keyColor": "#FE9D62",
+      "keyColor": "#ff9e64",
       "text": "birth_install=$(stat -c %W /); current=$(date +%s); days_difference=$(( (current - birth_install) / 86400 )); echo $days_difference days"
     },
     {
       "type": "uptime",
       "key": "󱫐 Uptime",
-      "keyColor": "#FE9D62"
+      "keyColor": "#ff9e64"
     }
   ]
 }
