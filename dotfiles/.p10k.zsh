@@ -191,8 +191,8 @@
 
   #################################[ os_icon: os identifier ]##################################
   # OS identifier color.
-  typeset -g POWERLEVEL9K_OS_ICON_FOREGROUND='#4D83F4'
-  typeset -g POWERLEVEL9K_OS_ICON_BACKGROUND='#c0caf5'
+  typeset -g POWERLEVEL9K_OS_ICON_FOREGROUND='#FFFFFF'
+  typeset -g POWERLEVEL9K_OS_ICON_BACKGROUND='#C774E8'  
   # Custom icon.
   # typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION='⭐'
 
@@ -200,10 +200,10 @@
   # Transparent background.
   typeset -g POWERLEVEL9K_PROMPT_CHAR_BACKGROUND=
   # Green prompt symbol if the last command succeeded.
-  typeset -g POWERLEVEL9K_PROMPT_CHAR_OK_{VIINS,VICMD,VIVIS,VIOWR}_FOREGROUND='#9ece6a'
+  typeset -g POWERLEVEL9K_PROMPT_CHAR_OK_{VIINS,VICMD,VIVIS,VIOWR}_FOREGROUND='#00F0FF'
 
   # Red prompt symbol if the last command failed.
-  typeset -g POWERLEVEL9K_PROMPT_CHAR_ERROR_{VIINS,VICMD,VIVIS,VIOWR}_FOREGROUND='#f7768e'
+  typeset -g POWERLEVEL9K_PROMPT_CHAR_ERROR_{VIINS,VICMD,VIVIS,VIOWR}_FOREGROUND='#FF79C6'
   # Default prompt symbol.
   typeset -g POWERLEVEL9K_PROMPT_CHAR_{OK,ERROR}_VIINS_CONTENT_EXPANSION='❯'
   # Prompt symbol in command vi mode.
@@ -221,19 +221,20 @@
   typeset -g POWERLEVEL9K_PROMPT_CHAR_LEFT_{LEFT,RIGHT}_WHITESPACE=
   ##################################[ dir: current directory ]##################################
   # Current directory background color.
-  typeset -g POWERLEVEL9K_DIR_BACKGROUND='#4D83F4'
+  typeset -g POWERLEVEL9K_DIR_BACKGROUND='#00F0FF'     
   # Default current directory foreground color.
-  typeset -g POWERLEVEL9K_DIR_FOREGROUND='#c0caf5'
+  typeset -g POWERLEVEL9K_DIR_FOREGROUND='#1A0033'   
+
   # If directory is too long, shorten some of its segments to the shortest possible unique
   # prefix. The shortened directory can be tab-completed to the original.
   typeset -g POWERLEVEL9K_SHORTEN_STRATEGY=truncate_to_unique
   # Replace removed segment suffixes with this symbol.
   typeset -g POWERLEVEL9K_SHORTEN_DELIMITER=
   # Color of the shortened directory segments.
-  typeset -g POWERLEVEL9K_DIR_SHORTENED_FOREGROUND='#c0caf5'
+  typeset -g POWERLEVEL9K_DIR_SHORTENED_FOREGROUND='#C774E8'
   # Color of the anchor directory segments. Anchor segments are never shortened. The first
   # segment is always an anchor.
-  typeset -g POWERLEVEL9K_DIR_ANCHOR_FOREGROUND='#c0caf5'
+  typeset -g POWERLEVEL9K_DIR_ANCHOR_FOREGROUND='#1A0033'
   # Display anchor directory segments in bold.
   typeset -g POWERLEVEL9K_DIR_ANCHOR_BOLD=true
   # Don't shorten directories that contain any of these files. They are anchors.
@@ -361,11 +362,11 @@
 
   #####################################[ vcs: git status ]######################################
   # Version control background colors.
-  typeset -g POWERLEVEL9K_VCS_CLEAN_BACKGROUND='#9ece6a'
-  typeset -g POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='#e0af68'
-  typeset -g POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='#9ece6a'
-  typeset -g POWERLEVEL9K_VCS_CONFLICTED_BACKGROUND='#f7768e'
-  typeset -g POWERLEVEL9K_VCS_LOADING_BACKGROUND='#565f89'
+  typeset -g POWERLEVEL9K_VCS_CLEAN_BACKGROUND='#FF6AD5'
+  typeset -g POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='#FFB86C'
+  typeset -g POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='#FF6AD5'
+  typeset -g POWERLEVEL9K_VCS_CONFLICTED_BACKGROUND='#FF79C6'
+  typeset -g POWERLEVEL9K_VCS_LOADING_BACKGROUND='#8795E8'
 
   # Branch icon. Set this parameter to '\UE0A0 ' for the popular Powerline branch icon.
   typeset -g POWERLEVEL9K_VCS_BRANCH_ICON='\uF126 '
@@ -519,8 +520,8 @@
   # it will signify success by turning green.
   typeset -g POWERLEVEL9K_STATUS_OK=false
   typeset -g POWERLEVEL9K_STATUS_OK_VISUAL_IDENTIFIER_EXPANSION='✔'
-  typeset -g POWERLEVEL9K_STATUS_OK_FOREGROUND='#9ece6a'
-  typeset -g POWERLEVEL9K_STATUS_OK_BACKGROUND='#1a1b26'
+  typeset -g POWERLEVEL9K_STATUS_OK_FOREGROUND='#00F0FF'
+  typeset -g POWERLEVEL9K_STATUS_OK_BACKGROUND='#1A0033'
 
   # Status when some part of a pipe command fails but the overall exit status is zero. It may look
   # like this: 1|0.
@@ -533,8 +534,8 @@
   # it will signify error by turning red.
   typeset -g POWERLEVEL9K_STATUS_ERROR=false
   typeset -g POWERLEVEL9K_STATUS_ERROR_VISUAL_IDENTIFIER_EXPANSION='✘'
-  typeset -g POWERLEVEL9K_STATUS_ERROR_FOREGROUND='#f7768e'
-  typeset -g POWERLEVEL9K_STATUS_ERROR_BACKGROUND='#1a1b26'
+  typeset -g POWERLEVEL9K_STATUS_ERROR_FOREGROUND='#FF79C6'
+  typeset -g POWERLEVEL9K_STATUS_ERROR_BACKGROUND='#1A0033'
 
   # Status when the last command was terminated by a signal.
   typeset -g POWERLEVEL9K_STATUS_ERROR_SIGNAL=true
@@ -553,8 +554,8 @@
 
   ###################[ command_execution_time: duration of the last command ]###################
   # Execution time color.
-  typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND='#1a1b26'
-  typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_BACKGROUND='#e0af68'
+  typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND='#1A0033'
+  typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_BACKGROUND='#FFB86C'
   # Show duration of the last command if takes at least this many seconds.
   typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD=3
   # Show this many fractional digits. Zero means round to seconds.
@@ -568,8 +569,8 @@
 
   #######################[ background_jobs: presence of background jobs ]#######################
   # Background jobs color.
-  typeset -g POWERLEVEL9K_BACKGROUND_JOBS_FOREGROUND='#7dcfff'
-  typeset -g POWERLEVEL9K_BACKGROUND_JOBS_BACKGROUND='#1a1b26'
+  typeset -g POWERLEVEL9K_BACKGROUND_JOBS_FOREGROUND='#94D0FF'
+  typeset -g POWERLEVEL9K_BACKGROUND_JOBS_BACKGROUND='#1A0033'
   # Don't show the number of background jobs.
   typeset -g POWERLEVEL9K_BACKGROUND_JOBS_VERBOSE=false
   # Custom icon.
@@ -972,14 +973,14 @@
 
   ##################################[ context: user@hostname ]##################################
   # Context color when running with privileges.
-  typeset -g POWERLEVEL9K_CONTEXT_ROOT_FOREGROUND='#f7768e'
-  typeset -g POWERLEVEL9K_CONTEXT_ROOT_BACKGROUND='#1a1b26'
+  typeset -g POWERLEVEL9K_CONTEXT_ROOT_FOREGROUND='#FF79C6'
+  typeset -g POWERLEVEL9K_CONTEXT_ROOT_BACKGROUND='#1A0033'
   # Context color in SSH without privileges.
-  typeset -g POWERLEVEL9K_CONTEXT_{REMOTE,REMOTE_SUDO}_FOREGROUND='#e0af68'
-  typeset -g POWERLEVEL9K_CONTEXT_{REMOTE,REMOTE_SUDO}_BACKGROUND='#1a1b26'
+  typeset -g POWERLEVEL9K_CONTEXT_{REMOTE,REMOTE_SUDO}_FOREGROUND='#FFB86C'
+  typeset -g POWERLEVEL9K_CONTEXT_{REMOTE,REMOTE_SUDO}_BACKGROUND='#1A0033'
   # Default context color (no privileges, no SSH).
-  typeset -g POWERLEVEL9K_CONTEXT_FOREGROUND='#e0af68'
-  typeset -g POWERLEVEL9K_CONTEXT_BACKGROUND='#1a1b26'
+  typeset -g POWERLEVEL9K_CONTEXT_FOREGROUND='#FFB86C'
+  typeset -g POWERLEVEL9K_CONTEXT_BACKGROUND='#1A0033'
 
   # Context format when running with privileges: user@hostname.
   typeset -g POWERLEVEL9K_CONTEXT_ROOT_TEMPLATE='%n@%m'
@@ -999,8 +1000,8 @@
 
   ###[ virtualenv: python virtual environment (https://docs.python.org/3/library/venv.html) ]###
   # Python virtual environment color.
-  typeset -g POWERLEVEL9K_VIRTUALENV_FOREGROUND='#1a1b26'
-  typeset -g POWERLEVEL9K_VIRTUALENV_BACKGROUND='#7aa2f7'
+  typeset -g POWERLEVEL9K_VIRTUALENV_FOREGROUND='#FFFFFF'
+  typeset -g POWERLEVEL9K_VIRTUALENV_BACKGROUND='#8795E8'
   # Don't show Python version next to the virtual environment name.
   typeset -g POWERLEVEL9K_VIRTUALENV_SHOW_PYTHON_VERSION=false
   # If set to "false", won't show virtualenv if pyenv is already shown.
@@ -1114,8 +1115,8 @@
 
   ############[ nodeenv: node.js environment (https://github.com/ekalinin/nodeenv) ]############
   # Nodeenv color.
-  typeset -g POWERLEVEL9K_NODEENV_FOREGROUND='#9ece6a'
-  typeset -g POWERLEVEL9K_NODEENV_BACKGROUND='#1a1b26'
+  typeset -g POWERLEVEL9K_NODEENV_FOREGROUND='#00F0FF'
+  typeset -g POWERLEVEL9K_NODEENV_BACKGROUND='#1A0033'
   # Don't show Node version next to the environment name.
   typeset -g POWERLEVEL9K_NODEENV_SHOW_NODE_VERSION=false
   # Separate environment name from Node version only with a space.
@@ -1410,8 +1411,8 @@
       # '*prod*'  PROD    # These values are examples that are unlikely
       # '*test*'  TEST    # to match your needs. Customize them as needed.
       '*'       DEFAULT)
-  typeset -g POWERLEVEL9K_KUBECONTEXT_DEFAULT_FOREGROUND='#c0caf5'
-  typeset -g POWERLEVEL9K_KUBECONTEXT_DEFAULT_BACKGROUND='#bb9af7'
+  typeset -g POWERLEVEL9K_KUBECONTEXT_DEFAULT_FOREGROUND='#FFFFFF'
+  typeset -g POWERLEVEL9K_KUBECONTEXT_DEFAULT_BACKGROUND='#AD8EE6'
   # typeset -g POWERLEVEL9K_KUBECONTEXT_DEFAULT_VISUAL_IDENTIFIER_EXPANSION='⭐'
 
   # Use POWERLEVEL9K_KUBECONTEXT_CONTENT_EXPANSION to specify the content displayed by kubecontext
@@ -1495,8 +1496,8 @@
       # '*prod*'  PROD    # These values are examples that are unlikely
       # '*test*'  TEST    # to match your needs. Customize them as needed.
       '*'       DEFAULT)
-   typeset -g POWERLEVEL9K_AWS_DEFAULT_FOREGROUND='#c0caf5'
-  typeset -g POWERLEVEL9K_AWS_DEFAULT_BACKGROUND='#ff9e64'
+  typeset -g POWERLEVEL9K_AWS_DEFAULT_FOREGROUND='#FFFFFF'
+  typeset -g POWERLEVEL9K_AWS_DEFAULT_BACKGROUND='#FF6AD5'
   # typeset -g POWERLEVEL9K_AWS_DEFAULT_VISUAL_IDENTIFIER_EXPANSION='⭐'
 
   # AWS segment format. The following parameters are available within the expansion.
@@ -1757,8 +1758,8 @@
 
   ####################################[ time: current time ]####################################
   # Current time color.
-  typeset -g POWERLEVEL9K_TIME_FOREGROUND='#1a1b26'
-  typeset -g POWERLEVEL9K_TIME_BACKGROUND='#c0caf5'
+  typeset -g POWERLEVEL9K_TIME_FOREGROUND='#1A0033'
+  typeset -g POWERLEVEL9K_TIME_BACKGROUND='#94D0FF'
   # Format for the current time: 09:51:02. See `man 3 strftime`.
   typeset -g POWERLEVEL9K_TIME_FORMAT='%D{%H:%M:%S}'
   # If set to true, time will update when you hit enter. This way prompts for the past
