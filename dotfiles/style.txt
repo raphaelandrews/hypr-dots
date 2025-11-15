@@ -17,7 +17,7 @@
 #B9B3D9 - Muted / Secondary
 
 🍦 Soft gradients
-1	#F6A944 - Soft amber start
+1	#F6A944 - Soft amber
 2	#F8C85A - Bridge tone
 3	#F4CE71 - Main
 
@@ -44,3 +44,9 @@ Name	Gradient
 Solar Core	#6ADED7 → #F4CE71 (Cyan → Gold)
 Stardust Drift	#A895FF → #F4CE71 (Purple → Gold)
 Nightfire	#A895FF → #FF5A6A (Purple → Red)
+
+"months": "<span color='#FD76B6'><b>{}</b></span>",  
+"days": "<span color='#6ADED7'><b>{}</b></span>",   
+"weeks": "<span color='#A895FF'><b>W{}</b></span>", 
+"weekdays": "<span color='#F4CE71'><b>{}</b></span>",
+"today": "<span color='#FF5A6A'><b><u>{}</u></b></span>" 
