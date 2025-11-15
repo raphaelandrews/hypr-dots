@@ -1,0 +1,46 @@
+#Main
+#6ADED7 - Blue-Green
+#FD76B6 - Magenta
+#F4CE71 - Orange-Yellow
+#A895FF - Violet
+#FF5A6A - Red
+
+#Full
+#6ADED7 - Primary accent
+#FD76B6 - Pink highlight 
+#F4CE71 - Warning / Success / Notifications
+#A895FF - Hover / Active focus
+#1A1824 - Background
+#2A2035 - Darker background / Shade
+#47436A - Border
+#F2EEF7 - Text
+#B9B3D9 - Muted / Secondary
+
+🍦 Soft gradients
+1	#F6A944 - Soft amber start
+2	#F8C85A - Bridge tone
+3	#F4CE71 - Main
+
+1	#4AB5E0 - Sky-blue
+2	#6ADED7 - Main
+3	#54D7AE - Soft sea-green
+
+🎨 Blend Gradients
+🔥 Category 1 — Opposite / Dual-energy gradients (highest contrast)
+Name	Gradient
+Aurora	#6ADED7 → #A895FF (Cyan → Purple)
+Laserwave	#FD76B6 → #6ADED7 (Pink → Cyan)
+Sunset Voltage	#F4CE71 → #FF5A6A (Gold → Red)
+Heatwave	#FF5A6A → #FD76B6 (Red → Pink)
+
+🌅 Category 2 — Triadic blends (smooth neon beams)
+Name	Gradient
+Neon Horizon	#6ADED7 → #FD76B6 → #A895FF
+Mirage	#FD76B6 → #F4CE71 → #6ADED7
+Etherlight	#A895FF → #6ADED7 → #F4CE71
+
+🌈 Category 3 — Cold ↔ Warm power arcs
+Name	Gradient
+Solar Core	#6ADED7 → #F4CE71 (Cyan → Gold)
+Stardust Drift	#A895FF → #F4CE71 (Purple → Gold)
+Nightfire	#A895FF → #FF5A6A (Purple → Red)
