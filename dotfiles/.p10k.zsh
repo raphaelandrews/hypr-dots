@@ -191,7 +191,7 @@
 
   #################################[ os_icon: os identifier ]##################################
   # OS identifier color.
-  typeset -g POWERLEVEL9K_OS_ICON_FOREGROUND='#F2EEF7'
+  typeset -g POWERLEVEL9K_OS_ICON_FOREGROUND='#BDCBEF'
   typeset -g POWERLEVEL9K_OS_ICON_BACKGROUND='#A895FF'
   # Custom icon.
   # typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION='⭐'
@@ -398,7 +398,7 @@
     local      clean='%F{#1A1824}'
     local   modified='%F{#1A1824}'
     local  untracked='%F{#1A1824}'
-    local conflicted='%F{#F2EEF7}'
+    local conflicted='%F{#BDCBEF}'
 
     local res
 
@@ -1000,7 +1000,7 @@
 
   ###[ virtualenv: python virtual environment (https://docs.python.org/3/library/venv.html) ]###
   # Python virtual environment color.
-  typeset -g POWERLEVEL9K_VIRTUALENV_FOREGROUND='#F2EEF7'
+  typeset -g POWERLEVEL9K_VIRTUALENV_FOREGROUND='#BDCBEF'
   typeset -g POWERLEVEL9K_VIRTUALENV_BACKGROUND='#A895FF'
   # Don't show Python version next to the virtual environment name.
   typeset -g POWERLEVEL9K_VIRTUALENV_SHOW_PYTHON_VERSION=false
@@ -1115,7 +1115,7 @@
 
   ############[ nodeenv: node.js environment (https://github.com/ekalinin/nodeenv) ]############
   # Nodeenv color.
-  typeset -g POWERLEVEL9K_NODEENV_FOREGROUND='#F2EEF7'
+  typeset -g POWERLEVEL9K_NODEENV_FOREGROUND='#BDCBEF'
   typeset -g POWERLEVEL9K_NODEENV_BACKGROUND='#A895FF'
   # Don't show Node version next to the environment name.
   typeset -g POWERLEVEL9K_NODEENV_SHOW_NODE_VERSION=false
@@ -1411,7 +1411,7 @@
       # '*prod*'  PROD    # These values are examples that are unlikely
       # '*test*'  TEST    # to match your needs. Customize them as needed.
       '*'       DEFAULT)
-  typeset -g POWERLEVEL9K_KUBECONTEXT_DEFAULT_FOREGROUND='#F2EEF7'
+  typeset -g POWERLEVEL9K_KUBECONTEXT_DEFAULT_FOREGROUND='#BDCBEF'
   typeset -g POWERLEVEL9K_KUBECONTEXT_DEFAULT_BACKGROUND='#FD76B6'
   # typeset -g POWERLEVEL9K_KUBECONTEXT_DEFAULT_VISUAL_IDENTIFIER_EXPANSION='⭐'
 
@@ -1496,7 +1496,7 @@
       # '*prod*'  PROD    # These values are examples that are unlikely
       # '*test*'  TEST    # to match your needs. Customize them as needed.
       '*'       DEFAULT)
-  typeset -g POWERLEVEL9K_AWS_DEFAULT_FOREGROUND='#F2EEF7'
+  typeset -g POWERLEVEL9K_AWS_DEFAULT_FOREGROUND='#BDCBEF'
   typeset -g POWERLEVEL9K_AWS_DEFAULT_BACKGROUND='#FD76B6'
   # typeset -g POWERLEVEL9K_AWS_DEFAULT_VISUAL_IDENTIFIER_EXPANSION='⭐'
 

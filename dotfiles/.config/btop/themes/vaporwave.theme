@@ -2,7 +2,7 @@
 theme[main_bg]="#1A1824"
 
 # Main text color
-theme[main_fg]="#F2EEF7"
+theme[main_fg]="#BDCBEF"
 
 # Title color for boxes
 theme[title]="#6ADED7"
@@ -20,7 +20,7 @@ theme[selected_fg]="#6ADED7"
 theme[inactive_fg]="#47436A"
 
 # Color of text appearing on top of graphs
-theme[graph_text]="#F2EEF7"
+theme[graph_text]="#BDCBEF"
 
 # Misc colors for processes box
 theme[proc_misc]="#6ADED7"
