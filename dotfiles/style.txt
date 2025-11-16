@@ -44,3 +44,14 @@ Name	Gradient
 Solar Core	#6ADED7 → #F4CE71 (Cyan → Gold)
 Stardust Drift	#A895FF → #F4CE71 (Purple → Gold)
 Nightfire	#A895FF → #FF5A6A (Purple → Red)
+
+
+#4DEBFF  Primary accent
+#FF5EBC  Pink highlight
+#FFB86B  Warning / Notice
+#9A6BFF  Hover / Active
+#130E38  Background
+#1D144B  Darker background / Shade
+#4A3F84  Border
+#E3D6FF  Text
+#C2B4E3  Muted / Secondary
