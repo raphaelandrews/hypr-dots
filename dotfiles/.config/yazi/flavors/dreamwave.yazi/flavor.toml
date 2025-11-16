@@ -8,14 +8,14 @@ hovered = { reversed = true }
 preview_hovered = { underline = true }
 
 find_keyword  = { fg = "#FD76B6", bold = true, italic = true, underline = true }
-find_position = { fg = "#6ADED7", bg = "reset", bold = true, italic = true }
+find_position = { fg = "#1abcdd", bg = "reset", bold = true, italic = true }
 
-marker_copied   = { fg = "#6ADED7", bg = "#6ADED7" }
+marker_copied   = { fg = "#1abcdd", bg = "#1abcdd" }
 marker_cut      = { fg = "#FF5A6A", bg = "#FF5A6A" }
 marker_marked   = { fg = "#1A1824", bg = "#A895FF" }
 marker_selected = { fg = "#FF5A6A", bg = "#FF5A6A" }
 
-count_copied   = { fg = "#1A1824", bg = "#6ADED7" }
+count_copied   = { fg = "#1A1824", bg = "#1abcdd" }
 count_cut      = { fg = "#1A1824", bg = "#FF5A6A" }
 count_selected = { fg = "#1A1824", bg = "#A895FF" }
 
@@ -31,8 +31,8 @@ inactive = { fg = "#B9B3D9", bg = "#1A1824" }
 
 # : Mode {{{
 [mode]
-normal_main = { fg = "#1A1824", bg = "#6ADED7", bold = true }
-normal_alt  = { fg = "#6ADED7", bg = "#1A1824" }
+normal_main = { fg = "#1A1824", bg = "#1abcdd", bold = true }
+normal_alt  = { fg = "#1abcdd", bg = "#1A1824" }
 
 select_main = { fg = "#1A1824", bg = "#FF5A6A", bold = true }
 select_alt  = { fg = "#FF5A6A", bg = "#1A1824" }
@@ -52,10 +52,10 @@ progress_normal = { fg = "#1A1824", bg = "#F4CE71" }
 progress_error = { fg = "#FF5A6A", bg = "#1A1824" }
 
 perm_sep   = { fg = "#A895FF" }
-perm_type  = { fg = "#6ADED7" }
+perm_type  = { fg = "#1abcdd" }
 perm_read  = { fg = "#FD76B6" }
 perm_write = { fg = "#F4CE71" }
-perm_exec  = { fg = "#6ADED7" }
+perm_exec  = { fg = "#1abcdd" }
 # : }}}
 
 # : Pick {{{
@@ -88,7 +88,7 @@ hovered = { fg = "#FD76B6", underline = true }
 # : Which {{{
 [which]
 mask            = { bg = "#2A2035" }
-cand            = { fg = "#6ADED7" }
+cand            = { fg = "#1abcdd" }
 rest            = { fg = "#BDCBEF" }
 desc            = { fg = "#FD76B6" }
 separator       = "  "
@@ -97,19 +97,19 @@ separator_style = { fg = "#A895FF" }
 
 # : Help {{{
 [help]
-on      = { fg = "#6ADED7" }
-run     = { fg = "#6ADED7" }
+on      = { fg = "#1abcdd" }
+run     = { fg = "#1abcdd" }
 hovered = { reversed = true, bold = true }
 footer  = { fg = "#1A1824", bg = "#FD76B6" }
 # : }}}
 
 # : Notify {{{
 [notify]
-title_info  = { fg = "#6ADED7" }
+title_info  = { fg = "#1abcdd" }
 title_warn  = { fg = "#F4CE71" }
 title_error = { fg = "#FF5A6A" }
 
-info  = { fg = "#1A1824", bg = "#6ADED7" }
+info  = { fg = "#1A1824", bg = "#1abcdd" }
 warn  = { fg = "#1A1824", bg = "#F4CE71" }
 error = { fg = "#1A1824", bg = "#FF5A6A" }
 # : }}}
@@ -124,7 +124,7 @@ border = { fg = "#A895FF" }
 [filetype]
 rules = [
 	# ── Folders ───────────────────────
-	{ name = "*/", fg = "#6ADED7", bold = true },
+	{ name = "*/", fg = "#1abcdd", bold = true },
 
 	# ── Executables ───────────────────
 	{ mime = "application/x-executable", fg = "#F4CE71", bold = true },
@@ -144,14 +144,14 @@ rules = [
 	{ name = ".*", fg = "#B9B3D9", italic = true },
 
 	# ── Code ──────────────────────────
-	{ name = "*.c",   fg = "#6ADED7" },
-	{ name = "*.cpp", fg = "#6ADED7" },
-	{ name = "*.rs",  fg = "#6ADED7" },
-	{ name = "*.go",  fg = "#6ADED7" },
-	{ name = "*.py",  fg = "#6ADED7" },
-	{ name = "*.ts",  fg = "#6ADED7" },
-	{ name = "*.js",  fg = "#6ADED7" },
-	{ name = "*.lua", fg = "#6ADED7" },
+	{ name = "*.c",   fg = "#1abcdd" },
+	{ name = "*.cpp", fg = "#1abcdd" },
+	{ name = "*.rs",  fg = "#1abcdd" },
+	{ name = "*.go",  fg = "#1abcdd" },
+	{ name = "*.py",  fg = "#1abcdd" },
+	{ name = "*.ts",  fg = "#1abcdd" },
+	{ name = "*.js",  fg = "#1abcdd" },
+	{ name = "*.lua", fg = "#1abcdd" },
 
 	# ── Images ────────────────────────
 	{ mime = "image/*", fg = "#FD76B6" },
@@ -161,13 +161,13 @@ rules = [
 	{ mime = "audio/*", fg = "#FD76B6" },
 
 	# ── Documents ─────────────────────
-	{ mime = "application/doc",        fg = "#6ADED7" },
-	{ mime = "application/epub+zip",   fg = "#6ADED7" },
-	{ mime = "application/pdf",        fg = "#6ADED7" },
-	{ mime = "application/rtf",        fg = "#6ADED7" },
-	{ mime = "application/vnd.*",      fg = "#6ADED7" },
-	{ name = "*.txt",                  fg = "#6ADED7" },
-	{ name = "*.md",                   fg = "#6ADED7" },
+	{ mime = "application/doc",        fg = "#1abcdd" },
+	{ mime = "application/epub+zip",   fg = "#1abcdd" },
+	{ mime = "application/pdf",        fg = "#1abcdd" },
+	{ mime = "application/rtf",        fg = "#1abcdd" },
+	{ mime = "application/vnd.*",      fg = "#1abcdd" },
+	{ name = "*.txt",                  fg = "#1abcdd" },
+	{ name = "*.md",                   fg = "#1abcdd" },
 
 	# ── Temp / lock ───────────────────
 	{ name = "*.tmp", fg = "#47436A" },

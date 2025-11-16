@@ -44,3 +44,58 @@ Name	Gradient
 Solar Core	#6ADED7 → #F4CE71 (Cyan → Gold)
 Stardust Drift	#A895FF → #F4CE71 (Purple → Gold)
 Nightfire	#A895FF → #FF5A6A (Purple → Red)
+
+
+
+#Blue
+#027b9b
+#50a3b5
+#1abcdd
+
+#Pink
+#c94c9c
+#e86fb4
+#ff80c4
+
+#Purple
+#5d4fb2
+#8b73e6
+#b499ff
+
+#Misc
+#fba02f
+#ff5a33
+#424b52
+
+#1e4862 - Hover / Select
+#2d6870 - Active
+#0f2838 - Inactive
+#68d3f0
+
+#System
+#dbe6ff - Text
+#acb8d6 - Muted / Secondary
+#50a3b5 - Border
+#050c11 - Darker background / Shade
+#08131a - Background
+
+#Bright
+#424b52
+#d38677
+#618c98
+#ff94cf
+#1abcdd
+#bbe3ee
+#86abb3
+#ffa7d9
+
+
+
+#1abcdd
+#ff80c4
+#b499ff
+#fba02f
+#ff5a33
+#dbe6ff - Text
+#acb8d6 - Muted / Secondary
+#08131a - Background
