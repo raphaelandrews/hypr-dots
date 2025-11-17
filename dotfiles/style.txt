@@ -88,14 +88,3 @@ Nightfire	#A895FF → #FF5A6A (Purple → Red)
 #bbe3ee
 #86abb3
 #ffa7d9
-
-
-
-#1abcdd
-#ff80c4
-#b499ff
-#fba02f
-#ff5a33
-#dbe6ff - Text
-#acb8d6 - Muted / Secondary
-#08131a - Background
