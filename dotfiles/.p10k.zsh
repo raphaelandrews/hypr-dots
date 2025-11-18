@@ -363,7 +363,7 @@
   #####################################[ vcs: git status ]######################################
   # Version control background colors.
   typeset -g POWERLEVEL9K_VCS_CLEAN_BACKGROUND='#ff80c4' 
-  typeset -g POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='#fba02f' 
+  typeset -g POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='#b499ff' 
   typeset -g POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='#ff80c4' 
   typeset -g POWERLEVEL9K_VCS_CONFLICTED_BACKGROUND='#ff5a33'
   typeset -g POWERLEVEL9K_VCS_LOADING_BACKGROUND='#b499ff'
@@ -544,7 +544,7 @@
   typeset -g POWERLEVEL9K_STATUS_ERROR_SIGNAL_VISUAL_IDENTIFIER_EXPANSION='✘'
   typeset -g POWERLEVEL9K_STATUS_ERROR_SIGNAL_FOREGROUND='#ff5a33'
   typeset -g POWERLEVEL9K_STATUS_ERROR_SIGNAL_BACKGROUND='#050c11'
-
+  
   # Status when some part of a pipe command fails and the overall exit status is also non-zero.
   # It may look like this: 1|0.
   typeset -g POWERLEVEL9K_STATUS_ERROR_PIPE=true
