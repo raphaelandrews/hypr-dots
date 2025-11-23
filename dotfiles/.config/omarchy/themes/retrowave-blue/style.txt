@@ -1,0 +1,42 @@
+#Blue
+#027b9b
+#50a3b5
+#1abcdd
+
+#Pink
+#c94c9c
+#e86fb4
+#ff80c4
+
+#Purple
+#5d4fb2
+#8b73e6
+#b499ff
+
+#Misc
+#fba02f
+#ff5a33
+#424b52
+
+#1e4862 - Hover / Select
+#2d6870 - Active
+#0f2838 - Inactive
+#68d3f0
+
+#System
+#dbe6ff - Text
+#7df9ff - Text Alt
+#acb8d6 - Muted / Secondary
+#50a3b5 - Border
+#050c11 - Darker background / Shade
+#08131a - Background
+
+#Bright
+#424b52
+#d38677
+#618c98
+#ff94cf
+#1abcdd
+#bbe3ee
+#86abb3
+#ffa7d9

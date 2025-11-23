@@ -1,0 +1,91 @@
+# Main background
+theme[main_bg]="#1A1824"
+
+# Main text color
+theme[main_fg]="#BDCBEF"
+
+# Title color for boxes
+theme[title]="#6ADED7"
+
+# Highlight color for keyboard shortcuts
+theme[hi_fg]="#FD76B6"
+
+# Background color of selected items
+theme[selected_bg]="#2A2035"
+
+# Foreground color of selected items
+theme[selected_fg]="#6ADED7"
+
+# Color of inactive/disabled text
+theme[inactive_fg]="#47436A"
+
+# Color of text appearing on top of graphs
+theme[graph_text]="#BDCBEF"
+
+# Misc colors for processes box
+theme[proc_misc]="#6ADED7"
+
+# Cpu box outline color
+theme[cpu_box]="#A895FF"
+
+# Memory/disks box outline color
+theme[mem_box]="#A895FF"
+
+# Net up/down box outline color
+theme[net_box]="#A895FF"
+
+# Processes box outline color
+theme[proc_box]="#A895FF"
+
+# Box divider line and small boxes line color
+theme[div_line]="#47436A"
+
+# Temperature graph colors (Solar Core — Cyan → Gold)
+theme[temp_start]="#6ADED7"
+theme[temp_mid]="#F8C85A"
+theme[temp_end]="#F4CE71"
+
+# CPU graph colors (Neon Horizon — Cyan → Pink → Violet)
+theme[cpu_start]="#6ADED7"
+theme[cpu_mid]="#FD76B6"
+theme[cpu_end]="#A895FF"
+
+# Mem/Disk free meter (Aqua soft beam — Sky → Cyan → Sea-green)
+theme[free_start]="#4AB5E0"
+theme[free_mid]="#6ADED7"
+theme[free_end]="#54D7AE"
+
+# Mem/Disk cached meter (Heatwave — Pink → Gold → Cyan)
+theme[cached_start]="#FD76B6"
+theme[cached_mid]="#F4CE71"
+theme[cached_end]="#6ADED7"
+
+# Mem/Disk available meter (Aurora — Cyan → Violet)
+theme[available_start]="#6ADED7"
+theme[available_mid]="#A895FF"
+theme[available_end]="#6ADED7"
+
+# Mem/Disk used meter (Nightfire — Violet → Red → Pink)
+theme[used_start]="#A895FF"
+theme[used_mid]="#FF5A6A"
+theme[used_end]="#FD76B6"
+
+# Download graph colors (Mirage — Pink → Gold → Cyan)
+theme[download_start]="#FD76B6"
+theme[download_mid]="#F4CE71"
+theme[download_end]="#6ADED7"
+
+# Upload graph colors (Sunset Voltage — Gold → Red → Pink)
+theme[upload_start]="#F4CE71"
+theme[upload_mid]="#FF5A6A"
+theme[upload_end]="#FD76B6"
+
+# Process box color gradient for threads, mem and cpu usage (Etherlight — Violet → Cyan → Gold)
+theme[process_start]="#A895FF"
+theme[process_mid]="#6ADED7"
+theme[process_end]="#F4CE71"
+
+# Alerts
+theme[error]="#FF5A6A"
+theme[warning]="#F4CE71"
+theme[ok]="#6ADED7"
