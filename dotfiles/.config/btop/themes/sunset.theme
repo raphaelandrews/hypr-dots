@@ -1,0 +1,87 @@
+# Theme: Sunset
+
+# Main bg — deep tropical night
+theme[main_bg]="#120913"
+
+# Main text color — warm CRT white
+theme[main_fg]="#FFF2FA"
+
+# Title color for boxes — neon magenta signs
+theme[title]="#E63680"
+
+# Highlight color for keyboard shortcuts — hot pink glow
+theme[hi_fg]="#FF60CE"
+
+# Background color of selected item in processes box — violet spotlight
+theme[selected_bg]="#9D6DFF"
+
+# Foreground color of selected item in processes box — cream text glow
+theme[selected_fg]="#FFF2FA"
+
+# Color of inactive/disabled text — muted rose-lavender
+theme[inactive_fg]="#EBC6DD"
+
+# Color of text appearing on top of graphs
+theme[graph_text]="#FFF2FA"
+
+# Misc colors for processes box including mini CPU graphs, details memory graph and status text
+theme[proc_misc]="#FF60CE"
+
+# Box outlines — dusty neon purple
+theme[cpu_box]="#55315C"
+theme[mem_box]="#55315C"
+theme[net_box]="#55315C"
+theme[proc_box]="#55315C"
+
+# Divider lines
+theme[div_line]="#55315C"
+
+# Temperature graph colors — sunset fire
+theme[temp_start]="#FF8C3A"
+theme[temp_mid]="#FF60CE"
+theme[temp_end]="#9D6DFF"
+
+# CPU graph colors — sunset → neon → night violet
+theme[cpu_start]="#FF8C3A"
+theme[cpu_mid]="#FF60CE"
+theme[cpu_end]="#7342D5"
+
+# Mem/Disk free meter
+theme[free_start]="#FF8C3A"
+theme[free_mid]="#FF60CE"
+theme[free_end]="#9D6DFF"
+
+# Mem/Disk cached meter
+theme[cached_start]="#FF8C3A"
+theme[cached_mid]="#FF60CE"
+theme[cached_end]="#9D6DFF"
+
+# Mem/Disk available meter
+theme[available_start]="#FF8C3A"
+theme[available_mid]="#FF60CE"
+theme[available_end]="#9D6DFF"
+
+# Mem/Disk used meter — intense neon heat
+theme[used_start]="#FF6B5E"
+theme[used_mid]="#FF60CE"
+theme[used_end]="#9D6DFF"
+
+# Download graph colors
+theme[download_start]="#FF60CE"
+theme[download_mid]="#FF8C3A"
+theme[download_end]="#FFF2FA"
+
+# Upload graph colors
+theme[upload_start]="#FF60CE"
+theme[upload_mid]="#9D6DFF"
+theme[upload_end]="#FFF2FA"
+
+# Process box usage gradient — violet → pink → gold
+theme[process_start]="#7342D5"
+theme[process_mid]="#FF60CE"
+theme[process_end]="#FFD676"
+
+# Alerts
+theme[error]="#FF6B5E"
+theme[warning]="#FF8C3A"
+theme[ok]="#FF60CE"

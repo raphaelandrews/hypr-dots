@@ -1,0 +1,45 @@
+:root {
+  /* ─────────── BLUE ─────────── */
+  --blue-1: #027b9b;
+  --blue-2: #50a3b5;
+  --blue-3: #1abcdd;
+
+  /* ─────────── PINK ─────────── */
+  --pink-1: #c94c9c;
+  --pink-2: #e86fb4;
+  --pink-3: #ff80c4;
+
+  /* ─────────── PURPLE ─────────── */
+  --purple-1: #5d4fb2;
+  --purple-2: #8b73e6;
+  --purple-3: #b499ff;
+
+  /* ─────────── MISC ─────────── */
+  --misc-amber: #fba02f;
+  --misc-orange: #ff5a33;
+  --misc-steel: #424b52;
+
+  /* ─────────── UI STATES ─────────── */
+  --state-hover: #1e4862;
+  --state-active: #2d6870;
+  --state-inactive: #0f2838;
+  --state-highlight: #68d3f0;
+
+  /* ─────────── SYSTEM ─────────── */
+  --sys-text: #dbe6ff;
+  --sys-text-alt: #7df9ff;
+  --sys-muted: #acb8d6;
+  --sys-border: #50a3b5;
+  --sys-bg-darkest: #050c11;
+  --sys-bg: #08131a;
+
+  /* ─────────── BRIGHT ─────────── */
+  --bright-1: #424b52;
+  --bright-2: #d38677;
+  --bright-3: #618c98;
+  --bright-4: #ff94cf;
+  --bright-5: #1abcdd;
+  --bright-6: #bbe3ee;
+  --bright-7: #86abb3;
+  --bright-8: #ffa7d9;
+}
