@@ -2,6 +2,6 @@
 deps = []
 
 [[flavor.deps]]
-use = "vaporwave"
+use = "sunsetwave"
 rev = "5f56364"
 hash = "c0bf69ad2c44005892d586e9693993c6"

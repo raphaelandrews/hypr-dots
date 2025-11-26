@@ -3,15 +3,15 @@
   --sunset-orange: #ff8c3a;
   --hot-pink: #ff60ce;
   --neon-magenta: #e63680;
-  --crimson: #ff6b5e;
   --violet: #9d6dff;
   --pastel-yellow: #ffd676;
+  --crimson: #ff6b5e;
 
   /* ---- Misc ---- */
   --electric-cyan: #4df2ff;
   --turquoise: #36ffd0;
   --midnight-blue: #1a0d2e;
-
+  
   /* ---- UI ROLES ---- */
   --accent: var(--hot-pink);
   --highlight: var(--sunset-orange);
