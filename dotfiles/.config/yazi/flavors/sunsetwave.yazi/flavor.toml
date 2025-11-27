@@ -1,167 +1,165 @@
-# Sunsetwave Yazi Theme
 # vim:fileencoding=utf-8:foldmethod=marker
 
 # : Manager {{{
 [mgr]
-cwd = { fg = "#ff8c3a" }                                       # highlight
+cwd = { fg = "#ff8d4e" }
 
 hovered = { reversed = true }
 preview_hovered = { underline = true }
 
 find_keyword  = { fg = "#ff60ce", bold = true, italic = true, underline = true }
-find_position = { fg = "#4df2ff", bg = "reset", bold = true, italic = true }
+find_position = { fg = "#ffb347", bg = "reset", bold = true, italic = true }
 
-marker_copied   = { fg = "#120913", bg = "#4df2ff" }
-marker_cut      = { fg = "#120913", bg = "#ff6b5e" }
-marker_marked   = { fg = "#120913", bg = "#9d6dff" }
+marker_copied   = { fg = "#120913", bg = "#ff8d4e" }
+marker_cut      = { fg = "#120913", bg = "#ff4e3f" }
+marker_marked   = { fg = "#120913", bg = "#c59cff" }
 marker_selected = { fg = "#120913", bg = "#ff60ce" }
 
-count_copied   = { fg = "#fff2fa", bg = "#4df2ff" }
-count_cut      = { fg = "#fff2fa", bg = "#ff6b5e" }
-count_selected = { fg = "#fff2fa", bg = "#ff60ce" }
+count_copied   = { fg = "#ffd7ec", bg = "#ff8d4e" }
+count_cut      = { fg = "#ffd7ec", bg = "#ff4e3f" }
+count_selected = { fg = "#ffd7ec", bg = "#ff60ce" }
 
 border_symbol = "│"
-border_style  = { fg = "#36ffd0" }
+border_style  = { fg = "#c59cff" }
 # : }}}
 
 # : Tabs {{{
 [tabs]
-active   = { fg = "#120913", bg = "#ff8c3a", bold = true }
-inactive = { fg = "#ebc6dd", bg = "#120913" }
+active   = { fg = "#120913", bg = "#ff8d4e", bold = true }
+inactive = { fg = "#b88ca9", bg = "#120913" }
 # : }}}
 
 # : Mode {{{
 [mode]
-normal_main = { fg = "#120913", bg = "#4df2ff", bold = true }
-normal_alt  = { fg = "#4df2ff", bg = "#0c060e" }
+normal_main = { fg = "#120913", bg = "#ff60ce", bold = true }
+normal_alt  = { fg = "#ff60ce", bg = "#0c060e" }
 
-select_main = { fg = "#120913", bg = "#ff60ce", bold = true }
-select_alt  = { fg = "#ff60ce", bg = "#120913" }
+select_main = { fg = "#120913", bg = "#ffb347", bold = true }
+select_alt  = { fg = "#ffb347", bg = "#120913" }
 
-unset_main = { fg = "#120913", bg = "#9d6dff", bold = true }
-unset_alt  = { fg = "#9d6dff", bg = "#120913" }
+unset_main = { fg = "#120913", bg = "#c59cff", bold = true }
+unset_alt  = { fg = "#c59cff", bg = "#120913" }
 # : }}}
 
 # : Status bar {{{
 [status]
-overall = { fg = "#ff8c3a" }
-
+overall = { fg = "#ff8d4e" }
 sep_left  = { open = "", close = "" }
 sep_right = { open = "", close = "" }
 
 progress_label = { fg = "#120913", bold = true }
-progress_normal = { fg = "#120913", bg = "#ff8c3a" }
-progress_error = { fg = "#ff6b5e", bg = "#120913" }
+progress_normal = { fg = "#120913", bg = "#ff8d4e" }
+progress_error = { fg = "#ff4e3f", bg = "#120913" }
 
-perm_sep   = { fg = "#9d6dff" }
-perm_type  = { fg = "#4df2ff" }
+perm_sep   = { fg = "#c59cff" }
+perm_type  = { fg = "#ffb347" }
 perm_read  = { fg = "#ff60ce" }
-perm_write = { fg = "#ff8c3a" }
-perm_exec  = { fg = "#4df2ff" }
+perm_write = { fg = "#ff8d4e" }
+perm_exec  = { fg = "#ffb347" }
 # : }}}
 
 # : Pick {{{
 [pick]
-border   = { fg = "#9d6dff" }
-active   = { fg = "#ff8c3a", bold = true }
+border   = { fg = "#c59cff" }
+active   = { fg = "#ff8d4e", bold = true }
 inactive = {}
 # : }}}
 
 # : Input {{{
 [input]
-border   = { fg = "#9d6dff" }
-title    = { fg = "#ebc6dd" }
+border   = { fg = "#c59cff" }
+title    = { fg = "#b88ca9" }
 value    = {}
 selected = { reversed = true }
 # : }}}
 
 # : Completion {{{
 [cmp]
-border = { fg = "#9d6dff" }
+border = { fg = "#c59cff" }
 # : }}}
 
 # : Tasks {{{
 [tasks]
-border  = { fg = "#9d6dff" }
+border  = { fg = "#c59cff" }
 title   = {}
 hovered = { fg = "#ff60ce", underline = true }
 # : }}}
 
 # : Which {{{
 [which]
-mask      = { bg = "#0c060e" }
-cand      = { fg = "#4df2ff" }
-rest      = { fg = "#ebc6dd" }
+mask      = { bg = "#261220" }
+cand      = { fg = "#ffb347" }
+rest      = { fg = "#b88ca9" }
 desc      = { fg = "#ff60ce" }
 separator       = "  "
-separator_style = { fg = "#9d6dff" }
+separator_style = { fg = "#c59cff" }
 # : }}}
 
 # : Help {{{
 [help]
-on      = { fg = "#4df2ff" }
-run     = { fg = "#4df2ff" }
+on      = { fg = "#ffb347" }
+run     = { fg = "#ffb347" }
 hovered = { reversed = true, bold = true }
 footer  = { fg = "#120913", bg = "#ff60ce" }
 # : }}}
 
 # : Notify {{{
 [notify]
-title_info  = { fg = "#4df2ff" }
-title_warn  = { fg = "#ff8c3a" }
-title_error = { fg = "#ff6b5e" }
+title_info  = { fg = "#ffb347" }
+title_warn  = { fg = "#ff8d4e" }
+title_error = { fg = "#ff4e3f" }
 
-info  = { fg = "#120913", bg = "#4df2ff" }
-warn  = { fg = "#120913", bg = "#ff8c3a" }
-error = { fg = "#120913", bg = "#ff6b5e" }
+info  = { fg = "#120913", bg = "#ffb347" }
+warn  = { fg = "#120913", bg = "#ff8d4e" }
+error = { fg = "#120913", bg = "#ff4e3f" }
 # : }}}
 
 # : Preview {{{
 [preview]
-title  = { fg = "#9d6dff", bold = true }
-border = { fg = "#9d6dff" }
+title  = { fg = "#c59cff", bold = true }
+border = { fg = "#c59cff" }
 # : }}}
 
 # : File-specific styles {{{
 [filetype]
 rules = [
-  { name = "*/", fg = "#4df2ff", bold = true },
+  { name = "*/", fg = "#ffb347", bold = true },
 
-  { mime = "application/x-executable", fg = "#ff8c3a", bold = true },
-  { name = "*.sh", fg = "#ff8c3a", bold = true },
-  { name = "*.bin", fg = "#ff8c3a", bold = true },
+  { mime = "application/x-executable", fg = "#ff8d4e", bold = true },
+  { name = "*.sh", fg = "#ff8d4e", bold = true },
+  { name = "*.bin", fg = "#ff8d4e", bold = true },
 
-  { mime = "application/zip",             fg = "#9d6dff" },
-  { mime = "application/x-tar",           fg = "#9d6dff" },
-  { mime = "application/x-bzip*",         fg = "#9d6dff" },
-  { mime = "application/x-bzip2",         fg = "#9d6dff" },
-  { mime = "application/x-7z-compressed", fg = "#9d6dff" },
-  { mime = "application/x-rar",           fg = "#9d6dff" },
-  { mime = "application/x-xz",            fg = "#9d6dff" },
+  { mime = "application/zip",             fg = "#c59cff" },
+  { mime = "application/x-tar",           fg = "#c59cff" },
+  { mime = "application/x-bzip*",         fg = "#c59cff" },
+  { mime = "application/x-bzip2",         fg = "#c59cff" },
+  { mime = "application/x-7z-compressed", fg = "#c59cff" },
+  { mime = "application/x-rar",           fg = "#c59cff" },
+  { mime = "application/x-xz",            fg = "#c59cff" },
 
-  { name = ".*", fg = "#ebc6dd", italic = true },
+  { name = ".*", fg = "#b88ca9", italic = true },
 
-  { name = "*.c",   fg = "#86abb3" },
-  { name = "*.cpp", fg = "#86abb3" },
-  { name = "*.rs",  fg = "#86abb3" },
-  { name = "*.go",  fg = "#86abb3" },
-  { name = "*.py",  fg = "#86abb3" },
-  { name = "*.ts",  fg = "#86abb3" },
-  { name = "*.js",  fg = "#86abb3" },
-  { name = "*.lua", fg = "#86abb3" },
+  { name = "*.c",   fg = "#e5b6c9" },
+  { name = "*.cpp", fg = "#e5b6c9" },
+  { name = "*.rs",  fg = "#e5b6c9" },
+  { name = "*.go",  fg = "#e5b6c9" },
+  { name = "*.py",  fg = "#e5b6c9" },
+  { name = "*.ts",  fg = "#e5b6c9" },
+  { name = "*.js",  fg = "#e5b6c9" },
+  { name = "*.lua", fg = "#e5b6c9" },
 
   { mime = "image/*", fg = "#ff60ce" },
   { mime = "video/*", fg = "#ff60ce" },
   { mime = "audio/*", fg = "#ff60ce" },
 
-  { mime = "application/*", fg = "#36ffd0" },
-  { name = "*.txt", fg = "#36ffd0" },
-  { name = "*.md",  fg = "#36ffd0" },
+  { mime = "application/pdf", fg = "#ffd7ec" },
+  { name = "*.txt",          fg = "#ffd7ec" },
+  { name = "*.md",           fg = "#ffd7ec" },
 
-  { name = "*.tmp",  fg = "#424b52" },
-  { name = "*.lock", fg = "#424b52" },
-  { name = "*~",     fg = "#424b52" },
+  { name = "*.tmp", fg = "#4b3943" },
+  { name = "*.lock", fg = "#4b3943" },
+  { name = "*~", fg = "#4b3943" },
 
-  { mime = "*", fg = "#fff2fa" }
+  { mime = "*", fg = "#ffd7ec" }
 ]
 # : }}}
