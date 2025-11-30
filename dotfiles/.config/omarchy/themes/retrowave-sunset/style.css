@@ -14,8 +14,7 @@
   
   /* ---- UI ROLES ---- */
   --accent: var(--hot-pink);
-  --highlight: var(--sunset-orange);
-  --notice: #ffbb3e;
+  --highlight: var(--sunset-orange); --notice: #ffbb3e;
   --focus: var(--violet);
   --bg: #120913;
   --bg-dark: #0c060e;

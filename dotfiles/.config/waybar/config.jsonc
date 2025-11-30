@@ -143,11 +143,7 @@
     "modules": [
       "custom/expand-icon",
       "tray",
-      "temperature",
-      "memory#total",
-      "memory#percent",
-      "cpu",
-      "custom/weather"
+      "bluetooth"
     ]
   },
   "custom/expand-icon": {
@@ -157,69 +153,6 @@
   "tray": {
     "icon-size": 12,
     "spacing": 12
-  },
-  "temperature": {
-    "thermal-zone": 1,
-    "critical-threshold": 90,
-    "interval": 10,
-    "format-critical": "󰀦 {temperatureC}°C",
-    "format": "{icon} {temperatureC}°C",
-    "format-icons": [
-      "󱃃",
-      "󰔏",
-      "󱃂"
-    ],
-    "min-length": 8,
-    "max-length": 8,
-    "tooltip-format": "Temp in Fahrenheit: {temperatureF}°F"
-  },
-  "memory#total": {
-    "interval": 10,
-    "format": " {used:0.1f}gb",
-    "format-warning": "󰀧 {used:0.1f}gb",
-    "format-critical": "󰀧 {used:0.1f}gb",
-    "states": {
-      "warning": 75,
-      "critical": 90
-    },
-    "min-length": 7,
-    "max-length": 20,
-    "tooltip-format": "Memory Used: {used:0.1f} GB / {total:0.1f} GB",
-    "on-click": "omarchy-launch-or-focus-tui btop"
-  },
-  "memory#percent": {
-    "interval": 10,
-    "format": "󰘚 {percentage}%",
-    "format-warning": "󰀧 {percentage}%",
-    "format-critical": "󰀧 {percentage}%",
-    "states": {
-      "warning": 75,
-      "critical": 90
-    },
-    "min-length": 7,
-    "max-length": 20,
-    "tooltip-format": "Memory Used: {percentage}% / {total:0.1f} GB",
-    "on-click": "omarchy-launch-or-focus-tui btop"
-  },
-  "cpu": {
-    "interval": 10,
-    "format": "󰍛 {usage}%",
-    "format-warning": "󰀨 {usage}%",
-    "format-critical": "󰀨 {usage}%",
-    "min-length": 7,
-    "max-length": 7,
-    "states": {
-      "warning": 75,
-      "critical": 90
-    },
-    "tooltip": false
-  },
-  "custom/weather": {
-    "format": "{}°",
-    "tooltip": true,
-    "interval": 600,
-    "exec": "wttrbar",
-    "return-type": "json"
   },
   "network": {
     "format-icons": [
