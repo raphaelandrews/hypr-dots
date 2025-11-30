@@ -1,0 +1,165 @@
+# vim:fileencoding=utf-8:foldmethod=marker
+
+# : Manager {{{
+[mgr]
+cwd = { fg = "#ff8d4e" }
+
+hovered = { reversed = true }
+preview_hovered = { underline = true }
+
+find_keyword  = { fg = "#ff60ce", bold = true, italic = true, underline = true }
+find_position = { fg = "#ffb347", bg = "reset", bold = true, italic = true }
+
+marker_copied   = { fg = "#120913", bg = "#ff8d4e" }
+marker_cut      = { fg = "#120913", bg = "#ff4e3f" }
+marker_marked   = { fg = "#120913", bg = "#c59cff" }
+marker_selected = { fg = "#120913", bg = "#ff60ce" }
+
+count_copied   = { fg = "#ffd7ec", bg = "#ff8d4e" }
+count_cut      = { fg = "#ffd7ec", bg = "#ff4e3f" }
+count_selected = { fg = "#ffd7ec", bg = "#ff60ce" }
+
+border_symbol = "│"
+border_style  = { fg = "#c59cff" }
+# : }}}
+
+# : Tabs {{{
+[tabs]
+active   = { fg = "#120913", bg = "#ff8d4e", bold = true }
+inactive = { fg = "#b88ca9", bg = "#120913" }
+# : }}}
+
+# : Mode {{{
+[mode]
+normal_main = { fg = "#120913", bg = "#ff60ce", bold = true }
+normal_alt  = { fg = "#ff60ce", bg = "#0c060e" }
+
+select_main = { fg = "#120913", bg = "#ffb347", bold = true }
+select_alt  = { fg = "#ffb347", bg = "#120913" }
+
+unset_main = { fg = "#120913", bg = "#c59cff", bold = true }
+unset_alt  = { fg = "#c59cff", bg = "#120913" }
+# : }}}
+
+# : Status bar {{{
+[status]
+overall = { fg = "#ff8d4e" }
+sep_left  = { open = "", close = "" }
+sep_right = { open = "", close = "" }
+
+progress_label = { fg = "#120913", bold = true }
+progress_normal = { fg = "#120913", bg = "#ff8d4e" }
+progress_error = { fg = "#ff4e3f", bg = "#120913" }
+
+perm_sep   = { fg = "#c59cff" }
+perm_type  = { fg = "#ffb347" }
+perm_read  = { fg = "#ff60ce" }
+perm_write = { fg = "#ff8d4e" }
+perm_exec  = { fg = "#ffb347" }
+# : }}}
+
+# : Pick {{{
+[pick]
+border   = { fg = "#c59cff" }
+active   = { fg = "#ff8d4e", bold = true }
+inactive = {}
+# : }}}
+
+# : Input {{{
+[input]
+border   = { fg = "#c59cff" }
+title    = { fg = "#b88ca9" }
+value    = {}
+selected = { reversed = true }
+# : }}}
+
+# : Completion {{{
+[cmp]
+border = { fg = "#c59cff" }
+# : }}}
+
+# : Tasks {{{
+[tasks]
+border  = { fg = "#c59cff" }
+title   = {}
+hovered = { fg = "#ff60ce", underline = true }
+# : }}}
+
+# : Which {{{
+[which]
+mask      = { bg = "#261220" }
+cand      = { fg = "#ffb347" }
+rest      = { fg = "#b88ca9" }
+desc      = { fg = "#ff60ce" }
+separator       = "  "
+separator_style = { fg = "#c59cff" }
+# : }}}
+
+# : Help {{{
+[help]
+on      = { fg = "#ffb347" }
+run     = { fg = "#ffb347" }
+hovered = { reversed = true, bold = true }
+footer  = { fg = "#120913", bg = "#ff60ce" }
+# : }}}
+
+# : Notify {{{
+[notify]
+title_info  = { fg = "#ffb347" }
+title_warn  = { fg = "#ff8d4e" }
+title_error = { fg = "#ff4e3f" }
+
+info  = { fg = "#120913", bg = "#ffb347" }
+warn  = { fg = "#120913", bg = "#ff8d4e" }
+error = { fg = "#120913", bg = "#ff4e3f" }
+# : }}}
+
+# : Preview {{{
+[preview]
+title  = { fg = "#c59cff", bold = true }
+border = { fg = "#c59cff" }
+# : }}}
+
+# : File-specific styles {{{
+[filetype]
+rules = [
+  { name = "*/", fg = "#ffb347", bold = true },
+
+  { mime = "application/x-executable", fg = "#ff8d4e", bold = true },
+  { name = "*.sh", fg = "#ff8d4e", bold = true },
+  { name = "*.bin", fg = "#ff8d4e", bold = true },
+
+  { mime = "application/zip",             fg = "#c59cff" },
+  { mime = "application/x-tar",           fg = "#c59cff" },
+  { mime = "application/x-bzip*",         fg = "#c59cff" },
+  { mime = "application/x-bzip2",         fg = "#c59cff" },
+  { mime = "application/x-7z-compressed", fg = "#c59cff" },
+  { mime = "application/x-rar",           fg = "#c59cff" },
+  { mime = "application/x-xz",            fg = "#c59cff" },
+
+  { name = ".*", fg = "#b88ca9", italic = true },
+
+  { name = "*.c",   fg = "#e5b6c9" },
+  { name = "*.cpp", fg = "#e5b6c9" },
+  { name = "*.rs",  fg = "#e5b6c9" },
+  { name = "*.go",  fg = "#e5b6c9" },
+  { name = "*.py",  fg = "#e5b6c9" },
+  { name = "*.ts",  fg = "#e5b6c9" },
+  { name = "*.js",  fg = "#e5b6c9" },
+  { name = "*.lua", fg = "#e5b6c9" },
+
+  { mime = "image/*", fg = "#ff60ce" },
+  { mime = "video/*", fg = "#ff60ce" },
+  { mime = "audio/*", fg = "#ff60ce" },
+
+  { mime = "application/pdf", fg = "#ffd7ec" },
+  { name = "*.txt",          fg = "#ffd7ec" },
+  { name = "*.md",           fg = "#ffd7ec" },
+
+  { name = "*.tmp", fg = "#4b3943" },
+  { name = "*.lock", fg = "#4b3943" },
+  { name = "*~", fg = "#4b3943" },
+
+  { mime = "*", fg = "#ffd7ec" }
+]
+# : }}}

@@ -1,0 +1,180 @@
+# vim:fileencoding=utf-8:foldmethod=marker
+
+# : Manager {{{
+[mgr]
+cwd = { fg = "#fba02f" }
+
+hovered = { reversed = true }
+preview_hovered = { underline = true }
+
+find_keyword  = { fg = "#ff80c4", bold = true, italic = true, underline = true }
+find_position = { fg = "#1abcdd", bg = "reset", bold = true, italic = true }
+
+marker_copied   = { fg = "#08131a", bg = "#1abcdd" }
+marker_cut      = { fg = "#08131a", bg = "#ff5a33" }
+marker_marked   = { fg = "#08131a", bg = "#b499ff" }
+marker_selected = { fg = "#08131a", bg = "#ff80c4" }
+
+count_copied   = { fg = "#dbe6ff", bg = "#1abcdd" }
+count_cut      = { fg = "#dbe6ff", bg = "#ff5a33" }
+count_selected = { fg = "#dbe6ff", bg = "#ff80c4" }
+
+border_symbol = "│"
+border_style  = { fg = "#50a3b5" }
+# : }}}
+
+# : Tabs {{{
+[tabs]
+active   = { fg = "#08131a", bg = "#fba02f", bold = true }
+inactive = { fg = "#acb8d6", bg = "#08131a" }
+# : }}}
+
+# : Mode {{{
+[mode]
+normal_main = { fg = "#08131a", bg = "#1abcdd", bold = true }
+normal_alt  = { fg = "#1abcdd", bg = "#050c11" }
+
+select_main = { fg = "#08131a", bg = "#ff80c4", bold = true }
+select_alt  = { fg = "#ff80c4", bg = "#08131a" }
+
+unset_main = { fg = "#08131a", bg = "#b499ff", bold = true }
+unset_alt  = { fg = "#b499ff", bg = "#08131a" }
+# : }}}
+
+# : Status bar {{{
+[status]
+overall = { fg = "#fba02f" }
+sep_left  = { open = "", close = "" }
+sep_right = { open = "", close = "" }
+
+progress_label = { fg = "#08131a", bold = true }
+progress_normal = { fg = "#08131a", bg = "#fba02f" }
+progress_error = { fg = "#ff5a33", bg = "#08131a" }
+
+perm_sep   = { fg = "#b499ff" }
+perm_type  = { fg = "#1abcdd" }
+perm_read  = { fg = "#ff80c4" }
+perm_write = { fg = "#fba02f" }
+perm_exec  = { fg = "#1abcdd" }
+# : }}}
+
+# : Pick {{{
+[pick]
+border   = { fg = "#b499ff" }
+active   = { fg = "#fba02f", bold = true }
+inactive = {}
+# : }}}
+
+# : Input {{{
+[input]
+border   = { fg = "#b499ff" }
+title    = { fg = "#acb8d6" }
+value    = {}
+selected = { reversed = true }
+# : }}}
+
+# : Completion {{{
+[cmp]
+border = { fg = "#b499ff" }
+# : }}}
+
+# : Tasks {{{
+[tasks]
+border  = { fg = "#b499ff" }
+title   = {}
+hovered = { fg = "#ff80c4", underline = true }
+# : }}}
+
+# : Which {{{
+[which]
+mask      = { bg = "#0f2838" }
+cand      = { fg = "#1abcdd" }
+rest      = { fg = "#acb8d6" }
+desc      = { fg = "#ff80c4" }
+separator       = "  "
+separator_style = { fg = "#b499ff" }
+# : }}}
+
+# : Help {{{
+[help]
+on      = { fg = "#1abcdd" }
+run     = { fg = "#1abcdd" }
+hovered = { reversed = true, bold = true }
+footer  = { fg = "#08131a", bg = "#ff80c4" }
+# : }}}
+
+# : Notify {{{
+[notify]
+title_info  = { fg = "#1abcdd" }
+title_warn  = { fg = "#fba02f" }
+title_error = { fg = "#ff5a33" }
+
+info  = { fg = "#08131a", bg = "#1abcdd" }
+warn  = { fg = "#08131a", bg = "#fba02f" }
+error = { fg = "#08131a", bg = "#ff5a33" }
+# : }}}
+
+# : Preview {{{
+[preview]
+title  = { fg = "#b499ff", bold = true }
+border = { fg = "#b499ff" }
+# : }}}
+
+# : File-specific styles {{{
+[filetype]
+rules = [
+	# ── Folders ───────────────────────
+  { name = "*/", fg = "#1abcdd", bold = true },
+
+	# ── Executables ───────────────────
+  { mime = "application/x-executable", fg = "#fba02f", bold = true },
+	{ name = "*.sh", fg = "#fba02f", bold = true },
+	{ name = "*.bin", fg = "#fba02f", bold = true },
+
+	# ── Archives ──────────────────────
+	{ mime = "application/zip",             fg = "#b499ff" },
+	{ mime = "application/x-tar",           fg = "#b499ff" },
+	{ mime = "application/x-bzip*",         fg = "#b499ff" },
+	{ mime = "application/x-bzip2",         fg = "#b499ff" },
+	{ mime = "application/x-7z-compressed", fg = "#b499ff" },
+	{ mime = "application/x-rar",           fg = "#b499ff" },
+	{ mime = "application/x-xz",            fg = "#b499ff" },
+
+	# ── Dotfiles ──────────────────────
+  { name = ".*", fg = "#acb8d6", italic = true },
+
+	# ── Code ──────────────────────────
+	{ name = "*.c",   fg = "#86abb3" },
+	{ name = "*.cpp", fg = "#86abb3" },
+	{ name = "*.rs",  fg = "#86abb3" },
+	{ name = "*.go",  fg = "#86abb3" },
+	{ name = "*.py",  fg = "#86abb3" },
+	{ name = "*.ts",  fg = "#86abb3" },
+	{ name = "*.js",  fg = "#86abb3" },
+	{ name = "*.lua", fg = "#86abb3" },
+
+	# ── Images ────────────────────────
+  { mime = "image/*", fg = "#ff80c4" },
+
+	# ── Media ─────────────────────────
+  { mime = "video/*", fg = "#ff80c4" },
+  { mime = "audio/*", fg = "#ff80c4" },
+
+	# ── Documents ─────────────────────
+	{ mime = "application/doc",        fg = "#bbe3ee" },
+	{ mime = "application/epub+zip",   fg = "#bbe3ee" },
+	{ mime = "application/pdf",        fg = "#bbe3ee" },
+	{ mime = "application/rtf",        fg = "#bbe3ee" },
+	{ mime = "application/vnd.*",      fg = "#bbe3ee" },
+	{ name = "*.txt",                  fg = "#bbe3ee" },
+	{ name = "*.md",                   fg = "#bbe3ee" },
+
+	# ── Temp / lock ───────────────────
+  { name = "*.tmp", fg = "#424b52" },
+	{ name = "*.lock", fg = "#424b52" },
+	{ name = "*~", fg = "#424b52" },
+
+	# ── Default ──────────────────────
+  { mime = "*", fg = "#dbe6ff" }
+]
+# : }}}

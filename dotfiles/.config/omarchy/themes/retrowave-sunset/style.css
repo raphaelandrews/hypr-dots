@@ -1,0 +1,42 @@
+:root {
+  /* ---- Main Tones ---- */
+  --sunset-orange: #ff8c3a;
+  --hot-pink: #ff60ce;
+  --neon-magenta: #e63680;
+  --violet: #9d6dff;
+  --pastel-yellow: #ffd676;
+  --crimson: #ff6b5e;
+
+  /* ---- Misc ---- */
+  --electric-cyan: #4df2ff;
+  --turquoise: #36ffd0;
+  --midnight-blue: #1a0d2e;
+  
+  /* ---- UI ROLES ---- */
+  --accent: var(--hot-pink);
+  --highlight: var(--sunset-orange); --notice: #ffbb3e;
+  --focus: var(--violet);
+  --bg: #120913;
+  --bg-dark: #0c060e;
+  --border: #55315c;
+  --text: #fff2fa;
+  --text-muted: #ebc6dd;
+
+  /* ---- Soft GRADIENTS ---- */
+  --grad-amber-1: #ffaa4e;
+  --grad-amber-2: #ff8c3a;
+  --grad-amber-3: #ff6c2b;
+
+  --grad-ocean-1: #ff3f97;
+  --grad-ocean-2: #b07aff;
+  --grad-ocean-3: #7342d5;
+
+  /* ---- Cinematic Blends ---- */
+  --grad-laserwave: linear-gradient(90deg, #e32168, #b07aff);
+  --grad-nightfire: linear-gradient(90deg, #b07aff, #e7393f);
+  --grad-horizon-burn: linear-gradient(90deg, #ff8c3a, #e32168);
+
+  --grad-pacific-dusk: linear-gradient(90deg, #ffaa4e, #ff3f97, #b07aff);
+  --grad-starlit-tide: linear-gradient(90deg, #b07aff, #7342d5, #120913);
+  --grad-mirage-sunset: linear-gradient(90deg, #ff3f97, #ff8c3a, #fff2fa);
+}

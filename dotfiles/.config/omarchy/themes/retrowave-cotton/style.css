@@ -1,0 +1,48 @@
+/* ================================
+   🌈 Cotton — CSS VARIABLES
+   ================================ */
+:root {
+  /* ---- MAIN TONES ---- */
+  --blue-green: #6ADED7;
+  --magenta: #FD76B6;
+  --orange-yellow: #F4CE71;
+  --violet: #A895FF;
+  --red: #FF5A6A;
+
+  /* ---- FULL / UI ROLES ---- */
+  --accent: #6ADED7;
+  --highlight: #FD76B6;
+  --notice: #F4CE71;
+  --focus: #A895FF;
+  --bg: #1A1824;
+  --bg-dark: #2A2035;
+  --border: #47436A;
+  --text: #BDCBEF;
+  --text-muted: #B9B3D9;
+
+  /* 🍦 Soft */
+  --grad-amber-1: #F6A944;
+  --grad-amber-2: #F8C85A;
+  --grad-amber-3: #F4CE71;
+
+  --grad-ocean-1: #4AB5E0;
+  --grad-ocean-2: #6ADED7;
+  --grad-ocean-3: #54D7AE;
+
+  /* 🎨 Blend gradients */
+  /* 🔥 Category 1 — Opposite / Dual-energy */
+  --grad-aurora: linear-gradient(90deg, #6ADED7, #A895FF);
+  --grad-laserwave: linear-gradient(90deg, #FD76B6, #6ADED7);
+  --grad-sunset-voltage: linear-gradient(90deg, #F4CE71, #FF5A6A);
+  --grad-heatwave: linear-gradient(90deg, #FF5A6A, #FD76B6);
+
+  /* 🌅 Category 2 — Triadic blends */
+  --grad-neon-horizon: linear-gradient(90deg, #6ADED7, #FD76B6, #A895FF);
+  --grad-mirage: linear-gradient(90deg, #FD76B6, #F4CE71, #6ADED7);
+  --grad-etherlight: linear-gradient(90deg, #A895FF, #6ADED7, #F4CE71);
+
+  /* 🌈 Category 3 — Cold ↔ Warm arcs */
+  --grad-solar-core: linear-gradient(90deg, #6ADED7, #F4CE71);
+  --grad-stardust-drift: linear-gradient(90deg, #A895FF, #F4CE71);
+  --grad-nightfire: linear-gradient(90deg, #A895FF, #FF5A6A);
+}

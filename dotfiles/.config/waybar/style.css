@@ -98,7 +98,7 @@ tooltip {
 
 #taskbar button:hover,
 #taskbar button.active {
-  background-color: @hover-bg;
+  background-color: transparent;
   transition: all 0.5s ease-out;
 }
 
@@ -166,6 +166,7 @@ mpris.empty {
 #pulseaudio {
   padding: 0 3 0 0;
 }
+
 #custom-audio {
   margin: 0 10px 0 10px;
 }
