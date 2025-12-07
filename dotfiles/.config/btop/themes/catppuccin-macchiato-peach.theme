@@ -28,7 +28,7 @@ theme[meter_bg]="#494d64"
 # Misc process box text / mini graphs
 theme[proc_misc]="#f0c6c6"  
 
-# Box outline colors (swapped to warm accents)
+# Box outline colors
 theme[cpu_box]="#f5bde6"  
 theme[mem_box]="#f5a97f" 
 theme[net_box]="#ee99a0"  
@@ -37,47 +37,52 @@ theme[proc_box]="#ed8796"
 # Divider lines
 theme[div_line]="#6e738d" 
 
-# Temperature graph (warm ramp)
+# Temperature graph
 theme[temp_start]="#f5a97f" 
 theme[temp_mid]="#eed49f"
 theme[temp_end]="#ed8796"  
 
-# CPU graph colors (kept cool for readability contrast)
-theme[cpu_start]="#8bd5ca"  
-theme[cpu_mid]="#7dc4e4"   
-theme[cpu_end]="#b7bdf8"  
+# CPU graph colors
+theme[cpu_start]="#f0c6c6"
+theme[cpu_mid]="#f5a97f"
+theme[cpu_end]="#ed8796"
 
-# Free meter (warmened)
-theme[free_start]="#f5bde6" 
-theme[free_mid]="#c6a0f6" 
-theme[free_end]="#8aadf4"
+# Free meter
+theme[free_start]="#ee99a0" 
+theme[free_mid]="#f5a97f" 
+theme[free_end]="#eed49f"
 
 # Cached meter
-theme[cached_start]="#7dc4e4"
-theme[cached_mid]="#8aadf4"
-theme[cached_end]="#b7bdf8"  
+theme[cached_start]="#7dc4e4" 
+theme[cached_mid]="#8aadf4" 
+theme[cached_end]="#b7bdf8"
 
-# Available meter (warm)
+# Available meter
 theme[available_start]="#f5a97f"
 theme[available_mid]="#ee99a0"    
 theme[available_end]="#ed8796"  
 
 # Used meter
-theme[used_start]="#a6da95"  
-theme[used_mid]="#8bd5ca"   
-theme[used_end]="#91d7e3"  
+theme[used_start]="#a6da95" 
+theme[used_mid]="#8bd5ca" 
+theme[used_end]="#91d7e3"
 
-# Download graph (warm ramp)
+# Download graph
 theme[download_start]="#f5a97f" 
 theme[download_mid]="#ee99a0"  
 theme[download_end]="#ed8796" 
 
-# Upload graph (kept default cool)
-theme[upload_start]="#a6da95"  
-theme[upload_mid]="#8bd5ca"  
-theme[upload_end]="#91d7e3"   
+# Upload graph 
+theme[upload_start]="#a6da95" 
+theme[upload_mid]="#8bd5ca" 
+theme[upload_end]="#91d7e3"
 
-# Process box gradient (slightly warm)
-theme[process_start]="#f0c6c6" 
-theme[process_mid]="#f5bde6"   
-theme[process_end]="#c6a0f6"  
+# Process box gradient 
+theme[process_start]="#f4dbd6"  
+theme[process_mid]="#f0c6c6" 
+theme[process_end]="#f5bde6" 
+
+# Alerts
+theme[error]="#ed8796"
+theme[warning]="#eed49f"
+theme[ok]="#8bd5ca"
