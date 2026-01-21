@@ -179,3 +179,6 @@ push() {
 
   git push
 }
+
+# opencode
+export PATH=/home/raphael/.opencode/bin:$PATH
