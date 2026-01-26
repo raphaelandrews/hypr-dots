@@ -160,7 +160,7 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 # To customize prompt, run `p10k configure` or edit ~/Documents/projects/hypr-dots/dotfiles/.p10k.zsh.
 [[ ! -f ~/Documents/projects/hypr-dots/dotfiles/.p10k.zsh ]] || source ~/Documents/projects/hypr-dots/dotfiles/.p10k.zsh
 
-# Lazy push
+# Lazy-push
 push() {
   if [[ $# -eq 0 ]]; then
     echo "❌ Error: Please provide a commit message."
