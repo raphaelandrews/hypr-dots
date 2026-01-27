@@ -160,42 +160,21 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 # To customize prompt, run `p10k configure` or edit ~/Documents/projects/hypr-dots/dotfiles/.p10k.zsh.
 [[ ! -f ~/Documents/projects/hypr-dots/dotfiles/.p10k.zsh ]] || source ~/Documents/projects/hypr-dots/dotfiles/.p10k.zsh
 
-# Lazy-push
+# Lazy push
 push() {
-  if [[ $# -eq 0 ]]; then
-    echo "❌ Error: Please provide a commit message."
-    return 1
-  fi
-
-  local msg="$*"
-  local branch=$(git rev-parse --abbrev-ref HEAD)
-  local file_count=$(git diff --cached --name-only | wc -l)
-
-  if [[ "$branch" == "main" || "$branch" == "master" ]]; then
-    echo -n "⚠️  Pushing to $branch. Are you sure? (y/n) "
-    read -r confirm
-    [[ "$confirm" != "y" ]] && echo "🛑 Aborted." && return 1
-  fi
-
-  git add .
-
-  if git commit -m "$msg"; then
-    if git push; then
-      echo "🎉 Success! Pushed to $branch."
-      
-      notify-send "Git Success" "Pushed to $branch\n$file_count files changed" \
-        --app-name="Git-Push" \
-        --icon=git \
-        --urgency=low
-    else
-      echo "❌ Push failed."
-      notify-send "Git Error" "Push to $branch failed" --urgency=critical
-      return 1
+    if [[ $# -eq 0 ]]; then
+        echo "❌ Error: Please provide a commit message."
+        return 1
     fi
-  else
-    echo "❌ Commit failed."
-    return 1
-  fi
+    
+    local branch=$(git rev-parse --abbrev-ref HEAD)
+    if [[ "$branch" == "main" || "$branch" == "master" ]]; then
+        echo -n "⚠️  Pushing to $branch. Continue? (y/n) "
+        read -r confirm
+        [[ "$confirm" != "y" ]] && echo "🛑 Aborted." && return 1
+    fi
+    
+    git add . && git commit -m "$*" && git push && echo "🎉 Pushed to $branch!"
 }
 
 # opencode
