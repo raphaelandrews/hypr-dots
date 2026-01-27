@@ -170,7 +170,8 @@ push() {
     local branch=$(git rev-parse --abbrev-ref HEAD)
     if [[ "$branch" == "main" || "$branch" == "master" ]]; then
         echo -n "⚠️  Pushing to $branch. Continue? (y/n) "
-        read -r confirm
+        read -k 1 confirm
+        echo
         [[ "$confirm" != "y" ]] && echo "🛑 Aborted." && return 1
     fi
     
