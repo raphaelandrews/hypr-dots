@@ -184,3 +184,7 @@ export PATH=/home/raphael/.opencode/bin:$PATH
 
 # Force tmux to use 256 colors for P10k icons
 alias tmux="tmux -2"
+
+#zoxide
+eval "$(zoxide init zsh)"
+eval "$(zoxide init zsh --cmd cd)"
