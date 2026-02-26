@@ -10,13 +10,13 @@
       "right": 6
     },
     "color": {
-      "1": "#8aadf4",
-      "2": "#b7bdf8"
+      "1": "#F8B115",
+      "2": "#40A02B"
     }
   },
   "display": {
     "color": {
-      "separator": "#8bd5ca"
+      "separator": "#1E66F5"
     },
     "separator": " ",
     "constants": [
@@ -28,106 +28,105 @@
     {
       "type": "title",
       "key": " PC",
-      "keyColor": "#8aadf4"
+      "keyColor": "#F8B115"
     },
     {
       "type": "cpu",
       "key": " ",
       "showPeCoreCount": true,
-      "keyColor": "#8aadf4"
+      "keyColor": "#F8B115"
     },
     {
       "type": "gpu",
       "key": " ",
       "detectionMethod": "pci",
-      "keyColor": "#8aadf4"
+      "keyColor": "#F8B115"
     },
     {
       "type": "display",
       "key": "󱄄 ",
-      "keyColor": "#8aadf4"
+      "keyColor": "#F8B115"
     },
     {
       "type": "disk",
       "key": "󰋊 ",
-      "keyColor": "#8aadf4"
+      "keyColor": "#F8B115"
     },
     {
       "type": "memory",
       "key": " ",
-      "keyColor": "#8aadf4"
+      "keyColor": "#F8B115"
     },
     {
       "type": "swap",
       "key": "󰓡 ",
-      "keyColor": "#8aadf4"
+      "keyColor": "#F8B115"
     },
     "break",
     {
       "type": "command",
       "key": "󰣇 OS",
-      "keyColor": "#b7bdf8",
+      "keyColor": "#40A02B",
       "text": "version=$(omarchy-version); echo \"Omarchy $version\""
     },
     {
       "type": "command",
       "key": "󰘬 ",
-      "keyColor": "#b7bdf8",
+      "keyColor": "#40A02B",
       "text": "branch=$(omarchy-version-branch); echo \"$branch\""
     },
     {
       "type": "kernel",
       "key": " ",
-      "keyColor": "#b7bdf8"
+      "keyColor": "#40A02B"
     },
     {
       "type": "wm",
       "key": " ",
-      "keyColor": "#b7bdf8"
+      "keyColor": "#40A02B"
     },
     {
       "type": "de",
       "key": " DE ",
-      "keyColor": "#b7bdf8"
+      "keyColor": "#40A02B"
     },
     {
       "type": "terminal",
       "key": " ",
-      "keyColor": "#b7bdf8"
+      "keyColor": "#40A02B"
     },
     {
       "type": "packages",
       "key": "󰏖 ",
-      "keyColor": "#b7bdf8"
+      "keyColor": "#40A02B"
     },
     {
       "type": "wmtheme",
       "key": "󰉼 ",
-      "keyColor": "#b7bdf8"
+      "keyColor": "#40A02B"
     },
     {
       "type": "command",
       "key": "󰸌 ",
-      "keyColor": "#b7bdf8",
-      "text": "theme=$(omarchy-theme-current); echo -e \"$theme \\e[38;2;145;215;227m●\\e[38;2;125;196;228m●\\e[38;2;138;173;244m●\\e[38;2;183;189;248m●\\e[38;2;198;160;246m●\\e[38;2;139;213;202m●\""
-
+      "keyColor": "#40A02B",
+      "text": "theme=$(omarchy-theme-current); echo -e \"$theme \\e[38;2;230;69;83m●\\e[38;2;254;129;45m●\\e[38;2;248;177;21m●\\e[38;2;64;160;43m●\\e[38;2;30;102;245m●\\e[38;2;145;113;216m●\""
     },
     {
       "type": "terminalfont",
       "key": " ",
-      "keyColor": "#b7bdf8"
+      "keyColor": "#40A02B"
     },
     "break",
     {
       "type": "command",
       "key": "󱦟 OS Age ",
-      "keyColor": "#8bd5ca",
+      "keyColor": "#1E66F5",
       "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days"
     },
     {
       "type": "uptime",
       "key": "󱫐 Uptime ",
-      "keyColor": "#8bd5ca"
+      "keyColor": "#1E66F5"
     },
     "break"
   ]

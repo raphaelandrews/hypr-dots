@@ -1,0 +1,85 @@
+# name: Tropical City Pop
+# Main background - Now explicitly set to your Beige Base
+theme[main_bg]="#F1DFC0"
+
+# Main text color
+theme[main_fg]="#2C3043"
+
+# Title color for boxes
+theme[title]="#2C3043"
+
+# Highlight color for keyboard shortcuts
+theme[hi_fg]="#1E66F5"
+
+# Background color of selected item in processes box
+theme[selected_bg]="#DCC9A9"
+
+# Foreground color of selected item in processes box
+theme[selected_fg]="#F8B115"
+
+# Color of inactive/disabled text
+theme[inactive_fg]="#6C6F85"
+
+# Color of text appearing on top of graphs
+theme[graph_text]="#E8A598"
+
+# Background color of the percentage meters (Muted beige-grey)
+theme[meter_bg]="#CCD0DA"
+
+# Misc colors for processes box including mini cpu graphs
+theme[proc_misc]="#F8B115"
+
+# CPU, Memory, Network, Proc box outline colors
+# Based on Ardhira's high-saturation geometric palettes
+theme[cpu_box]="#9171D8" # Mauve
+theme[mem_box]="#40A02B" # Green
+theme[net_box]="#E64553" # Red
+theme[proc_box]="#1E66F5" # Blue
+
+# Box divider line - Mimics heavy comic-style inking
+theme[div_line]="#2C3043"
+
+# Temperature graph color (Green -> Yellow -> Red)
+theme[temp_start]="#40A02B"
+theme[temp_mid]="#F8B115"
+theme[temp_end]="#E64553"
+
+# CPU graph colors (Teal -> Sky -> Mauve)
+theme[cpu_start]="#179299"
+theme[cpu_mid]="#04A5E5"
+theme[cpu_end]="#9171D8"
+
+# Mem/Disk free meter (Mauve -> Lavender -> Blue)
+theme[free_start]="#9171D8"
+theme[free_mid]="#7287FD"
+theme[free_end]="#1E66F5"
+
+# Mem/Disk cached meter (Sky -> Blue)
+theme[cached_start]="#04A5E5"
+theme[cached_mid]="#1E66F5"
+theme[cached_end]="#7287FD"
+
+# Mem/Disk available meter (Orange -> Red)
+theme[available_start]="#FE812D"
+theme[available_mid]="#E64553"
+theme[available_end]="#BA333F"
+
+# Mem/Disk used meter (Green -> Teal -> Sky)
+theme[used_start]="#40A02B"
+theme[used_mid]="#179299"
+theme[used_end]="#04A5E5"
+
+# Download graph colors (Peach -> Red)
+theme[download_start]="#FE812D"
+theme[download_mid]="#E64553"
+theme[download_end]="#BA333F"
+
+# Upload graph colors (Green -> Sky)
+theme[upload_start]="#40A02B"
+theme[upload_mid]="#179299"
+theme[upload_end]="#04A5E5"
+
+# Process box color gradient (Teal -> Mauve)
+theme[process_start]="#209FB5"
+theme[process_mid]="#7287FD"
+theme[process_end]="#9171D8"
