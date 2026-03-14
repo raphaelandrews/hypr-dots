@@ -188,3 +188,14 @@ alias tmux="tmux -2"
 #zoxide
 eval "$(zoxide init zsh)"
 eval "$(zoxide init zsh --cmd cd)"
+
+# Vite+ bin (https://viteplus.dev)
+. "$HOME/.vite-plus/env"
+
+# pnpm
+export PNPM_HOME="/home/raphael/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
