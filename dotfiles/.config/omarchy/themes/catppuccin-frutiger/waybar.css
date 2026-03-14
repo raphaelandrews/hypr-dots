@@ -1,0 +1,13 @@
+/* Catppuccin Frutiger Aero (Deep Sea) */
+
+/* Ice White Glow for icons and text */
+@define-color foreground #e0fbff;
+
+/* Abyssal Cobalt for the bar background */
+/* Slight transparency for "Glass" feel*/
+@define-color background rgba(10, 25, 47, 0.85);
+
+/* Optional */
+@define-color blue #0096ff;
+@define-color sapphire #00d4ff;
+@define-color teal #00f5d4;

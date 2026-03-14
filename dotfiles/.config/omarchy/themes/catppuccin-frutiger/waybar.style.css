@@ -1,0 +1,106 @@
+@import "../omarchy/current/theme/waybar.css";
+
+/* --- Variables --- */
+@define-color foreground #e0fbff;
+@define-color background rgba(10, 25, 47, 0.75);
+@define-color glass-edge rgba(0, 212, 255, 0.3);
+@define-color gloss-white rgba(255, 255, 255, 0.15);
+
+/* --- Global --- */
+* {
+  font-family: "CaskaydiaMono Nerd Font";
+  font-size: 12px;
+  font-weight: bold;
+  color: @foreground;
+  border: none;
+  border-radius: 0;
+  text-shadow: 0px 0px 4px rgba(0, 212, 255, 0.5);
+}
+
+window#waybar {
+  background: transparent;
+}
+
+tooltip {
+  background: rgba(10, 25, 47, 0.95);
+  border: 1px solid #0096FF;
+  border-radius: 12px;
+  text-shadow: none;
+}
+
+/* --- Shared Modules --- */
+#custom-omarchy,
+#workspaces,
+#taskbar,
+#window,
+#clock,
+#custom-update,
+#custom-screenrecording-indicator,
+#mpris,
+#tray-expander,
+#tray,
+#network,
+#pulseaudio,
+#custom-cpu,
+#battery,
+#backlight,
+#bluetooth,
+#custom-weather {
+  background: linear-gradient(180deg,
+      @gloss-white 0%,
+      rgba(16, 45, 74, 0.6) 50%,
+      rgba(10, 25, 47, 0.8) 100%);
+
+  border: 1px solid @glass-edge;
+  border-bottom: 1px solid rgba(0, 150, 255, 0.4);
+  box-shadow: inset 0 1px 0 @gloss-white;
+
+  border-radius: 12px;
+  padding: 0 12px;
+  margin: 0 0 0 5;
+  transition: all 0.3s cubic-bezier(.55, 0, .1, 1);
+}
+
+/* Shared Hover States */
+#workspaces button:hover,
+#taskbar button:hover,
+#network:hover,
+#pulseaudio.output:hover,
+#backlight:hover {
+  background: rgba(0, 212, 255, 0.3);
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.4);
+}
+
+/* --- Modules Left --- */
+#workspaces button.active {
+  color: #00D4FF;
+  border-bottom: 2px solid #00D4FF;
+}
+
+/* --- Modules Center --- */
+
+/* --- Modules Right --- */
+#tray-expander {
+  padding: 0 8 0 12;
+}
+
+#pulseaudio {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+}
+
+#pulseaudio.output,
+#pulseaudio.input,
+#custom-audio {
+  background: rgba(22, 45, 74, 0.6);
+  border: 1px solid @glass-edge;
+  border-radius: 10px;
+  margin: 0 2px;
+  padding: 0 8px;
+}
+
+#custom-audio {
+  padding: 0 18px 0 12px;
+}

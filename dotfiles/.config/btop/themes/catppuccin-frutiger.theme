@@ -1,0 +1,85 @@
+# Theme: Catppuccin Frutiger Aero (Deep Sea Dark)
+# Main bg (Base)
+theme[main_bg]="#0A192F"
+
+# Main text color (Text)
+theme[main_fg]="#E0FBFF"
+
+# Title color for boxes (Blue - Vista)
+theme[title]="#0096FF"
+
+# Highlight color for keyboard shortcuts (Sapphire)
+theme[hi_fg]="#00D4FF"
+
+# Background color of selected item in processes box (Surface0)
+theme[selected_bg]="#162D4A"
+
+# Foreground color of selected item in processes box (Text)
+theme[selected_fg]="#E0FBFF"
+
+# Color of inactive/disabled text (Overlay0)
+theme[inactive_fg]="#32527B"
+
+# Color of text appearing on top of graphs (Subtext1)
+theme[graph_text]="#BDE0FE"
+
+# Misc colors for processes box (Lavender)
+theme[proc_misc]="#B8C0FF"
+
+# Box outline colors (Surface2 - for the glass frame effect)
+theme[cpu_box]="#244166"
+theme[mem_box]="#244166"
+theme[net_box]="#244166"
+theme[proc_box]="#244166"
+theme[div_line]="#244166"
+
+# Temperature graph colors (Teal -> Sapphire -> Blue)
+# Creates a "cool to deep" water effect
+theme[temp_start]="#00F5D4"
+theme[temp_mid]="#00D4FF"
+theme[temp_end]="#0096FF"
+
+# CPU graph colors (Teal -> Sapphire -> Blue)
+theme[cpu_start]="#00F5D4"
+theme[cpu_mid]="#00D4FF"
+theme[cpu_end]="#0096FF"
+
+# Mem/Disk free meter (Teal)
+theme[free_start]="#00F5D4"
+theme[free_mid]="#00D4FF"
+theme[free_end]="#0096FF"
+
+# Mem/Disk cached meter (Sky)
+theme[cached_start]="#89DCEB"
+theme[cached_mid]="#00D4FF"
+theme[cached_end]="#0096FF"
+
+# Mem/Disk available meter (Sapphire)
+theme[available_start]="#00D4FF"
+theme[available_mid]="#0096FF"
+theme[available_end]="#244166"
+
+# Mem/Disk used meter (Blue)
+theme[used_start]="#0096FF"
+theme[used_mid]="#00D4FF"
+theme[used_end]="#00F5D4"
+
+# Download graph colors
+theme[download_start]="#00F5D4"
+theme[download_mid]="#00D4FF"
+theme[download_end]="#0096FF"
+
+# Upload graph colors
+theme[upload_start]="#00F5D4"
+theme[upload_mid]="#00D4FF"
+theme[upload_end]="#0096FF"
+
+# Process box color gradient (Mint -> Sky -> Mauve)
+theme[process_start]="#00F5D4"
+theme[process_mid]="#89DCEB"
+theme[process_end]="#C0A3FF"
+
+# Alerts (Red, Yellow, Teal)
+theme[error]="#FF5D8F"
+theme[warning]="#FFE27A"
+theme[ok]="#00F5D4"

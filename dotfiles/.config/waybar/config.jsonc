@@ -34,7 +34,7 @@
 		modules-left
 	------------------*/
   "custom/omarchy": {
-    "format": "<span font='omarchy'>💿</span>",
+    "format": "<span font='omarchy'>🍋‍🟩</span>",
     "on-click": "omarchy-menu",
     "on-click-right": "xdg-terminal-exec",
     "tooltip-format": "Omarchy Menu\n\nSuper + Alt + Space"
@@ -92,11 +92,11 @@
       "weeks-pos": "right",
       "on-scroll": 1,
       "format": {
-        "months": "<span color='#8bd5ca'><b>{}</b></span>",
-        "days": "<span color='#cad3f5'><b>{}</b></span>",
-        "weeks": "<span color='#a6da95'><b>W{}</b></span>",
-        "weekdays": "<span color='#91d7e3'><b>{}</b></span>",
-        "today": "<span color='#eed49f'><b><u>{}</u></b></span>"
+        "months": "<span color='#0096FF'><b>{}</b></span>", // Vista Blue
+        "days": "<span color='#E0FBFF'><b>{}</b></span>", // Ice White
+        "weeks": "<span color='#00F5D4'><b>W{}</b></span>", // Bio-Mint
+        "weekdays": "<span color='#00D4FF'><b>{}</b></span>", // Sapphire Cyan
+        "today": "<span color='#FFE27A'><b><u>{}</u></b></span>" // Citrus Yellow
       }
     },
     "actions": {

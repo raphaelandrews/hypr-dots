@@ -1,0 +1,47 @@
+Frutiger Aqua x Catppuccin Palette
+Backgrounds	
+Base	#111d2b	Deep Oceanic Blue
+Mantle	#0d1722	Dark Abyssal Blue
+Crust	#080e15	Near-Black Midnight
+
+Layers	
+Surface0	#1e3148	Muted Steel Blue
+Overlay0	#4a6b8a	Frosted Glass Blue
+
+Primary	
+Text	#e0fbff	Crisp Ice White
+Subtext1	#b8ddec	Light Mist
+
+Accents	
+Rosewater	#f5c2e7	Soft Shell Pink
+Mauve	#cba6f7	Digital Violet
+Blue	#3399ff	The "Vista" Blue
+Sapphire	#209fb5	Deep Crystal Cyan
+Sky	#89dceb	Bright Oxygen Blue
+Teal	#94e2d5	Minty Refresh
+
+Warm	
+Peach	#fab387	Sunset Orange
+Red	#f38ba8	Vibrant Coral
+
+
+Backgrounds	
+Base	#BDE0FE	Crystal Sky Blue
+Mantle	#A2D2FF	Soft Pool Water
+Crust	#8ECAE6	Caribbean Cyan
+
+Layers	
+Surface0	#E0F2FE	Frosted Ice
+Overlay0	#F0F9FF	Near-White Mist
+
+Primary	
+Text	#023047	Deep Navy
+Subtext1	#219EBC	Teal Ink
+
+Accents	
+Blue	#0096FF	Vivid Vista Blue
+Sapphire	#00B4D8	Electric Cyan
+Sky	#90E0EF	Pale Oxygen
+Teal	#06D6A0	Tropical Mint
+Mauve	#B794F4	Glossy Lavender
+Red	#FF4D6D	Jellybean Red

@@ -37,33 +37,33 @@
   # Zsh >= 5.1 is required.
   [[ $ZSH_VERSION == (5.<1->*|<6->.*) ]] || return
 
-  # Prompt colors.
-  local rosewater='#f4dbd6'
-  local flamingo='#f0c6c6'
-  local pink='#f5bde6'
-  local mauve='#c6a0f6'
-  local red='#ed8796'
-  local maroon='#ee99a0'
-  local peach='#f5a97f'
-  local yellow='#eed49f'
-  local green='#a6da95'
-  local teal='#8bd5ca'
-  local sky='#91d7e3'
-  local sapphire='#7dc4e4'
-  local blue='#8aadf4'
-  local lavender='#b7bdf8'
-  local text='#cad3f5'
-  local subtext1='#b8c0e0'
-  local subtext0='#a5adcb'
-  local overlay2='#939ab7'
-  local overlay1='#8087a2'
-  local overlay0='#6e738d'
-  local surface2='#5b6078'
-  local surface1='#494d64'
-  local surface0='#363a4f'
-  local base='#24273a'
-  local mantle='#1e2030'
-  local crust='#181926'
+  # Prompt colors (Catppuccin Frutiger Aero - Deep Sea Dark)
+  local rosewater='#FAD0C4'
+  local flamingo='#FBC2EB'
+  local pink='#FF99CC'
+  local mauve='#C0A3FF'
+  local red='#FF5D8F'     # Candy Red
+  local maroon='#FF8A7A'
+  local peach='#FFB86B'
+  local yellow='#FFE27A'   # Citrus Yellow
+  local green='#6EE7B7'
+  local teal='#00F5D4'     # Bio-Mint
+  local sky='#89DCEB'      # Oxygen Blue
+  local sapphire='#00D4FF' # Electric Cyan
+  local blue='#0096FF'     # Vista Blue
+  local lavender='#B8C0FF'
+  local text='#E0FBFF'     # Ice White Glow
+  local subtext1='#BDE0FE'
+  local subtext0='#A2D2FF'
+  local overlay2='#6082B6'
+  local overlay1='#4A6B8A'
+  local overlay0='#32527B'
+  local surface2='#244166'
+  local surface1='#1C3557'
+  local surface0='#162D4A'
+  local base='#0A192F'
+  local mantle='#071222'
+  local crust='#050D1A'
   
   # Left prompt segments.
   typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
@@ -95,7 +95,7 @@
   typeset -g POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
 
   # Prompt symbol colors
-  typeset -g POWERLEVEL9K_PROMPT_CHAR_OK_{VIINS,VICMD,VIVIS}_FOREGROUND=$teal
+  typeset -g POWERLEVEL9K_PROMPT_CHAR_OK_{VIINS,VICMD,VIVIS}_FOREGROUND=$blue
   typeset -g POWERLEVEL9K_PROMPT_CHAR_ERROR_{VIINS,VICMD,VIVIS}_FOREGROUND=$red
   typeset -g POWERLEVEL9K_PROMPT_CHAR_{OK,ERROR}_VIINS_CONTENT_EXPANSION='❯'
   typeset -g POWERLEVEL9K_PROMPT_CHAR_{OK,ERROR}_VICMD_CONTENT_EXPANSION='❮'
@@ -108,10 +108,10 @@
   typeset -g POWERLEVEL9K_VIRTUALENV_{LEFT,RIGHT}_DELIMITER=
 
   # Directory color
-  typeset -g POWERLEVEL9K_DIR_FOREGROUND=$teal
+  typeset -g POWERLEVEL9K_DIR_FOREGROUND=$sapphire
 
   # Context format when root: user@host.
-  typeset -g POWERLEVEL9K_CONTEXT_ROOT_TEMPLATE="%F{$sky}%n%f%F{$overlay0}@%m%f"
+  typeset -g POWERLEVEL9K_CONTEXT_ROOT_TEMPLATE="%F{$yellow}%n%f%F{$overlay0}@%m%f"
   typeset -g POWERLEVEL9K_CONTEXT_TEMPLATE="%F{$overlay1}%n@%m%f"
   typeset -g POWERLEVEL9K_CONTEXT_{DEFAULT,SUDO}_CONTENT_EXPANSION=
 
@@ -122,7 +122,7 @@
   typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND=$yellow
 
   # Git
-  typeset -g POWERLEVEL9K_VCS_FOREGROUND=$green
+  typeset -g POWERLEVEL9K_VCS_FOREGROUND=$teal
   typeset -g POWERLEVEL9K_VCS_LOADING_TEXT=
   typeset -g POWERLEVEL9K_VCS_MAX_SYNC_LATENCY_SECONDS=0
 
