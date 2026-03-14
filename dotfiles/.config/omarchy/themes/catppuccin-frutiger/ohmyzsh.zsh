@@ -46,7 +46,7 @@
   local maroon='#FF8A7A'
   local peach='#FFB86B'
   local yellow='#FFE27A'   # Citrus Yellow
-  local green='#6EE7B7'
+  local green='#5CFF47'
   local teal='#00F5D4'     # Bio-Mint
   local sky='#89DCEB'      # Oxygen Blue
   local sapphire='#00D4FF' # Electric Cyan
@@ -108,7 +108,7 @@
   typeset -g POWERLEVEL9K_VIRTUALENV_{LEFT,RIGHT}_DELIMITER=
 
   # Directory color
-  typeset -g POWERLEVEL9K_DIR_FOREGROUND=$sapphire
+  typeset -g POWERLEVEL9K_DIR_FOREGROUND=$blue
 
   # Context format when root: user@host.
   typeset -g POWERLEVEL9K_CONTEXT_ROOT_TEMPLATE="%F{$yellow}%n%f%F{$overlay0}@%m%f"

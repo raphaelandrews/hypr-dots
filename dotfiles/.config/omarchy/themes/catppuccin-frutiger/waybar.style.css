@@ -3,7 +3,7 @@
 /* --- Variables --- */
 @define-color foreground #e0fbff;
 @define-color background rgba(10, 25, 47, 0.75);
-@define-color glass-edge rgba(0, 212, 255, 0.3);
+@define-color glass-edge rgba(0, 150, 255, 0.3);
 @define-color gloss-white rgba(255, 255, 255, 0.15);
 
 * {
@@ -13,29 +13,43 @@
   color: @foreground;
   border: none;
   border-radius: 0;
-  text-shadow: 0px 0px 4px rgba(0, 212, 255, 0.5);
+  text-shadow: 0px 0px 4px rgba(0, 150, 255, 0.5);
 }
 
 window#waybar {
   background: transparent;
 }
 
-#backlight, #custom-weather, #mpris, #window, #tray, #custom-cpu, #battery, 
-#network, #bluetooth, #pulseaudio, #custom-omarchy, #clock, #workspaces, 
-#taskbar, #custom-update, #custom-screenrecording-indicator, #tray-expander {
-  background: linear-gradient(180deg, 
-              @gloss-white 0%, 
-              rgba(16, 45, 74, 0.6) 50%, 
-              rgba(10, 25, 47, 0.8) 100%);
-  
+#backlight,
+#custom-weather,
+#mpris,
+#window,
+#tray,
+#custom-cpu,
+#battery,
+#network,
+#bluetooth,
+#pulseaudio,
+#custom-omarchy,
+#clock,
+#workspaces,
+#taskbar,
+#custom-update,
+#custom-screenrecording-indicator,
+#tray-expander {
+  background: linear-gradient(180deg,
+      @gloss-white 0%,
+      rgba(16, 45, 74, 0.6) 50%,
+      rgba(10, 25, 47, 0.8) 100%);
+
   border: 1px solid @glass-edge;
   border-bottom: 1px solid rgba(0, 150, 255, 0.4);
   box-shadow: inset 0 1px 0 @gloss-white;
-  
+
   border-radius: 12px;
   padding: 0 12px;
   margin: 0 0 0 5;
-  transition: all 0.3s cubic-bezier(.55,0,.1,1);
+  transition: all 0.3s cubic-bezier(.55, 0, .1, 1);
 }
 
 #pulseaudio {
@@ -45,7 +59,9 @@ window#waybar {
   padding: 0;
 }
 
-#pulseaudio.output, #pulseaudio.input, #custom-audio {
+#pulseaudio.output,
+#pulseaudio.input,
+#custom-audio {
   background: rgba(22, 45, 74, 0.6);
   border: 1px solid @glass-edge;
   border-radius: 10px;
@@ -57,15 +73,18 @@ window#waybar {
   padding: 0 8 0 12;
 }
 
-#workspaces button:hover, #taskbar button:hover, 
-#backlight:hover, #network:hover, #pulseaudio.output:hover {
-  background: rgba(0, 212, 255, 0.3);
-  box-shadow: 0 0 10px rgba(0, 212, 255, 0.4);
+#workspaces button:hover,
+#taskbar button:hover,
+#backlight:hover,
+#network:hover,
+#pulseaudio.output:hover {
+  background: rgba(0, 150, 255, 0.3);
+  box-shadow: 0 0 10px rgba(0, 150, 255, 0.4);
 }
 
 #workspaces button.active {
-  color: #00D4FF;
-  border-bottom: 2px solid #00D4FF;
+  color: #0096FF;
+  border-bottom: 2px solid #0096FF;
 }
 
 tooltip {
@@ -75,6 +94,6 @@ tooltip {
   text-shadow: none;
 }
 
-#custom-audio{
+#custom-audio {
   padding: 0 18px 0 12px;
 }

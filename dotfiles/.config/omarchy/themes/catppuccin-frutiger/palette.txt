@@ -8,11 +8,11 @@ Red	#FF5D8F	Cherry Candy
 Maroon	#FF8A7A	Coral Reef
 Peach	#FFB86B	Sunkist Orange
 Yellow	#FFE27A	Bright Citrus
-Green	#6EE7B7	Tropical Seafoam
+Green	#5CFF47	Aero Grass Green
 Teal	#00F5D4	Bio-Mint
 Sky	#89DCEB	Fresh Oxygen
-Sapphire	#00D4FF	Electric Cyan
-Blue	#0096FF	True Vista Blue
+Sapphire	#00D4FF	Electric Cyan (Secondary Accent)
+Blue	#0096FF	True Vista Blue (Primary Aero Accent)
 Lavender	#B8C0FF	Digital Silk
 Text	#E0FBFF	Glow White
 Subtext1	#BDE0FE	Mist Blue

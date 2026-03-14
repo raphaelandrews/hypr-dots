@@ -9,7 +9,7 @@ theme[main_fg]="#E0FBFF"
 theme[title]="#0096FF"
 
 # Highlight color for keyboard shortcuts (Sapphire)
-theme[hi_fg]="#00D4FF"
+theme[hi_fg]="#0096FF"
 
 # Background color of selected item in processes box (Surface0)
 theme[selected_bg]="#162D4A"

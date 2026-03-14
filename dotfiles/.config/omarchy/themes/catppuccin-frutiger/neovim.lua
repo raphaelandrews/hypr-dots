@@ -15,12 +15,12 @@ return {
           SnacksDashboardHeader = { fg = vista_blue, bold = true },
           AlphaHeader = { fg = vista_blue, bold = true },
           
-          DashboardIcon = { fg = sapphire_cyan },
-          SnacksDashboardIcon = { fg = sapphire_cyan },
+          DashboardIcon = { fg = vista_blue },
+          SnacksDashboardIcon = { fg = vista_blue },
           
-          DashboardKey = { fg = sapphire_cyan },
+          DashboardKey = { fg = vista_blue },
           DashboardDesc = { fg = ice_white },
-          SnacksDashboardKey = { fg = sapphire_cyan },
+          SnacksDashboardKey = { fg = vista_blue },
           SnacksDashboardDesc = { fg = ice_white },
           
           -- Dashboard Footer (Mist Blue)
