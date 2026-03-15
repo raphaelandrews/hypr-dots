@@ -92,11 +92,11 @@
       "weeks-pos": "right",
       "on-scroll": 1,
       "format": {
-         "months": "<span color='#5CFF47'><b>{}</b></span>", // Aero Grass Green
+        "months": "<span color='#5CFF47'><b>{}</b></span>", // Aero Grass Green
         "days": "<span color='#ECFFE0'><b>{}</b></span>", // Glow White
         "weeks": "<span color='#00F5D4'><b>W{}</b></span>", // Bio-Mint
         "weekdays": "<span color='#0096FF'><b>{}</b></span>", // True Vista Blue
-        "today": "<span color='#FFE27A'><b><u>{}</u></b></span>" // Citrus Yellow
+        "today": "<span color='#FFD700'><b><u>{}</u></b></span>" // Warning Sun Yellow
       }
     },
     "actions": {
@@ -149,18 +149,6 @@
   "custom/expand-icon": {
     "format": " ",
     "tooltip": false
-  },
-  "custom/idle-indicator": {
-    "on-click": "omarchy-toggle-idle",
-    "exec": "$OMARCHY_PATH/default/waybar/indicators/idle.sh",
-    "signal": 9,
-    "return-type": "json"
-  },
-  "custom/notification-silencing-indicator": {
-    "on-click": "omarchy-toggle-notification-silencing",
-    "exec": "$OMARCHY_PATH/default/waybar/indicators/notification-silencing.sh",
-    "signal": 10,
-    "return-type": "json"
   },
   "tray": {
     "icon-size": 12,

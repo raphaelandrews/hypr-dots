@@ -1,0 +1,16 @@
+/* Frutiger Dark Aero */
+
+/* The Main Bubble (Studio Black with high transparency for glass effect) */
+@define-color background-color rgba(27, 27, 27, 0.85);
+
+/* The Frame (Aero Grass Green) */
+@define-color border-color #5CFF47;
+
+/* Text Label (Glow White) */
+@define-color label #ecffe0;
+
+/* Icons (Glow White) */
+@define-color image #ecffe0;
+
+/* The Level Bar (True Vista Blue for that "Liquid" look) */
+@define-color progress #0096ff;

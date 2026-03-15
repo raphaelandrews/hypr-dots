@@ -66,55 +66,55 @@
     {
       "type": "command",
       "key": "󰣇 OS",
-      "keyColor": "#5CFF47",
+      "keyColor": "#0096FF",
       "text": "version=$(omarchy-version); echo \"Omarchy $version\""
     },
     {
       "type": "command",
       "key": "󰘬 ",
-      "keyColor": "#5CFF47",
+      "keyColor": "#0096FF",
       "text": "branch=$(omarchy-version-branch); echo \"$branch\""
     },
     {
       "type": "kernel",
       "key": " ",
-      "keyColor": "#5CFF47"
+      "keyColor": "#0096FF"
     },
     {
       "type": "wm",
       "key": " ",
-      "keyColor": "#5CFF47"
+      "keyColor": "#0096FF"
     },
     {
       "type": "de",
       "key": " DE ",
-      "keyColor": "#5CFF47"
+      "keyColor": "#0096FF"
     },
     {
       "type": "terminal",
       "key": " ",
-      "keyColor": "#5CFF47"
+      "keyColor": "#0096FF"
     },
     {
       "type": "packages",
       "key": "󰏖 ",
-      "keyColor": "#5CFF47"
+      "keyColor": "#0096FF"
     },
     {
       "type": "wmtheme",
       "key": "󰉼 ",
-      "keyColor": "#5CFF47"
+      "keyColor": "#0096FF"
     },
     {
       "type": "command",
       "key": "󰉼 ",
-      "keyColor": "#5CFF47",
-      "text": "echo -e \"Frutiger Eco \\e[38;2;0;150;255m●\\e[38;2;92;255;71m●\\e[38;2;192;254;189m●\\e[38;2;236;255;224m●\""
+      "keyColor": "#0096FF",
+      "text": "echo -e \"Frutiger Dark Aero \\e[38;2;19;146;40m●\\e[38;2;0;150;255m●\\e[38;2;0;245;212m●\\e[38;2;87;250;111m●\""
     },
     {
       "type": "terminalfont",
       "key": " ",
-      "keyColor": "#5CFF47"
+      "keyColor": "#0096FF"
     },
     "break",
     {

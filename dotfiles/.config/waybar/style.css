@@ -7,7 +7,7 @@
 @define-color gloss-white rgba(255, 255, 255, 0.15);
 
 * {
-  font-family: "CaskaydiaMono Nerd Font";
+  font-family: "Hack Nerd Font";
   font-size: 12px;
   font-weight: bold;
   color: @foreground;
@@ -37,10 +37,7 @@ window#waybar {
 #custom-update,
 #custom-screenrecording-indicator,
 #tray-expander {
-  background: linear-gradient(180deg,
-      @gloss-white 0%,
-      rgba(22, 74, 25, 0.6) 50%,
-      rgba(10, 47, 13, 0.8) 100%);
+  background: linear-gradient(to bottom, #b4b4b4 0, grey 3%, #4e4e4e 20%, #292929 50%, #0a0a0a 51%, #080808 60%, #1f1f1f 100%);
 
   border: 1px solid @glass-edge;
   border-bottom: 1px solid rgba(92, 255, 71, 0.4);
@@ -62,15 +59,21 @@ window#waybar {
 #pulseaudio.output,
 #pulseaudio.input,
 #custom-audio {
-  background: rgba(22, 74, 25, 0.6);
+  background: linear-gradient(to bottom, #b4b4b4 0, grey 3%, #4e4e4e 20%, #292929 50%, #0a0a0a 51%, #080808 60%, #1f1f1f 100%);
   border: 1px solid @glass-edge;
   border-radius: 10px;
   margin: 0 2px;
   padding: 0 8px;
+  transition: all 0.3s cubic-bezier(.55, 0, .1, 1);
 }
 
 #tray-expander {
   padding: 0 8 0 12;
+}
+
+#workspaces button,
+#taskbar button {
+  transition: all 0.3s cubic-bezier(.55, 0, .1, 1);
 }
 
 #workspaces button:hover,
@@ -80,6 +83,7 @@ window#waybar {
 #pulseaudio.output:hover {
   background: rgba(92, 255, 71, 0.3);
   box-shadow: 0 0 10px rgba(92, 255, 71, 0.4);
+  transition: all 0.3s cubic-bezier(.55, 0, .1, 1);
 }
 
 #workspaces button.active {
@@ -88,7 +92,7 @@ window#waybar {
 }
 
 tooltip {
-  background: rgba(10, 47, 13, 0.95);
+  background: #1b1b1b;
   border: 1px solid #5CFF47;
   border-radius: 12px;
   text-shadow: none;

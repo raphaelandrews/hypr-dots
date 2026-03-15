@@ -1,4 +1,4 @@
 [flavor]
-use = "frutiger-eco"
-dark = "frutiger-eco"
-light = "frutiger-eco"
+use = "frutiger-dark-aero"
+dark = "frutiger-dark-aero"
+light = "frutiger-dark-aero"

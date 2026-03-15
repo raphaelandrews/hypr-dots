@@ -1,0 +1,23 @@
+Frutiger Dark Aero
+
+Red	#FF3333	Glossy Stoplight Red
+Yellow	#FFD700	Warning Sun Yellow
+Green	#5CFF47	Aero Grass Green (Primary Aero Accent)
+Teal	#00F5D4	Bio-Mint
+Sky	#89DCEB	Fresh Oxygen
+Sapphire	#00D4FF	Electric Cyan
+Blue	#0096FF	True Vista Blue (Secondary Accent)
+
+Text	#ECFFE0	Glow White
+Accent	#139228
+Subtext1	#C0FEBD	Mist Green
+Subtext0	#B4B4B4	Silver Glass
+Overlay2	#808080	Industrial Grey
+Overlay1	#686868	Glass Border
+Overlay0	#4E4E4E	Polished Graphite
+Surface2	#2B2B2B	Smoked Glass
+Surface1	#1F1F1F	Deep Gloss
+Surface0	#1B1B1B	Dark Chrome
+Base	#1b1b1b	Studio Black
+Mantle	#080808	Deep Slate
+Crust	#000000	Vantablack

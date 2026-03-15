@@ -37,33 +37,27 @@
   # Zsh >= 5.1 is required.
   [[ $ZSH_VERSION == (5.<1->*|<6->.*) ]] || return
 
-  # Prompt colors (Frutiger Eco)
-  local rosewater='#FAD0C4'
-  local flamingo='#FBC2EB'
-  local pink='#FF99CC'
-  local mauve='#C0A3FF'
-  local red='#FF5D8F'     # Candy Red
-  local maroon='#FF8A7A'
-  local peach='#FFB86B'
-  local yellow='#FFE27A'   # Citrus Yellow
-  local green='#5CFF47'
+  # Prompt colors (Frutiger Dark Aero)
+  local red='#FF3333'      # Glossy Stoplight Red
+  local yellow='#FFD700'   # Warning Sun Yellow
+  local green='#5CFF47'    # Aero Grass Green
   local teal='#00F5D4'     # Bio-Mint
-  local sky='#89DCEB'      # Oxygen Blue
+  local sky='#89DCEB'      # Fresh Oxygen
   local sapphire='#00D4FF' # Electric Cyan
   local blue='#0096FF'     # True Vista Blue
-  local lavender='#B8C0FF'
-  local text='#E0FBFF'     # Ice White Glow
-  local subtext1='#BDE0FE'
-  local subtext0='#A2D2FF'
-  local overlay2='#6082B6'
-  local overlay1='#4A6B8A'
-  local overlay0='#32527B'
-  local surface2='#244166'
-  local surface1='#1C3557'
-  local surface0='#162D4A'
-  local base='#0A192F'
-  local mantle='#071222'
-  local crust='#050D1A'
+  local text='#ECFFE0'     # Glow White
+  local accent='#139228'   # Dark Green Accent
+  local subtext1='#C0FEBD'
+  local subtext0='#B4B4B4'
+  local overlay2='#808080'
+  local overlay1='#686868'
+  local overlay0='#4E4E4E'
+  local surface2='#2B2B2B'
+  local surface1='#1F1F1F'
+  local surface0='#1B1B1B'
+  local base='#1b1b1b'
+  local mantle='#080808'
+  local crust='#000000'
   
   # Left prompt segments.
   typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
@@ -108,7 +102,7 @@
   typeset -g POWERLEVEL9K_VIRTUALENV_{LEFT,RIGHT}_DELIMITER=
 
   # Directory color
-  typeset -g POWERLEVEL9K_DIR_FOREGROUND=$green
+  typeset -g POWERLEVEL9K_DIR_FOREGROUND=$blue
 
   # Context format when root: user@host.
   typeset -g POWERLEVEL9K_CONTEXT_ROOT_TEMPLATE="%F{$yellow}%n%f%F{$overlay0}@%m%f"
