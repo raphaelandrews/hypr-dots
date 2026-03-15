@@ -37,7 +37,7 @@
   # Zsh >= 5.1 is required.
   [[ $ZSH_VERSION == (5.<1->*|<6->.*) ]] || return
 
-  # Prompt colors (Catppuccin Frutiger Aero - Deep Sea Dark)
+  # Prompt colors (Frutiger Eco)
   local rosewater='#FAD0C4'
   local flamingo='#FBC2EB'
   local pink='#FF99CC'
@@ -50,7 +50,7 @@
   local teal='#00F5D4'     # Bio-Mint
   local sky='#89DCEB'      # Oxygen Blue
   local sapphire='#00D4FF' # Electric Cyan
-  local blue='#0096FF'     # Vista Blue
+  local blue='#0096FF'     # True Vista Blue
   local lavender='#B8C0FF'
   local text='#E0FBFF'     # Ice White Glow
   local subtext1='#BDE0FE'
@@ -95,7 +95,7 @@
   typeset -g POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
 
   # Prompt symbol colors
-  typeset -g POWERLEVEL9K_PROMPT_CHAR_OK_{VIINS,VICMD,VIVIS}_FOREGROUND=$blue
+  typeset -g POWERLEVEL9K_PROMPT_CHAR_OK_{VIINS,VICMD,VIVIS}_FOREGROUND=$green
   typeset -g POWERLEVEL9K_PROMPT_CHAR_ERROR_{VIINS,VICMD,VIVIS}_FOREGROUND=$red
   typeset -g POWERLEVEL9K_PROMPT_CHAR_{OK,ERROR}_VIINS_CONTENT_EXPANSION='❯'
   typeset -g POWERLEVEL9K_PROMPT_CHAR_{OK,ERROR}_VICMD_CONTENT_EXPANSION='❮'
@@ -108,7 +108,7 @@
   typeset -g POWERLEVEL9K_VIRTUALENV_{LEFT,RIGHT}_DELIMITER=
 
   # Directory color
-  typeset -g POWERLEVEL9K_DIR_FOREGROUND=$blue
+  typeset -g POWERLEVEL9K_DIR_FOREGROUND=$green
 
   # Context format when root: user@host.
   typeset -g POWERLEVEL9K_CONTEXT_ROOT_TEMPLATE="%F{$yellow}%n%f%F{$overlay0}@%m%f"

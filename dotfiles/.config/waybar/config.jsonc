@@ -92,10 +92,10 @@
       "weeks-pos": "right",
       "on-scroll": 1,
       "format": {
-        "months": "<span color='#0096FF'><b>{}</b></span>", // Vista Blue
-        "days": "<span color='#E0FBFF'><b>{}</b></span>", // Ice White
+         "months": "<span color='#5CFF47'><b>{}</b></span>", // Aero Grass Green
+        "days": "<span color='#ECFFE0'><b>{}</b></span>", // Glow White
         "weeks": "<span color='#00F5D4'><b>W{}</b></span>", // Bio-Mint
-        "weekdays": "<span color='#00D4FF'><b>{}</b></span>", // Sapphire Cyan
+        "weekdays": "<span color='#0096FF'><b>{}</b></span>", // True Vista Blue
         "today": "<span color='#FFE27A'><b><u>{}</u></b></span>" // Citrus Yellow
       }
     },

@@ -10,13 +10,13 @@
       "right": 6
     },
     "color": {
-      "1": "#0096FF",
-      "2": "#00D4FF"
+      "1": "#5CFF47",
+      "2": "#5CFF47"
     }
   },
   "display": {
     "color": {
-      "separator": "#0096FF"
+      "separator": "#5CFF47"
     },
     "separator": " ",
     "constants": [
@@ -28,93 +28,93 @@
     {
       "type": "title",
       "key": " PC",
-      "keyColor": "#0096FF"
+      "keyColor": "#5CFF47"
     },
     {
       "type": "cpu",
       "key": " ",
       "showPeCoreCount": true,
-      "keyColor": "#0096FF"
+      "keyColor": "#5CFF47"
     },
     {
       "type": "gpu",
       "key": " ",
       "detectionMethod": "pci",
-      "keyColor": "#0096FF"
+      "keyColor": "#5CFF47"
     },
     {
       "type": "display",
       "key": "󱄄 ",
-      "keyColor": "#0096FF"
+      "keyColor": "#5CFF47"
     },
     {
       "type": "disk",
       "key": "󰋊 ",
-      "keyColor": "#0096FF"
+      "keyColor": "#5CFF47"
     },
     {
       "type": "memory",
       "key": " ",
-      "keyColor": "#0096FF"
+      "keyColor": "#5CFF47"
     },
     {
       "type": "swap",
       "key": "󰓡 ",
-      "keyColor": "#0096FF"
+      "keyColor": "#5CFF47"
     },
     "break",
     {
       "type": "command",
       "key": "󰣇 OS",
-      "keyColor": "#00D4FF",
+      "keyColor": "#5CFF47",
       "text": "version=$(omarchy-version); echo \"Omarchy $version\""
     },
     {
       "type": "command",
       "key": "󰘬 ",
-      "keyColor": "#00D4FF",
+      "keyColor": "#5CFF47",
       "text": "branch=$(omarchy-version-branch); echo \"$branch\""
     },
     {
       "type": "kernel",
       "key": " ",
-      "keyColor": "#00D4FF"
+      "keyColor": "#5CFF47"
     },
     {
       "type": "wm",
       "key": " ",
-      "keyColor": "#00D4FF"
+      "keyColor": "#5CFF47"
     },
     {
       "type": "de",
       "key": " DE ",
-      "keyColor": "#00D4FF"
+      "keyColor": "#5CFF47"
     },
     {
       "type": "terminal",
       "key": " ",
-      "keyColor": "#00D4FF"
+      "keyColor": "#5CFF47"
     },
     {
       "type": "packages",
       "key": "󰏖 ",
-      "keyColor": "#00D4FF"
+      "keyColor": "#5CFF47"
     },
     {
       "type": "wmtheme",
       "key": "󰉼 ",
-      "keyColor": "#00D4FF"
+      "keyColor": "#5CFF47"
     },
     {
       "type": "command",
       "key": "󰉼 ",
-      "keyColor": "#00D4FF",
-      "text": "echo -e \"Catppuccin Frutiger \\e[38;2;110;231;183m●\\e[38;2;0;245;212m●\\e[38;2;137;220;235m●\\e[38;2;0;212;255m●\\e[38;2;0;150;255m●\\e[38;2;155;102;255m●\""
+      "keyColor": "#5CFF47",
+      "text": "echo -e \"Frutiger Eco \\e[38;2;0;150;255m●\\e[38;2;92;255;71m●\\e[38;2;192;254;189m●\\e[38;2;236;255;224m●\""
     },
     {
       "type": "terminalfont",
       "key": " ",
-      "keyColor": "#00D4FF"
+      "keyColor": "#5CFF47"
     },
     "break",
     {
