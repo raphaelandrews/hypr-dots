@@ -3,8 +3,8 @@ overall = { bg = "#0A192F" }
 
 [mgr]
 cwd = { fg = "#0096FF" }
-hovered         = { fg = "#0A192F", bg = "#0096FF", bold = true }
-preview_hovered = { fg = "#E0FBFF", bg = "#162D4A", bold = true }
+hovered         = { fg = "#E0FBFF", bg = "#0096FF", bold = true }
+preview_hovered = { fg = "#E0FBFF", bg = "#244166", bold = true }
 
 find_keyword  = { fg = "#FFE27A", italic = true }
 find_position = { fg = "#C0A3FF", bg = "reset", italic = true }
