@@ -2,18 +2,18 @@
 
 /* --- Variables --- */
 @define-color selected-text #5CFF47;
-@define-color text #ecffe0;
-@define-color base rgba(27, 27, 27, 0.90);
+@define-color text #ECFFE0;
+@define-color base rgba(19, 24, 19, 0.90);
 @define-color border #5CFF47;
-@define-color foreground #c0febd;
+@define-color foreground #C0FEBD;
 @define-color gloss-white rgba(255, 255, 255, 0.15);
 
 .box-wrapper {
-  background-image: linear-gradient(rgba(48, 48, 48, .5), rgba(26, 26, 26, .8), rgba(26, 26, 26, .95)) !important;
-  border: 1px solid #686868 !important;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .12), inset 0 0 8px rgba(255, 255, 255, .1), 0 5px 5px rgba(0, 0, 0, .5) !important;
-  border-radius: 16px !important;
-  padding: 10px !important;
+  background-image: linear-gradient(rgba(92, 108, 92, 0.4), rgba(19, 24, 19, 0.85), rgba(10, 13, 10, 0.95)) !important;
+  border: 1px solid #5C6C5C !important;
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.2), inset 0 0 10px rgba(92, 255, 71, 0.1), 0 10px 20px rgba(0, 0, 0, 0.6) !important;
+  border-radius: 20px !important;
+  padding: 12px !important;
 }
 
 .search-container {
@@ -28,32 +28,45 @@
 }
 
 .input {
-  background: rgba(43, 43, 43, 0.5);
-  border: 1px solid rgba(87, 250, 111, 0.5);
-  border-radius: 10px;
+  background: rgba(37, 43, 37, 0.6);
+  border: 1px solid rgba(92, 255, 71, 0.4);
+  border-radius: 12px;
   color: #ecffe0;
-  margin-bottom: 10px;
-  padding: 8px;
+  margin-bottom: 12px;
+  padding: 10px;
+  text-shadow: 0px 0px 8px rgba(92, 255, 71, 0.3);
 }
 
 .item-box {
   border: 1px solid transparent;
-  border-radius: 8px;
-  transition: all 0.2s ease;
+  border-radius: 10px;
+  padding: 8px;
+  transition: all 0.15s ease-out;
 }
 
 child:hover .item-box,
 child:selected .item-box {
-  background: linear-gradient(to bottom, #fff 0, #9efd96 3%, #32912a 30%, #185815 56%, #0b3112 56%, #1a5c1e 100%);
-  border: 1px solid #9efd96;
+  background: linear-gradient(to bottom, #fff 0, #EAFF00 2%, #5CFF47 35%, #139228 50%, #0a0d0a 51%, #139228 100%);
+  border: 1px solid #EAFF00;
+  box-shadow: 0 0 12px rgba(92, 255, 71, 0.4);
 }
 
 .item-text,
 .input {
   color: #ecffe0;
   text-shadow: 0px 0px 4px rgba(87, 250, 111, 0.5);
+  font-weight: bold;
+}
+
+child:selected .item-text {
+  color: #050805;
+  text-shadow: none;
 }
 
 .item-subtext {
-  color: #c0febd;
+  color: #A4C4A4;
+}
+
+child:selected .item-subtext {
+  color: #151a15;
 }

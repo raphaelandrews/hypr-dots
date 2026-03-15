@@ -66,67 +66,67 @@
     {
       "type": "command",
       "key": "󰣇 OS",
-      "keyColor": "#0096FF",
+      "keyColor": "#EAFF00",
       "text": "version=$(omarchy-version); echo \"Omarchy $version\""
     },
     {
       "type": "command",
       "key": "󰘬 ",
-      "keyColor": "#0096FF",
+      "keyColor": "#EAFF00",
       "text": "branch=$(omarchy-version-branch); echo \"$branch\""
     },
     {
       "type": "kernel",
       "key": " ",
-      "keyColor": "#0096FF"
+      "keyColor": "#EAFF00"
     },
     {
       "type": "wm",
       "key": " ",
-      "keyColor": "#0096FF"
+      "keyColor": "#EAFF00"
     },
     {
       "type": "de",
       "key": " DE ",
-      "keyColor": "#0096FF"
+      "keyColor": "#EAFF00"
     },
     {
       "type": "terminal",
       "key": " ",
-      "keyColor": "#0096FF"
+      "keyColor": "#EAFF00"
     },
     {
       "type": "packages",
       "key": "󰏖 ",
-      "keyColor": "#0096FF"
+      "keyColor": "#EAFF00"
     },
     {
       "type": "wmtheme",
       "key": "󰉼 ",
-      "keyColor": "#0096FF"
+      "keyColor": "#EAFF00"
     },
     {
       "type": "command",
       "key": "󰉼 ",
-      "keyColor": "#0096FF",
-      "text": "echo -e \"Frutiger Dark Aero \\e[38;2;19;146;40m●\\e[38;2;0;150;255m●\\e[38;2;0;245;212m●\\e[38;2;87;250;111m●\""
+      "keyColor": "#EAFF00",
+      "text": "echo -e \"Frutiger Dark Aero \\e[38;2;92;255;71m●\\e[38;2;255;215;0m●\\e[38;2;160;255;32m●\\e[38;2;234;255;0m●\""
     },
     {
       "type": "terminalfont",
       "key": " ",
-      "keyColor": "#0096FF"
+      "keyColor": "#EAFF00"
     },
     "break",
     {
       "type": "command",
       "key": "󱦟 OS Age ",
-      "keyColor": "#00F5D4",
+      "keyColor": "#D4FF00",
       "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days"
     },
     {
       "type": "uptime",
       "key": "󱫐 Uptime ",
-      "keyColor": "#00F5D4"
+      "keyColor": "#D4FF00"
     },
     "break"
   ]

@@ -6,29 +6,51 @@ return {
     opts = {
       transparent_background = true,
       custom_highlights = function(colors)
-        local aero_green = "#5CFF47"
-        local aero_blue = "#0096FF"
-        local glow_white = "#ECFFE0"
+        local green = "#5CFF47"
+        local yellow = "#FFD700"
+        local text = "#ECFFE0"
+        local subtext0 = "#A4C4A4"
 
         return {
-          DashboardHeader = { fg = aero_green, bold = true },
-          SnacksDashboardHeader = { fg = aero_green, bold = true },
-          AlphaHeader = { fg = aero_green, bold = true },
+          DashboardHeader = { fg = green, bold = true },
+          SnacksDashboardHeader = { fg = green, bold = true },
+          AlphaHeader = { fg = green, bold = true },
+
+          DashboardIcon = { fg = yellow },
+          SnacksDashboardIcon = { fg = yellow },
+
+          DashboardKey = { fg = green },
+          SnacksDashboardShortCut = { fg = green },
+          DashboardDesc = { fg = text },
+          DashboardCenter = { fg = text },
+          DashboardShortCut = { fg = green },
+          SnacksDashboardKey = { fg = green },
+          SnacksDashboardDesc = { fg = text },
+
+          DashboardFooter = { fg = subtext0, italic = true },
+          SnacksDashboardFooter = { fg = subtext0, italic = true },
+
+          -- Additional dashboard text colors to override catppuccin purple
+          DashboardRecentFiles = { fg = text },
+          DashboardProject = { fg = text },
+          DashboardMruTitle = { fg = green },
+          DashboardFile = { fg = text },
+          DashboardDir = { fg = subtext0 },
+          DashboardButton = { fg = text },
+          DashboardButtonIcon = { fg = yellow },
           
-          DashboardIcon = { fg = aero_blue },
-          SnacksDashboardIcon = { fg = aero_blue },
+          SnacksDashboardTitle = { fg = green },
+          SnacksDashboardFile = { fg = text },
+          SnacksDashboardDir = { fg = subtext0 },
+          SnacksDashboardButton = { fg = text },
+          SnacksDashboardButtonIcon = { fg = yellow },
+          SnacksDashboardRecentFiles = { fg = text },
+          SnacksDashboardProject = { fg = text },
+          SnacksDashboardMruTitle = { fg = green },
           
-          DashboardKey = { fg = aero_green },
-          SnacksDashboardShortCut = { fg = aero_green },
-          DashboardDesc = { fg = glow_white },
-          DashboardCenter = { fg = glow_white },
-          DashboardShortCut = { fg = aero_green },
-          SnacksDashboardKey = { fg = aero_green },
-          SnacksDashboardDesc = { fg = glow_white },
-          
-          -- Dashboard Footer (Silver Glass)
-          DashboardFooter = { fg = "#B4B4B4", italic = true },
-          SnacksDashboardFooter = { fg = "#B4B4B4", italic = true },
+          AlphaButtons = { fg = text },
+          AlphaShortcut = { fg = green },
+          AlphaFooter = { fg = subtext0, italic = true },
         }
       end,
     },

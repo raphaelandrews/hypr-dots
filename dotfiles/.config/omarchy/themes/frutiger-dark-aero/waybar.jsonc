@@ -94,8 +94,8 @@
       "format": {
         "months": "<span color='#5CFF47'><b>{}</b></span>", // Aero Grass Green
         "days": "<span color='#ECFFE0'><b>{}</b></span>", // Glow White
-        "weeks": "<span color='#00F5D4'><b>W{}</b></span>", // Bio-Mint
-        "weekdays": "<span color='#0096FF'><b>{}</b></span>", // True Vista Blue
+        "weeks": "<span color='#A0FF20'><b>W{}</b></span>", // Toxic Chartreuse
+        "weekdays": "<span color='#D4FF00'><b>{}</b></span>", // Acid Lime
         "today": "<span color='#FFD700'><b><u>{}</u></b></span>" // Warning Sun Yellow
       }
     },

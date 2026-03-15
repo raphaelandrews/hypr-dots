@@ -37,27 +37,20 @@
   # Zsh >= 5.1 is required.
   [[ $ZSH_VERSION == (5.<1->*|<6->.*) ]] || return
 
-  # Prompt colors (Frutiger Dark Aero)
-  local red='#FF3333'      # Glossy Stoplight Red
-  local yellow='#FFD700'   # Warning Sun Yellow
-  local green='#5CFF47'    # Aero Grass Green
-  local teal='#00F5D4'     # Bio-Mint
-  local sky='#89DCEB'      # Fresh Oxygen
-  local sapphire='#00D4FF' # Electric Cyan
-  local blue='#0096FF'     # True Vista Blue
-  local text='#ECFFE0'     # Glow White
-  local accent='#139228'   # Dark Green Accent
-  local subtext1='#C0FEBD'
-  local subtext0='#B4B4B4'
-  local overlay2='#808080'
-  local overlay1='#686868'
-  local overlay0='#4E4E4E'
-  local surface2='#2B2B2B'
-  local surface1='#1F1F1F'
-  local surface0='#1B1B1B'
-  local base='#1b1b1b'
-  local mantle='#080808'
-  local crust='#000000'
+# --- Frutiger Dark Aero Color Palette ---
+  local red='#FF3333'          # Glossy Stoplight Red
+  local yellow='#FFD700'       # Warning Sun Yellow
+  local lemon='#EAFF00'        # Electric Lemon
+  local green='#5CFF47'        # Aero Grass Green
+  local toxic='#A0FF20'        # Toxic Chartreuse
+  local lime='#7FFF00'         # Deep Lime
+  local emerald='#139228'      # Dark Emerald Accent
+  local text='#ECFFE0'         # Glow White
+  local subtext='#C0FEBD'      # Mist Green
+  local moss='#A4C4A4'         # Silver Moss
+  local sage='#758575'         # Industrial Sage
+  local graphite='#455545'     # Polished Graphite Green
+  local base='#131813'         # Studio Night
   
   # Left prompt segments.
   typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
@@ -97,31 +90,31 @@
   typeset -g POWERLEVEL9K_PROMPT_CHAR_OVERWRITE_STATE=false
 
   # Virtualenv 
-  typeset -g POWERLEVEL9K_VIRTUALENV_FOREGROUND=$overlay1
+  typeset -g POWERLEVEL9K_VIRTUALENV_FOREGROUND=$moss
   typeset -g POWERLEVEL9K_VIRTUALENV_SHOW_PYTHON_VERSION=false
   typeset -g POWERLEVEL9K_VIRTUALENV_{LEFT,RIGHT}_DELIMITER=
 
   # Directory color
-  typeset -g POWERLEVEL9K_DIR_FOREGROUND=$blue
+ typeset -g POWERLEVEL9K_DIR_FOREGROUND=$lime
 
   # Context format when root: user@host.
-  typeset -g POWERLEVEL9K_CONTEXT_ROOT_TEMPLATE="%F{$yellow}%n%f%F{$overlay0}@%m%f"
-  typeset -g POWERLEVEL9K_CONTEXT_TEMPLATE="%F{$overlay1}%n@%m%f"
+  typeset -g POWERLEVEL9K_CONTEXT_ROOT_TEMPLATE="%F{$yellow}%n%f%F{$graphite}@%m%f"
+  typeset -g POWERLEVEL9K_CONTEXT_TEMPLATE="%F{$sage}%n@%m%f"
   typeset -g POWERLEVEL9K_CONTEXT_{DEFAULT,SUDO}_CONTENT_EXPANSION=
 
   # Execution time
   typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD=5
   typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_PRECISION=0
   typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_FORMAT='d h m s'
-  typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND=$yellow
+  typeset -g POWERLEVEL9K_TIME_FOREGROUND=$graphite
 
   # Git
-  typeset -g POWERLEVEL9K_VCS_FOREGROUND=$teal
+  typeset -g POWERLEVEL9K_VCS_FOREGROUND=$toxic
   typeset -g POWERLEVEL9K_VCS_LOADING_TEXT=
   typeset -g POWERLEVEL9K_VCS_MAX_SYNC_LATENCY_SECONDS=0
 
   # Ahead/behind arrows
-  typeset -g POWERLEVEL9K_VCS_{INCOMING,OUTGOING}_CHANGESFORMAT_FOREGROUND=$sky
+  typeset -g POWERLEVEL9K_VCS_{INCOMING,OUTGOING}_CHANGESFORMAT_FOREGROUND=$subtext
   typeset -g POWERLEVEL9K_VCS_GIT_HOOKS=(vcs-detect-changes git-untracked git-aheadbehind)
   typeset -g POWERLEVEL9K_VCS_BRANCH_ICON=
   typeset -g POWERLEVEL9K_VCS_COMMIT_ICON='@'

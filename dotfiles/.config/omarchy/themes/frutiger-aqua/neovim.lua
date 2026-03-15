@@ -6,26 +6,29 @@ return {
     opts = {
       transparent_background = true,
       custom_highlights = function(colors)
-        local vista_blue = "#0096FF"
-        local sapphire_cyan = "#00D4FF"
-        local ice_white = "#E0FBFF"
+        local green = "#5CFF47"
+        local yellow = "#FFD700"
+        local text = "#ECFFE0"
+        local subtext0 = "#A4C4A4"
 
         return {
-          DashboardHeader = { fg = vista_blue, bold = true },
-          SnacksDashboardHeader = { fg = vista_blue, bold = true },
-          AlphaHeader = { fg = vista_blue, bold = true },
-          
-          DashboardIcon = { fg = vista_blue },
-          SnacksDashboardIcon = { fg = vista_blue },
-          
-          DashboardKey = { fg = vista_blue },
-          DashboardDesc = { fg = ice_white },
-          SnacksDashboardKey = { fg = vista_blue },
-          SnacksDashboardDesc = { fg = ice_white },
-          
-          -- Dashboard Footer (Mist Blue)
-          DashboardFooter = { fg = "#BDE0FE", italic = true },
-          SnacksDashboardFooter = { fg = "#BDE0FE", italic = true },
+          DashboardHeader = { fg = green, bold = true },
+          SnacksDashboardHeader = { fg = green, bold = true },
+          AlphaHeader = { fg = green, bold = true },
+
+          DashboardIcon = { fg = yellow },
+          SnacksDashboardIcon = { fg = yellow },
+
+          DashboardKey = { fg = green },
+          SnacksDashboardShortCut = { fg = green },
+          DashboardDesc = { fg = text },
+          DashboardCenter = { fg = text },
+          DashboardShortCut = { fg = green },
+          SnacksDashboardKey = { fg = green },
+          SnacksDashboardDesc = { fg = text },
+
+          DashboardFooter = { fg = subtext0, italic = true },
+          SnacksDashboardFooter = { fg = subtext0, italic = true },
         }
       end,
     },
