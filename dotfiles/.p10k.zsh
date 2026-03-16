@@ -37,21 +37,34 @@
   # Zsh >= 5.1 is required.
   [[ $ZSH_VERSION == (5.<1->*|<6->.*) ]] || return
 
-# --- Frutiger Dark Aero Color Palette ---
-  local red='#FF3333'          # Glossy Stoplight Red
-  local yellow='#FFD700'       # Warning Sun Yellow
-  local lemon='#EAFF00'        # Electric Lemon
-  local green='#5CFF47'        # Aero Grass Green
-  local toxic='#A0FF20'        # Toxic Chartreuse
-  local lime='#7FFF00'         # Deep Lime
-  local emerald='#139228'      # Dark Emerald Accent
-  local text='#ECFFE0'         # Glow White
-  local subtext='#C0FEBD'      # Mist Green
-  local moss='#A4C4A4'         # Silver Moss
-  local sage='#758575'         # Industrial Sage
-  local graphite='#455545'     # Polished Graphite Green
-  local base='#131813'         # Studio Night
-  
+# Prompt colors - Updated to Variant 3 (Botanical 165°)
+  local rosewater='#f4dbd6'
+  local flamingo='#f0c6c6'
+  local pink='#f5bde6'
+  local mauve='#c6a0f6'
+  local red='#ed8796'
+  local maroon='#ee99a0'   
+  local peach='#f5a97f'    
+  local yellow='#eed49f'   
+  local green='#a6da95'   
+  local teal='#8bd5ca'    
+  local sky='#91d7e3'
+  local sapphire='#7dc4e4'
+  local blue='#8aadf4'
+  local lavender='#b7bdf8'
+  local text='#c0e0d6' 
+  local subtext1='#add4c5'
+  local subtext0='#99c4b3'
+  local overlay2='#88b19e'
+  local overlay1='#76978a'
+  local overlay0='#668878'
+  local surface2='#537566'
+  local surface1='#416154'
+  local surface0='#2e4d40'
+  local base='#1e362c'
+  local mantle='#182d24'
+  local crust='#11221b'
+
   # Left prompt segments.
   typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
     context                   # user@host
@@ -82,39 +95,39 @@
   typeset -g POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
 
   # Prompt symbol colors
-  typeset -g POWERLEVEL9K_PROMPT_CHAR_OK_{VIINS,VICMD,VIVIS}_FOREGROUND=$green
-  typeset -g POWERLEVEL9K_PROMPT_CHAR_ERROR_{VIINS,VICMD,VIVIS}_FOREGROUND=$red
+  typeset -g POWERLEVEL9K_PROMPT_CHAR_OK_{VIINS,VICMD,VIVIS}_FOREGROUND=$teal
+  typeset -g POWERLEVEL9K_PROMPT_CHAR_ERROR_{VIINS,VICMD,VIVIS}_FOREGROUND=$maroon
   typeset -g POWERLEVEL9K_PROMPT_CHAR_{OK,ERROR}_VIINS_CONTENT_EXPANSION='❯'
   typeset -g POWERLEVEL9K_PROMPT_CHAR_{OK,ERROR}_VICMD_CONTENT_EXPANSION='❮'
   typeset -g POWERLEVEL9K_PROMPT_CHAR_{OK,ERROR}_VIVIS_CONTENT_EXPANSION='❮'
   typeset -g POWERLEVEL9K_PROMPT_CHAR_OVERWRITE_STATE=false
 
   # Virtualenv 
-  typeset -g POWERLEVEL9K_VIRTUALENV_FOREGROUND=$moss
+  typeset -g POWERLEVEL9K_VIRTUALENV_FOREGROUND=$overlay1
   typeset -g POWERLEVEL9K_VIRTUALENV_SHOW_PYTHON_VERSION=false
   typeset -g POWERLEVEL9K_VIRTUALENV_{LEFT,RIGHT}_DELIMITER=
 
   # Directory color
- typeset -g POWERLEVEL9K_DIR_FOREGROUND=$lime
+  typeset -g POWERLEVEL9K_DIR_FOREGROUND=$green
 
   # Context format when root: user@host.
-  typeset -g POWERLEVEL9K_CONTEXT_ROOT_TEMPLATE="%F{$yellow}%n%f%F{$graphite}@%m%f"
-  typeset -g POWERLEVEL9K_CONTEXT_TEMPLATE="%F{$sage}%n@%m%f"
+  typeset -g POWERLEVEL9K_CONTEXT_ROOT_TEMPLATE="%F{$peach}%n%f%F{$overlay0}@%m%f"
+  typeset -g POWERLEVEL9K_CONTEXT_TEMPLATE="%F{$overlay1}%n@%m%f"
   typeset -g POWERLEVEL9K_CONTEXT_{DEFAULT,SUDO}_CONTENT_EXPANSION=
 
   # Execution time
   typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD=5
   typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_PRECISION=0
   typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_FORMAT='d h m s'
-  typeset -g POWERLEVEL9K_TIME_FOREGROUND=$graphite
+  typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND=$yellow
 
   # Git
-  typeset -g POWERLEVEL9K_VCS_FOREGROUND=$toxic
+  typeset -g POWERLEVEL9K_VCS_FOREGROUND=$peach
   typeset -g POWERLEVEL9K_VCS_LOADING_TEXT=
   typeset -g POWERLEVEL9K_VCS_MAX_SYNC_LATENCY_SECONDS=0
 
   # Ahead/behind arrows
-  typeset -g POWERLEVEL9K_VCS_{INCOMING,OUTGOING}_CHANGESFORMAT_FOREGROUND=$subtext
+  typeset -g POWERLEVEL9K_VCS_{INCOMING,OUTGOING}_CHANGESFORMAT_FOREGROUND=$sky
   typeset -g POWERLEVEL9K_VCS_GIT_HOOKS=(vcs-detect-changes git-untracked git-aheadbehind)
   typeset -g POWERLEVEL9K_VCS_BRANCH_ICON=
   typeset -g POWERLEVEL9K_VCS_COMMIT_ICON='@'

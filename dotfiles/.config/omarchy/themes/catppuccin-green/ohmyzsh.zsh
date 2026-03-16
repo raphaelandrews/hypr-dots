@@ -37,34 +37,34 @@
   # Zsh >= 5.1 is required.
   [[ $ZSH_VERSION == (5.<1->*|<6->.*) ]] || return
 
-  # Prompt colors.
+# Prompt colors - Updated to Variant 3 (Botanical 165°)
   local rosewater='#f4dbd6'
   local flamingo='#f0c6c6'
   local pink='#f5bde6'
   local mauve='#c6a0f6'
   local red='#ed8796'
-  local maroon='#ee99a0'
-  local peach='#f5a97f'
-  local yellow='#eed49f'
-  local green='#a6da95'
-  local teal='#8bd5ca'
+  local maroon='#ee99a0'   
+  local peach='#f5a97f'    
+  local yellow='#eed49f'   
+  local green='#a6da95'   
+  local teal='#8bd5ca'    
   local sky='#91d7e3'
   local sapphire='#7dc4e4'
   local blue='#8aadf4'
   local lavender='#b7bdf8'
-  local text='#cad3f5'
-  local subtext1='#b8c0e0'
-  local subtext0='#a5adcb'
-  local overlay2='#939ab7'
-  local overlay1='#8087a2'
-  local overlay0='#6e738d'
-  local surface2='#5b6078'
-  local surface1='#494d64'
-  local surface0='#363a4f'
-  local base='#24273a'
-  local mantle='#1e2030'
-  local crust='#181926'
-  
+  local text='#c0e0d6' 
+  local subtext1='#add4c5'
+  local subtext0='#99c4b3'
+  local overlay2='#88b19e'
+  local overlay1='#76978a'
+  local overlay0='#668878'
+  local surface2='#537566'
+  local surface1='#416154'
+  local surface0='#2e4d40'
+  local base='#1e362c'
+  local mantle='#182d24'
+  local crust='#11221b'
+
   # Left prompt segments.
   typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
     context                   # user@host
@@ -96,7 +96,7 @@
 
   # Prompt symbol colors
   typeset -g POWERLEVEL9K_PROMPT_CHAR_OK_{VIINS,VICMD,VIVIS}_FOREGROUND=$teal
-  typeset -g POWERLEVEL9K_PROMPT_CHAR_ERROR_{VIINS,VICMD,VIVIS}_FOREGROUND=$red
+  typeset -g POWERLEVEL9K_PROMPT_CHAR_ERROR_{VIINS,VICMD,VIVIS}_FOREGROUND=$maroon
   typeset -g POWERLEVEL9K_PROMPT_CHAR_{OK,ERROR}_VIINS_CONTENT_EXPANSION='❯'
   typeset -g POWERLEVEL9K_PROMPT_CHAR_{OK,ERROR}_VICMD_CONTENT_EXPANSION='❮'
   typeset -g POWERLEVEL9K_PROMPT_CHAR_{OK,ERROR}_VIVIS_CONTENT_EXPANSION='❮'
@@ -108,10 +108,10 @@
   typeset -g POWERLEVEL9K_VIRTUALENV_{LEFT,RIGHT}_DELIMITER=
 
   # Directory color
-  typeset -g POWERLEVEL9K_DIR_FOREGROUND=$teal
+  typeset -g POWERLEVEL9K_DIR_FOREGROUND=$green
 
   # Context format when root: user@host.
-  typeset -g POWERLEVEL9K_CONTEXT_ROOT_TEMPLATE="%F{$sky}%n%f%F{$overlay0}@%m%f"
+  typeset -g POWERLEVEL9K_CONTEXT_ROOT_TEMPLATE="%F{$peach}%n%f%F{$overlay0}@%m%f"
   typeset -g POWERLEVEL9K_CONTEXT_TEMPLATE="%F{$overlay1}%n@%m%f"
   typeset -g POWERLEVEL9K_CONTEXT_{DEFAULT,SUDO}_CONTENT_EXPANSION=
 

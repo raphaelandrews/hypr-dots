@@ -1,0 +1,91 @@
+CATPPUCCIN MACCHIATO: TEAL NEUTRAL VARIANTS (EXPANDED)
+------------------------------------------------------
+
+------------------------------------------------------
+VARIANT 1: TEAL (185°)
+------------------------------------------------------
+Vibe: Modern, clean, "True Teal" expansion.
+
+CORE ACCENTS:
+1. Primary:   Teal (#8bd5ca)
+2. Secondary: Sky (#91d7e3)
+3. Tertiary:  Sapphire (#7dc4e4)
+4. Quaternary:Blue (#8aadf4)
+
+STATUS COLORS:
+Warning:      Yellow (#eed49f)
+Danger:       Red (#ed8796)
+
+NEUTRALS (185°):
+Text         #c0dce0   rgb(192, 220, 224)   hsl(187, 33%, 82%)
+Subtext1     #adcfd4   rgb(173, 207, 212)   hsl(188, 30%, 75%)
+Subtext0     #99bec4   rgb(153, 190, 196)   hsl(188, 26%, 68%)
+Overlay2     #88abb1   rgb(136, 171, 177)   hsl(189, 21%, 61%)
+Overlay1     #76979d   rgb(118, 151, 157)   hsl(189, 17%, 54%)
+Overlay0     #668388   rgb(102, 131, 136)   hsl(189, 14%, 47%)
+Surface2     #537075   rgb(83, 112, 117)    hsl(189, 17%, 39%)
+Surface1     #415c61   rgb(65, 92, 97)      hsl(189, 20%, 32%)
+Surface0     #2e484d   rgb(46, 72, 77)      hsl(190, 25%, 24%)
+Base         #1e3236   rgb(30, 50, 54)      hsl(190, 28%, 16%)
+Mantle       #182a2d   rgb(24, 42, 45)      hsl(189, 30%, 14%)
+Crust        #111f22   rgb(17, 31, 34)      hsl(191, 33%, 10%)
+
+
+------------------------------------------------------
+VARIANT 2: SKY (195°)
+------------------------------------------------------
+Vibe: Frosty, airy, "Cyber-Pastel."
+
+CORE ACCENTS:
+1. Primary:   Sky (#91d7e3)
+2. Secondary: Sapphire (#7dc4e4)
+3. Tertiary:  Blue (#8aadf4)
+4. Quaternary:Lavender (#b7bdf8)
+
+STATUS COLORS:
+Warning:      Rosewater (#f4dbd6) - (A cooler, muted warning)
+Danger:       Maroon (#ee99a0)    - (A desaturated, frosty red)
+
+NEUTRALS (195°):
+Text         #c0dae4   rgb(192, 218, 228)   hsl(197, 39%, 82%)
+Subtext1     #adccdb   rgb(173, 204, 219)   hsl(200, 39%, 77%)
+Subtext0     #99bcce   rgb(153, 188, 206)   hsl(200, 36%, 70%)
+Overlay2     #88a9bd   rgb(136, 169, 189)   hsl(203, 28%, 64%)
+Overlay1     #7695a8   rgb(118, 149, 168)   hsl(203, 22%, 56%)
+Overlay0     #668192   rgb(102, 129, 146)   hsl(203, 18%, 49%)
+Surface2     #536d7d   rgb(83, 109, 125)    hsl(203, 20%, 41%)
+Surface1     #415967   rgb(65, 89, 103)      hsl(202, 23%, 33%)
+Surface0     #2e4451   rgb(46, 68, 81)      hsl(202, 28%, 25%)
+Base         #1e2f3a   rgb(30, 47, 58)      hsl(204, 32%, 17%)
+Mantle       #182730   rgb(24, 39, 48)      hsl(202, 33%, 14%)
+Crust        #111c22   rgb(17, 28, 34)      hsl(201, 33%, 10%)
+
+
+------------------------------------------------------
+VARIANT 3: GREEN (165°)
+------------------------------------------------------
+Vibe: Botanical, Minty, softest eye-strain reduction.
+
+CORE ACCENTS:
+1. Primary:   Green (#a6da95)
+2. Secondary: Teal (#8bd5ca)
+3. Tertiary:  Yellow (#eed49f)
+4. Quaternary:Peach (#f5a97f)
+
+STATUS COLORS:
+Warning:      Peach (#f5a97f)     - (Warm but fits the earthy vibe)
+Danger:       Maroon (#ee99a0)    - (Organic, less harsh than Red)
+
+NEUTRALS (165°):
+Text         #c0e0d6   rgb(192, 224, 214)   hsl(161, 33%, 82%)
+Subtext1     #add4c5   rgb(173, 212, 197)   hsl(157, 30%, 75%)
+Subtext0     #99c4b3   rgb(153, 196, 179)   hsl(157, 26%, 68%)
+Overlay2     #88b19e   rgb(136, 177, 158)   hsl(152, 21%, 61%)
+Overlay1     #76978a   rgb(118, 151, 138)   hsl(151, 17%, 54%)
+Overlay0     #668878   rgb(102, 136, 120)   hsl(152, 14%, 47%)
+Surface2     #537566   rgb(83, 117, 102)    hsl(154, 17%, 39%)
+Surface1     #416154   rgb(65, 97, 84)      hsl(156, 20%, 32%)
+Surface0     #2e4d40   rgb(46, 77, 64)      hsl(155, 25%, 24%)
+Base         #1e362c   rgb(30, 54, 44)      hsl(155, 28%, 16%)
+Mantle       #182d24   rgb(24, 45, 36)      hsl(154, 30%, 14%)
+Crust        #11221b   rgb(17, 34, 27)      hsl(155, 33%, 10%)
