@@ -1,82 +1,79 @@
 return {
   {
-    "catppuccin/nvim",
-    name = "catppuccin",
+    "Ferouk/bearded-nvim",
+    name = "bearded",
     priority = 1000,
-    opts = {
-      transparent_background = true,
-      -- Ensure the base palette follows the 165° botanical hue
-      color_overrides = {
-        macchiato = {
-          text = "#c0e0d6",
-          subtext1 = "#add4c5",
-          subtext0 = "#99c4b3",
-          overlay2 = "#88b19e",
-          overlay1 = "#76978a",
-          overlay0 = "#668878",
-          surface2 = "#537566",
-          surface1 = "#416154",
-          surface0 = "#2e4d40",
-          base = "#1e362c",
-          mantle = "#182d24",
-          crust = "#11221b",
-        },
-      },
-      custom_highlights = function(colors)
-        -- Variant 3 Botanical Adaptations
-        local green = "#a6da95"    -- Primary Core
-        local yellow = "#eed49f"   -- Tertiary/Warning
-        local text = "#c0e0d6"     -- Neutral Text
-        local subtext0 = "#99c4b3" -- Neutral Subtext
+    config = function()
+      -- 1. Setup the theme flavor
+      require("bearded").setup({
+        flavor = "oceanic",
+      })
+      vim.cmd("colorscheme bearded")
 
-        return {
-          DashboardHeader = { fg = green, bold = true },
-          SnacksDashboardHeader = { fg = green, bold = true },
-          AlphaHeader = { fg = green, bold = true },
+      -- 2. Define Variant 3 Botanical Palette
+      local green = "#a6da95"
+      local teal = "#8bd5ca"
+      local yellow = "#eed49f"
+      local peach = "#f5a97f"
+      local text = "#c0e0d6"
+      local subtext0 = "#99c4b3"
 
-          DashboardIcon = { fg = yellow },
-          SnacksDashboardIcon = { fg = yellow },
+      -- 3. Map EVERY property from your long list
+      local hl = vim.api.nvim_set_hl
+      local highlights = {
+        -- Headers
+        DashboardHeader = { fg = green, bold = true },
+        SnacksDashboardHeader = { fg = green, bold = true },
+        AlphaHeader = { fg = green, bold = true },
 
-          DashboardKey = { fg = green },
-          SnacksDashboardShortCut = { fg = green },
-          DashboardDesc = { fg = text },
-          DashboardCenter = { fg = text },
-          DashboardShortCut = { fg = green },
-          SnacksDashboardKey = { fg = green },
-          SnacksDashboardDesc = { fg = text },
+        -- Icons
+        DashboardIcon = { fg = yellow },
+        SnacksDashboardIcon = { fg = yellow },
+        DashboardButtonIcon = { fg = yellow },
+        SnacksDashboardButtonIcon = { fg = yellow },
 
-          DashboardFooter = { fg = subtext0, italic = true },
-          SnacksDashboardFooter = { fg = subtext0, italic = true },
+        -- Keys & Shortcuts
+        DashboardKey = { fg = peach },
+        DashboardShortCut = { fg = peach },
+        SnacksDashboardKey = { fg = peach },
+        SnacksDashboardShortCut = { fg = peach },
+        AlphaShortcut = { fg = peach },
 
-          -- Additional dashboard text colors
-          DashboardRecentFiles = { fg = text },
-          DashboardProject = { fg = text },
-          DashboardMruTitle = { fg = green },
-          DashboardFile = { fg = text },
-          DashboardDir = { fg = subtext0 },
-          DashboardButton = { fg = text },
-          DashboardButtonIcon = { fg = yellow },
-          
-          SnacksDashboardTitle = { fg = green },
-          SnacksDashboardFile = { fg = text },
-          SnacksDashboardDir = { fg = subtext0 },
-          SnacksDashboardButton = { fg = text },
-          SnacksDashboardButtonIcon = { fg = yellow },
-          SnacksDashboardRecentFiles = { fg = text },
-          SnacksDashboardProject = { fg = text },
-          SnacksDashboardMruTitle = { fg = green },
-          
-          AlphaButtons = { fg = text },
-          AlphaShortcut = { fg = green },
-          AlphaFooter = { fg = subtext0, italic = true },
-        }
-      end,
-    },
-  },
-  {
-    "LazyVim/LazyVim",
-    opts = {
-      colorscheme = "catppuccin-macchiato",
-    },
-  },
+        -- Descriptions & Text
+        DashboardDesc = { fg = text },
+        DashboardCenter = { fg = text },
+        DashboardRecentFiles = { fg = text },
+        DashboardProject = { fg = text },
+        DashboardFile = { fg = text },
+        DashboardButton = { fg = text },
+        AlphaButtons = { fg = text },
+        SnacksDashboardDesc = { fg = text },
+        SnacksDashboardFile = { fg = text },
+        SnacksDashboardButton = { fg = text },
+        SnacksDashboardRecentFiles = { fg = text },
+        SnacksDashboardProject = { fg = text },
+
+        -- Titles
+        DashboardMruTitle = { fg = green },
+        SnacksDashboardTitle = { fg = green },
+        SnacksDashboardMruTitle = { fg = green },
+
+        -- Footers & Directories
+        DashboardFooter = { fg = yellow, italic = true },
+        SnacksDashboardFooter = { fg = yellow, italic = true },
+        AlphaFooter = { fg = yellow, italic = true },
+        DashboardDir = { fg = yellow },
+        SnacksDashboardDir = { fg = yellow },
+      }
+
+      -- 4. The Loop: This is what applies the "long list"
+      for group, opts in pairs(highlights) do
+        hl(0, group, opts)
+      end
+      
+      -- 5. Force Transparency (Optional but recommended for your build)
+      hl(0, "Normal", { bg = "NONE" })
+      hl(0, "NormalFloat", { bg = "NONE" })
+    end,
+  }
 }
