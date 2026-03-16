@@ -1,0 +1,84 @@
+# btop theme: Catppuccin Macchiato Teal (Variant 1 - 185°)
+# Main background (Base)
+theme[main_bg]="#1e3236"
+
+# Main text color (Text)
+theme[main_fg]="#c0dce0"
+
+# Title color for boxes (Text)
+theme[title]="#c0dce0"
+
+# Highlight color for keyboard shortcuts (Sky)
+theme[hi_fg]="#91d7e3"
+
+# Background color of selected item in processes box (Surface1)
+theme[selected_bg]="#415c61"
+
+# Foreground color of selected item in processes box (Sky)
+theme[selected_fg]="#91d7e3"
+
+# Color of inactive/disabled text (Overlay1)
+theme[inactive_fg]="#76979d"
+
+# Color of text appearing on top of graphs (Sky)
+theme[graph_text]="#91d7e3"
+
+# Background color of the percentage meters (Surface1)
+theme[meter_bg]="#415c61"
+
+# Misc colors for processes box (Sky)
+theme[proc_misc]="#91d7e3"
+
+# CPU, Memory, Network, Proc box outline colors
+theme[cpu_box]="#8bd5ca" # Teal (Primary Core)
+theme[mem_box]="#91d7e3" # Sky (Secondary Core)
+theme[net_box]="#eed49f" # Yellow (Warning)
+theme[proc_box]="#7dc4e4" # Sapphire (Tertiary)
+
+# Box divider line and small boxes line color (Overlay0)
+theme[div_line]="#668388"
+
+# Temperature graph color (Teal -> Yellow -> Red)
+theme[temp_start]="#8bd5ca"
+theme[temp_mid]="#eed49f"
+theme[temp_end]="#ed8796"
+
+# CPU graph colors (Teal -> Sky -> Sapphire)
+theme[cpu_start]="#8bd5ca"
+theme[cpu_mid]="#91d7e3"
+theme[cpu_end]="#7dc4e4"
+
+# Mem/Disk free meter (Teal -> Sky -> Sapphire)
+theme[free_start]="#8bd5ca"
+theme[free_mid]="#91d7e3"
+theme[free_end]="#7dc4e4"
+
+# Mem/Disk cached meter (Sapphire -> Sky -> Teal)
+theme[cached_start]="#7dc4e4"
+theme[cached_mid]="#91d7e3"
+theme[cached_end]="#8bd5ca"
+
+# Mem/Disk available meter (Yellow -> Red)
+theme[available_start]="#eed49f"
+theme[available_mid]="#f5a97f"
+theme[available_end]="#ed8796"
+
+# Mem/Disk used meter (Teal -> Sky -> Sapphire)
+theme[used_start]="#8bd5ca"
+theme[used_mid]="#91d7e3"
+theme[used_end]="#7dc4e4"
+
+# Download graph colors (Yellow -> Red)
+theme[download_start]="#eed49f"
+theme[download_mid]="#f5a97f"
+theme[download_end]="#ed8796"
+
+# Upload graph colors (Teal -> Sky)
+theme[upload_start]="#8bd5ca"
+theme[upload_mid]="#91d7e3"
+theme[upload_end]="#7dc4e4"
+
+# Process box color gradient for threads, mem and cpu usage (Teal -> Sky)
+theme[process_start]="#8bd5ca"
+theme[process_mid]="#91d7e3"
+theme[process_end]="#7dc4e4"

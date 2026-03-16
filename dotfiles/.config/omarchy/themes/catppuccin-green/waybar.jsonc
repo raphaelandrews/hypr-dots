@@ -34,7 +34,7 @@
 		modules-left
 	------------------*/
   "custom/omarchy": {
-    "format": "<span font='omarchy'>📟</span>",
+    "format": "<span font='omarchy'>🍍</span>",
     "on-click": "omarchy-menu",
     "on-click-right": "xdg-terminal-exec",
     "tooltip-format": "Omarchy Menu\n\nSuper + Alt + Space"
@@ -93,10 +93,10 @@
       "on-scroll": 1,
       "format": {
         "months": "<span color='#8bd5ca'><b>{}</b></span>",
-        "days": "<span color='#cad3f5'><b>{}</b></span>",
-        "weeks": "<span color='#a6da95'><b>W{}</b></span>",
-        "weekdays": "<span color='#91d7e3'><b>{}</b></span>",
-        "today": "<span color='#eed49f'><b><u>{}</u></b></span>"
+        "days": "<span color='#c0e0d6'><b>{}</b></span>",
+        "weeks": "<span color='#76978a'><b>W{}</b></span>",
+        "weekdays": "<span color='#eed49f'><b>{}</b></span>",
+        "today": "<span color='#a6da95'><b><u>{}</u></b></span>"
       }
     },
     "actions": {

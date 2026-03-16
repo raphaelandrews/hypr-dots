@@ -1,0 +1,13 @@
+/* Waybar Variant 1 Modern Teal (185°) */
+@define-color foreground #c0dce0;
+@define-color background #1e3236;
+
+/* Additional helper colors for modules */
+@define-color teal       #8bd5ca;
+@define-color sky        #91d7e3;
+@define-color sapphire   #7dc4e4;
+@define-color blue       #8aadf4;
+@define-color yellow     #eed49f;
+@define-color red        #ed8796;
+@define-color surface1   #415c61;
+@define-color surface0   #2e484d;
