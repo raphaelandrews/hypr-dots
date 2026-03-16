@@ -1,4 +1,5 @@
 {
-  "name": "Catppuccin Mocha",
-  "extension": "catppuccin.catppuccin-vsc"
+  "name": "Bearded Theme Oceanic",
+  "extension": "BeardedBear.beardedtheme",
+  "theme": "Bearded Theme Oceanic"
 }

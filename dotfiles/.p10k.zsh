@@ -37,7 +37,7 @@
   # Zsh >= 5.1 is required.
   [[ $ZSH_VERSION == (5.<1->*|<6->.*) ]] || return
 
- # Prompt colors - Updated to Variant 1 (Modern Teal 185°)
+# Prompt colors - Updated to Variant 3 (Botanical 165°)
   local rosewater='#f4dbd6'
   local flamingo='#f0c6c6'
   local pink='#f5bde6'
@@ -52,18 +52,18 @@
   local sapphire='#7dc4e4'
   local blue='#8aadf4'
   local lavender='#b7bdf8'
-  local text='#c0dce0' 
-  local subtext1='#adcfd4'
-  local subtext0='#99bec4'
-  local overlay2='#88abb1'
-  local overlay1='#76979d'
-  local overlay0='#668388'
-  local surface2='#537075'
-  local surface1='#415c61'
-  local surface0='#2e484d'
-  local base='#1e3236'
-  local mantle='#182a2d'
-  local crust='#111f22'
+  local text='#c0e0d6' 
+  local subtext1='#add4c5'
+  local subtext0='#99c4b3'
+  local overlay2='#88b19e'
+  local overlay1='#76978a'
+  local overlay0='#668878'
+  local surface2='#537566'
+  local surface1='#416154'
+  local surface0='#2e4d40'
+  local base='#1e362c'
+  local mantle='#182d24'
+  local crust='#11221b'
 
   # Left prompt segments.
   typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
@@ -95,8 +95,8 @@
   typeset -g POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
 
   # Prompt symbol colors
-  typeset -g POWERLEVEL9K_PROMPT_CHAR_OK_{VIINS,VICMD,VIVIS}_FOREGROUND=$sky
-  typeset -g POWERLEVEL9K_PROMPT_CHAR_ERROR_{VIINS,VICMD,VIVIS}_FOREGROUND=$red
+  typeset -g POWERLEVEL9K_PROMPT_CHAR_OK_{VIINS,VICMD,VIVIS}_FOREGROUND=$teal
+  typeset -g POWERLEVEL9K_PROMPT_CHAR_ERROR_{VIINS,VICMD,VIVIS}_FOREGROUND=$maroon
   typeset -g POWERLEVEL9K_PROMPT_CHAR_{OK,ERROR}_VIINS_CONTENT_EXPANSION='❯'
   typeset -g POWERLEVEL9K_PROMPT_CHAR_{OK,ERROR}_VICMD_CONTENT_EXPANSION='❮'
   typeset -g POWERLEVEL9K_PROMPT_CHAR_{OK,ERROR}_VIVIS_CONTENT_EXPANSION='❮'
@@ -108,10 +108,10 @@
   typeset -g POWERLEVEL9K_VIRTUALENV_{LEFT,RIGHT}_DELIMITER=
 
   # Directory color
-  typeset -g POWERLEVEL9K_DIR_FOREGROUND=$teal
+  typeset -g POWERLEVEL9K_DIR_FOREGROUND=$green
 
   # Context format when root: user@host.
-  typeset -g POWERLEVEL9K_CONTEXT_ROOT_TEMPLATE="%F{$sapphire}%n%f%F{$overlay0}@%m%f"
+  typeset -g POWERLEVEL9K_CONTEXT_ROOT_TEMPLATE="%F{$peach}%n%f%F{$overlay0}@%m%f"
   typeset -g POWERLEVEL9K_CONTEXT_TEMPLATE="%F{$overlay1}%n@%m%f"
   typeset -g POWERLEVEL9K_CONTEXT_{DEFAULT,SUDO}_CONTENT_EXPANSION=
 
@@ -122,12 +122,12 @@
   typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND=$yellow
 
   # Git
-  typeset -g POWERLEVEL9K_VCS_FOREGROUND=$sky
+  typeset -g POWERLEVEL9K_VCS_FOREGROUND=$peach
   typeset -g POWERLEVEL9K_VCS_LOADING_TEXT=
   typeset -g POWERLEVEL9K_VCS_MAX_SYNC_LATENCY_SECONDS=0
 
   # Ahead/behind arrows
-  typeset -g POWERLEVEL9K_VCS_{INCOMING,OUTGOING}_CHANGESFORMAT_FOREGROUND=$sapphire
+  typeset -g POWERLEVEL9K_VCS_{INCOMING,OUTGOING}_CHANGESFORMAT_FOREGROUND=$sky
   typeset -g POWERLEVEL9K_VCS_GIT_HOOKS=(vcs-detect-changes git-untracked git-aheadbehind)
   typeset -g POWERLEVEL9K_VCS_BRANCH_ICON=
   typeset -g POWERLEVEL9K_VCS_COMMIT_ICON='@'
