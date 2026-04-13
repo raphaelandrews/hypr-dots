@@ -3,7 +3,8 @@
 # : Manager {{{
 
 [mgr]
-cwd = { fg = "#89b482" }
+cwd     = { fg = "#89b482" }
+hovered = { fg = "#282828", bg = "#89b482", bold = true }
 
 # Find
 find_keyword  = { fg = "#d8a657", bold = true, italic = true, underline = true }
@@ -30,8 +31,8 @@ border_style  = { fg = "#928374" }
 # : Tabs {{{
 
 [tabs]
-active   = { fg = "#282828", bg = "#7daea3", bold = true }
-inactive = { fg = "#7daea3", bg = "#32302f" }
+active   = { fg = "#282828", bg = "#89b482", bold = true }
+inactive = { fg = "#89b482", bg = "#32302f" }
 
 # : }}}
 
@@ -40,8 +41,8 @@ inactive = { fg = "#7daea3", bg = "#32302f" }
 
 [mode]
 
-normal_main = { fg = "#282828", bg = "#7daea3", bold = true }
-normal_alt  = { fg = "#7daea3", bg = "#32302f" }
+normal_main = { fg = "#282828", bg = "#89b482", bold = true }
+normal_alt  = { fg = "#89b482", bg = "#32302f" }
 
 # Select mode
 select_main = { fg = "#282828", bg = "#89b482", bold = true }
@@ -59,7 +60,7 @@ unset_alt  = { fg = "#ea6962", bg = "#32302f" }
 [status]
 # Permissions
 perm_sep   = { fg = "#928374" }
-perm_type  = { fg = "#7daea3" }
+perm_type  = { fg = "#89b482" }
 perm_read  = { fg = "#d8a657" }
 perm_write = { fg = "#ea6962" }
 perm_exec  = { fg = "#a9b665" }
@@ -75,7 +76,7 @@ progress_error  = { fg = "#d8a657", bg = "#ea6962" }
 # : Pick {{{
 
 [pick]
-border   = { fg = "#7daea3" }
+border   = { fg = "#89b482" }
 active   = { fg = "#d3869b", bold = true }
 inactive = {}
 
@@ -85,7 +86,7 @@ inactive = {}
 # : Input {{{
 
 [input]
-border   = { fg = "#7daea3" }
+border   = { fg = "#89b482" }
 title    = {}
 value    = {}
 selected = { reversed = true }
@@ -96,7 +97,7 @@ selected = { reversed = true }
 # : Completion {{{
 
 [cmp]
-border = { fg = "#7daea3" }
+border = { fg = "#89b482" }
 
 # : }}}
 
@@ -104,7 +105,7 @@ border = { fg = "#7daea3" }
 # : Tasks {{{
 
 [tasks]
-border  = { fg = "#7daea3" }
+border  = { fg = "#89b482" }
 title   = {}
 hovered = { fg = "#d3869b", bold = true }
 
@@ -138,8 +139,8 @@ footer  = { fg = "#32302f", bg = "#d4be98" }
 # : Spotter {{{
 
 [spot]
-border   = { fg = "#7daea3" }
-title    = { fg = "#7daea3" }
+border   = { fg = "#89b482" }
+title    = { fg = "#89b482" }
 tbl_col  = { fg = "#89b482" }
 tbl_cell = { fg = "#d3869b", bg = "#45403d" }
 
@@ -173,7 +174,7 @@ rules = [
 	{ mime = "vfs/{absent,stale}", fg = "#a89984" },
 	# Fallback
 	{ url = "*", fg = "#d4be98" },
-	{ url = "*/", fg = "#7daea3" },
+	{ url = "*/", fg = "#89b482" },
 ]
 
 # : }}}
@@ -183,8 +184,8 @@ rules = [
 dirs = [
 	{ name = ".config", text = "", fg = "#d3869b" },
 	{ name = ".git", text = "", fg = "#89b482" },
-	{ name = ".github", text = "", fg = "#7daea3" },
-	{ name = ".npm", text = "", fg = "#7daea3" },
+	{ name = ".github", text = "", fg = "#89b482" },
+	{ name = ".npm", text = "", fg = "#89b482" },
 	{ name = "Desktop", text = "", fg = "#89b482" },
 	{ name = "Development", text = "", fg = "#89b482" },
 	{ name = "Documents", text = "", fg = "#89b482" },
@@ -208,7 +209,7 @@ conds = [
 	{ if = "dummy", text = "", fg = "#ea6962" },
 
 	# Fallback
-	{ if = "dir", text = "", fg = "#7daea3" },
+	{ if = "dir", text = "", fg = "#89b482" },
 	{ if = "exec", text = "", fg = "#a9b665" },
 	{ if = "!dir", text = "", fg = "#d4be98" },
 ]
