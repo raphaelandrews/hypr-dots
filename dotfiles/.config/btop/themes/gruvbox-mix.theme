@@ -1,0 +1,77 @@
+# Main background (bg1 stays the same)
+theme[main_bg]="#282828"
+
+# Foreground (Mix fg0)
+theme[main_fg]="#E2CCA9"
+
+# Titles (Mix uses same tone, keep consistent)
+theme[title]="#E2CCA9"
+
+# Highlight (secondary → Mix yellow)
+theme[hi_fg]="#E9B143"
+
+# Selection (keep best bg, swap fg to Mix yellow)
+theme[selected_bg]="#473C29"
+theme[selected_fg]="#E9B143"
+
+# Inactive text
+theme[inactive_fg]="#7C6F64"
+
+# Graph text
+theme[graph_text]="#928374"
+
+# Process misc (primary → Mix green)
+theme[proc_misc]="#B0B846"
+
+# Box outlines (unchanged, neutral)
+theme[cpu_box]="#504945"
+theme[mem_box]="#504945"
+theme[net_box]="#504945"
+theme[proc_box]="#504945"
+
+# Dividers
+theme[div_line]="#504945"
+
+# ----------------------
+# GRAPHS (Mix adapted)
+# ----------------------
+
+# Temperature → warm progression
+theme[temp_start]="#B0B846"   # green
+theme[temp_mid]="#E9B143"     # yellow
+theme[temp_end]="#F28534"     # orange
+
+# CPU → warm → stress
+theme[cpu_start]="#B0B846"
+theme[cpu_mid]="#E9B143"
+theme[cpu_end]="#F2594B"      # Mix red
+
+# Memory free → subtle green bg → green
+theme[free_start]="#32361A"
+theme[free_mid]=""
+theme[free_end]="#B0B846"
+
+# Cached → green → aqua (Mix)
+theme[cached_start]="#333E34"
+theme[cached_mid]=""
+theme[cached_end]="#8BBA7F"
+
+# Available → yellow → orange
+theme[available_start]="#E9B143"
+theme[available_mid]=""
+theme[available_end]="#F28534"
+
+# Used → red (Mix)
+theme[used_start]="#F2594B"
+theme[used_mid]=""
+theme[used_end]="#F2594B"
+
+# Download → green → aqua → blue (subtle cool edge)
+theme[download_start]="#B0B846"
+theme[download_mid]="#8BBA7F"
+theme[download_end]="#80AA9E"
+
+# Upload → yellow → orange → red
+theme[upload_start]="#E9B143"
+theme[upload_mid]="#F28534"
+theme[upload_end]="#F2594B"

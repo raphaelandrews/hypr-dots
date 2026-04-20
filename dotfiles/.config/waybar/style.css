@@ -30,14 +30,13 @@ window#waybar.empty #window {
 
 tooltip {
   padding: 2px;
-  background: #282828;
-  border: 1px solid #a89984;
+  background: #282828;      /* bg1 */
+  border: 1px solid #a89984; /* grey2 */
   border-radius: 8px;
 }
 
-
 tooltip label {
-  color: #d4be98;
+  color: #d4be98; /* fg0 */
 }
 
 .hidden {

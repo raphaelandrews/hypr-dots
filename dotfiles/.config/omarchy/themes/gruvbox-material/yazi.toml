@@ -1,0 +1,205 @@
+# vim:fileencoding=utf-8:foldmethod=marker
+
+# : Manager {{{
+
+[mgr]
+cwd     = { fg = "#a9b665" }
+hovered = { fg = "#1d2021", bg = "#a9b665", bold = true }
+
+# Find
+find_keyword  = { fg = "#d8a657", bold = true, italic = true, underline = true }
+find_position = { fg = "#e78a4e", bg = "reset", bold = true, italic = true }
+
+# Marker
+marker_copied   = { fg = "#a9b665", bg = "#a9b665" }
+marker_cut      = { fg = "#ea6962", bg = "#ea6962" }
+marker_marked   = { fg = "#89b482", bg = "#89b482" }
+marker_selected = { fg = "#d8a657", bg = "#d8a657" }
+
+# Count
+count_copied   = { fg = "#1d2021", bg = "#a9b665" }
+count_cut      = { fg = "#1d2021", bg = "#ea6962" }
+count_selected = { fg = "#1d2021", bg = "#d8a657" }
+
+# Border
+border_symbol = "│"
+border_style  = { fg = "#928374" }
+
+# : }}}
+
+
+# : Tabs {{{
+
+[tabs]
+active   = { fg = "#1d2021", bg = "#a9b665", bold = true }
+inactive = { fg = "#a9b665", bg = "#32302f" }
+
+# : }}}
+
+
+# : Mode {{{
+
+[mode]
+
+normal_main = { fg = "#1d2021", bg = "#a9b665", bold = true }
+normal_alt  = { fg = "#a9b665", bg = "#32302f" }
+
+# Select mode
+select_main = { fg = "#1d2021", bg = "#a9b665", bold = true }
+select_alt  = { fg = "#a9b665", bg = "#32302f" }
+
+# Unset mode
+unset_main = { fg = "#1d2021", bg = "#ea6962", bold = true }
+unset_alt  = { fg = "#ea6962", bg = "#32302f" }
+
+# : }}}
+
+
+# : Status bar {{{
+
+[status]
+perm_sep   = { fg = "#928374" }
+perm_type  = { fg = "#a9b665" }
+perm_read  = { fg = "#d8a657" }
+perm_write = { fg = "#ea6962" }
+perm_exec  = { fg = "#a9b665" }
+
+progress_label  = { fg = "#ddc7a1", bold = true }
+progress_normal = { fg = "#a9b665", bg = "#3c3836" }
+progress_error  = { fg = "#d8a657", bg = "#ea6962" }
+
+# : }}}
+
+
+# : Pick {{{
+
+[pick]
+border   = { fg = "#a9b665" }
+active   = { fg = "#e78a4e", bold = true }
+inactive = {}
+
+# : }}}
+
+
+# : Input {{{
+
+[input]
+border   = { fg = "#a9b665" }
+title    = {}
+value    = {}
+selected = { reversed = true }
+
+# : }}}
+
+
+# : Completion {{{
+
+[cmp]
+border = { fg = "#a9b665" }
+
+# : }}}
+
+
+# : Tasks {{{
+
+[tasks]
+border  = { fg = "#a9b665" }
+title   = {}
+hovered = { fg = "#e78a4e", bold = true }
+
+# : }}}
+
+
+# : Which {{{
+
+[which]
+mask            = { bg = "#32302f" }
+cand            = { fg = "#a9b665" }
+rest            = { fg = "#a89984" }
+desc            = { fg = "#e78a4e" }
+separator       = "  "
+separator_style = { fg = "#7c6f64" }
+
+# : }}}
+
+
+# : Help {{{
+
+[help]
+on      = { fg = "#a9b665" }
+run     = { fg = "#e78a4e" }
+hovered = { reversed = true, bold = true }
+footer  = { fg = "#32302f", bg = "#d4be98" }
+
+# : }}}
+
+
+# : Spotter {{{
+
+[spot]
+border   = { fg = "#a9b665" }
+title    = { fg = "#a9b665" }
+tbl_col  = { fg = "#a9b665" }
+tbl_cell = { fg = "#e78a4e", bg = "#3c3836" }
+
+# : }}}
+
+
+# : Notification {{{
+
+[notify]
+title_info  = { fg = "#a9b665" }
+title_warn  = { fg = "#d8a657" }
+title_error = { fg = "#ea6962" }
+
+# : }}}
+
+
+# : File-specific styles {{{
+
+[filetype]
+
+rules = [
+	{ mime = "image/*", fg = "#89b482" },
+	{ mime = "{audio,video}/*", fg = "#d8a657" },
+	{ mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", fg = "#e78a4e" },
+	{ mime = "application/{pdf,doc,rtf}", fg = "#a9b665" },
+	{ mime = "vfs/{absent,stale}", fg = "#a89984" },
+	{ url = "*", fg = "#d4be98" },
+	{ url = "*/", fg = "#a9b665" },
+]
+
+# : }}}
+
+[icon]
+
+dirs = [
+	{ name = ".config", text = "", fg = "#e78a4e" },
+	{ name = ".git", text = "", fg = "#a9b665" },
+	{ name = ".github", text = "", fg = "#a9b665" },
+	{ name = ".npm", text = "", fg = "#a9b665" },
+	{ name = "Desktop", text = "", fg = "#a9b665" },
+	{ name = "Development", text = "", fg = "#a9b665" },
+	{ name = "Documents", text = "", fg = "#a9b665" },
+	{ name = "Downloads", text = "", fg = "#a9b665" },
+	{ name = "Library", text = "", fg = "#a9b665" },
+	{ name = "Movies", text = "", fg = "#a9b665" },
+	{ name = "Music", text = "", fg = "#a9b665" },
+	{ name = "Pictures", text = "", fg = "#a9b665" },
+	{ name = "Public", text = "", fg = "#a9b665" },
+	{ name = "Videos", text = "", fg = "#a9b665" },
+]
+conds = [
+	{ if = "orphan", text = "", fg = "#d4be98" },
+	{ if = "link", text = "", fg = "#928374" },
+	{ if = "block", text = "", fg = "#ea6962" },
+	{ if = "char", text = "", fg = "#ea6962" },
+	{ if = "fifo", text = "", fg = "#ea6962" },
+	{ if = "sock", text = "", fg = "#ea6962" },
+	{ if = "sticky", text = "", fg = "#ea6962" },
+	{ if = "dummy", text = "", fg = "#ea6962" },
+
+	{ if = "dir", text = "", fg = "#a9b665" },
+	{ if = "exec", text = "", fg = "#a9b665" },
+	{ if = "!dir", text = "", fg = "#d4be98" },
+]

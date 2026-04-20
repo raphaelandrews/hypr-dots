@@ -1,0 +1,77 @@
+# Main background (use bg1 for softer contrast)
+theme[main_bg]="#282828"
+
+# Main text (use fg0 for clarity)
+theme[main_fg]="#D4BE98"
+
+# Titles (slightly brighter text)
+theme[title]="#DDC7A1"
+
+# Highlight (keyboard shortcuts → secondary color)
+theme[hi_fg]="#D8A657"
+
+# Selection (use warm yellow-tinted bg)
+theme[selected_bg]="#473C29"
+theme[selected_fg]="#D8A657"
+
+# Inactive/disabled text (true grey, not bg)
+theme[inactive_fg]="#7C6F64"
+
+# Graph text (subtle but readable)
+theme[graph_text]="#928374"
+
+# Process misc (primary accent)
+theme[proc_misc]="#A9B665"
+
+# Box outlines (neutral, not competing)
+theme[cpu_box]="#504945"
+theme[mem_box]="#504945"
+theme[net_box]="#504945"
+theme[proc_box]="#504945"
+
+# Dividers
+theme[div_line]="#504945"
+
+# ----------------------
+# GRAPHS (key changes)
+# ----------------------
+
+# Temperature → warm progression
+theme[temp_start]="#A9B665"   # green
+theme[temp_mid]="#D8A657"     # yellow
+theme[temp_end]="#E78A4E"     # orange
+
+# CPU → classic warm gradient
+theme[cpu_start]="#A9B665"
+theme[cpu_mid]="#D8A657"
+theme[cpu_end]="#EA6962"      # red for max stress
+
+# Memory free → subtle green
+theme[free_start]="#32361A"
+theme[free_mid]=""
+theme[free_end]="#A9B665"
+
+# Cached → soft green/aqua (very subtle)
+theme[cached_start]="#333E34"
+theme[cached_mid]=""
+theme[cached_end]="#89B482"
+
+# Available → yellow spectrum
+theme[available_start]="#D8A657"
+theme[available_mid]=""
+theme[available_end]="#E78A4E"
+
+# Used → red spectrum (unchanged logic, but harmonized)
+theme[used_start]="#EA6962"
+theme[used_mid]=""
+theme[used_end]="#EA6962"
+
+# Download → green → aqua (keep it subtle)
+theme[download_start]="#A9B665"
+theme[download_mid]="#89B482"
+theme[download_end]="#7DAEA3"
+
+# Upload → yellow → orange
+theme[upload_start]="#D8A657"
+theme[upload_mid]="#E78A4E"
+theme[upload_end]="#EA6962"

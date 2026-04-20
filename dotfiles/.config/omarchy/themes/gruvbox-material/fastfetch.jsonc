@@ -1,0 +1,133 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "source": "arch",
+    "type": "small",
+    "height": 12,
+    "padding": {
+      "top": 6,
+      "left": 6,
+      "right": 6
+    },
+    "color": {
+      "1": "#a9b665",
+      "2": "#d8a657"
+    }
+  },
+  "display": {
+    "color": {
+      "separator": "#e78a4e"
+    },
+    "separator": " ",
+    "constants": [
+      "   »»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»"
+    ]
+  },
+  "modules": [
+    "break",
+    {
+      "type": "title",
+      "key": " PC",
+      "keyColor": "#a9b665"
+    },
+    {
+      "type": "cpu",
+      "key": " ",
+      "showPeCoreCount": true,
+      "keyColor": "#a9b665"
+    },
+    {
+      "type": "gpu",
+      "key": " ",
+      "detectionMethod": "pci",
+      "keyColor": "#a9b665"
+    },
+    {
+      "type": "display",
+      "key": "󱄄 ",
+      "keyColor": "#a9b665"
+    },
+    {
+      "type": "disk",
+      "key": "󰋊 ",
+      "keyColor": "#a9b665"
+    },
+    {
+      "type": "memory",
+      "key": " ",
+      "keyColor": "#a9b665"
+    },
+    {
+      "type": "swap",
+      "key": "󰓡 ",
+      "keyColor": "#a9b665"
+    },
+    "break",
+    {
+      "type": "command",
+      "key": "󰣇 OS",
+      "keyColor": "#d8a657",
+      "text": "version=$(omarchy-version); echo \"Omarchy $version\""
+    },
+    {
+      "type": "command",
+      "key": "󰘬 ",
+      "keyColor": "#d8a657",
+      "text": "branch=$(omarchy-version-branch); echo \"$branch\""
+    },
+    {
+      "type": "kernel",
+      "key": " ",
+      "keyColor": "#d8a657"
+    },
+    {
+      "type": "wm",
+      "key": " ",
+      "keyColor": "#d8a657"
+    },
+    {
+      "type": "de",
+      "key": " DE ",
+      "keyColor": "#d8a657"
+    },
+    {
+      "type": "terminal",
+      "key": " ",
+      "keyColor": "#d8a657"
+    },
+    {
+      "type": "packages",
+      "key": "󰏖 ",
+      "keyColor": "#d8a657"
+    },
+    {
+      "type": "wmtheme",
+      "key": "󰉼 ",
+      "keyColor": "#d8a657"
+    },
+    {
+      "type": "command",
+      "key": "󰸌 ",
+      "keyColor": "#d8a657",
+      "text": "theme=$(omarchy-theme-current); echo -e \"$theme \\e[38;2;169;182;101m●\\e[38;2;216;166;87m●\\e[38;2;231;138;78m●\\e[38;2;212;190;152m●\\e[38;2;124;111;100m●\\e[38;2;234;105;98m●\""
+    },
+    {
+      "type": "terminalfont",
+      "key": " ",
+      "keyColor": "#d8a657"
+    },
+    "break",
+    {
+      "type": "command",
+      "key": "󱦟 OS Age ",
+      "keyColor": "#e78a4e",
+      "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days"
+    },
+    {
+      "type": "uptime",
+      "key": "󱫐 Uptime ",
+      "keyColor": "#e78a4e"
+    },
+    "break"
+  ]
+}

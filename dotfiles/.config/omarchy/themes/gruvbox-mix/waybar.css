@@ -1,0 +1,13 @@
+@define-color foreground #e2cca9;
+@define-color background #282828;
+
+/* Semantic + interaction */
+@define-color aqua       #8bba7f;
+@define-color green      #b0b846;
+@define-color yellow     #e9b143;
+@define-color orange     #f28534;
+@define-color red        #f2594b;
+
+/* Surfaces */
+@define-color surface1   #3c3836;
+@define-color surface0   #32302f;

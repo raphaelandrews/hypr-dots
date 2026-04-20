@@ -11,12 +11,12 @@
     },
     "color": {
       "1": "#a9b665",
-      "2": "#89b482"
+      "2": "#d8a657"
     }
   },
   "display": {
     "color": {
-      "separator": "#89b482"
+      "separator": "#e78a4e"
     },
     "separator": " ",
     "constants": [
@@ -66,67 +66,67 @@
     {
       "type": "command",
       "key": "󰣇 OS",
-      "keyColor": "#89b482",
+      "keyColor": "#d8a657",
       "text": "version=$(omarchy-version); echo \"Omarchy $version\""
     },
     {
       "type": "command",
       "key": "󰘬 ",
-      "keyColor": "#89b482",
+      "keyColor": "#d8a657",
       "text": "branch=$(omarchy-version-branch); echo \"$branch\""
     },
     {
       "type": "kernel",
       "key": " ",
-      "keyColor": "#89b482"
+      "keyColor": "#d8a657"
     },
     {
       "type": "wm",
       "key": " ",
-      "keyColor": "#89b482"
+      "keyColor": "#d8a657"
     },
     {
       "type": "de",
       "key": " DE ",
-      "keyColor": "#89b482"
+      "keyColor": "#d8a657"
     },
     {
       "type": "terminal",
       "key": " ",
-      "keyColor": "#89b482"
+      "keyColor": "#d8a657"
     },
     {
       "type": "packages",
       "key": "󰏖 ",
-      "keyColor": "#89b482"
+      "keyColor": "#d8a657"
     },
     {
       "type": "wmtheme",
       "key": "󰉼 ",
-      "keyColor": "#89b482"
+      "keyColor": "#d8a657"
     },
     {
       "type": "command",
       "key": "󰸌 ",
-      "keyColor": "#89b482",
-      "text": "theme=$(omarchy-theme-current); echo -e \"$theme \\e[38;2;169;182;101m●\\e[38;2;137;180;130m●\\e[38;2;212;190;152m●\\e[38;2;216;166;87m●\\e[38;2;231;138;78m●\\e[38;2;234;105;98m●\""
+      "keyColor": "#d8a657",
+      "text": "theme=$(omarchy-theme-current); echo -e \"$theme \\e[38;2;169;182;101m●\\e[38;2;216;166;87m●\\e[38;2;231;138;78m●\\e[38;2;212;190;152m●\\e[38;2;124;111;100m●\\e[38;2;234;105;98m●\""
     },
     {
       "type": "terminalfont",
       "key": " ",
-      "keyColor": "#89b482"
+      "keyColor": "#d8a657"
     },
     "break",
     {
       "type": "command",
       "key": "󱦟 OS Age ",
-      "keyColor": "#d8a657",
+      "keyColor": "#e78a4e",
       "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days"
     },
     {
       "type": "uptime",
       "key": "󱫐 Uptime ",
-      "keyColor": "#d8a657"
+      "keyColor": "#e78a4e"
     },
     "break"
   ]
