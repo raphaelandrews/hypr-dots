@@ -32,7 +32,7 @@ border_style  = { fg = "#928374" }
 
 [tabs]
 active   = { fg = "#1d2021", bg = "#a9b665", bold = true }
-inactive = { fg = "#a9b665", bg = "#32302f" }
+inactive = { fg = "#d8a657", bg = "#32302f" }
 
 # : }}}
 
@@ -45,8 +45,8 @@ normal_main = { fg = "#1d2021", bg = "#a9b665", bold = true }
 normal_alt  = { fg = "#a9b665", bg = "#32302f" }
 
 # Select mode
-select_main = { fg = "#1d2021", bg = "#a9b665", bold = true }
-select_alt  = { fg = "#a9b665", bg = "#32302f" }
+select_main = { fg = "#1d2021", bg = "#d8a657", bold = true }
+select_alt  = { fg = "#d8a657", bg = "#32302f" }
 
 # Unset mode
 unset_main = { fg = "#1d2021", bg = "#ea6962", bold = true }
@@ -62,7 +62,7 @@ perm_sep   = { fg = "#928374" }
 perm_type  = { fg = "#a9b665" }
 perm_read  = { fg = "#d8a657" }
 perm_write = { fg = "#ea6962" }
-perm_exec  = { fg = "#a9b665" }
+perm_exec  = { fg = "#e78a4e" }
 
 progress_label  = { fg = "#ddc7a1", bold = true }
 progress_normal = { fg = "#a9b665", bg = "#3c3836" }
@@ -114,7 +114,7 @@ hovered = { fg = "#e78a4e", bold = true }
 
 [which]
 mask            = { bg = "#32302f" }
-cand            = { fg = "#a9b665" }
+cand            = { fg = "#d8a657" }
 rest            = { fg = "#a89984" }
 desc            = { fg = "#e78a4e" }
 separator       = "  "
@@ -126,7 +126,7 @@ separator_style = { fg = "#7c6f64" }
 # : Help {{{
 
 [help]
-on      = { fg = "#a9b665" }
+on      = { fg = "#d8a657" }
 run     = { fg = "#e78a4e" }
 hovered = { reversed = true, bold = true }
 footer  = { fg = "#32302f", bg = "#d4be98" }
@@ -139,7 +139,7 @@ footer  = { fg = "#32302f", bg = "#d4be98" }
 [spot]
 border   = { fg = "#a9b665" }
 title    = { fg = "#a9b665" }
-tbl_col  = { fg = "#a9b665" }
+tbl_col  = { fg = "#d8a657" }
 tbl_cell = { fg = "#e78a4e", bg = "#3c3836" }
 
 # : }}}
@@ -175,7 +175,7 @@ rules = [
 
 dirs = [
 	{ name = ".config", text = "", fg = "#e78a4e" },
-	{ name = ".git", text = "", fg = "#a9b665" },
+	{ name = ".git", text = "", fg = "#e78a4e" },
 	{ name = ".github", text = "", fg = "#a9b665" },
 	{ name = ".npm", text = "", fg = "#a9b665" },
 	{ name = "Desktop", text = "", fg = "#a9b665" },
@@ -200,6 +200,6 @@ conds = [
 	{ if = "dummy", text = "", fg = "#ea6962" },
 
 	{ if = "dir", text = "", fg = "#a9b665" },
-	{ if = "exec", text = "", fg = "#a9b665" },
+	{ if = "exec", text = "", fg = "#e78a4e" },
 	{ if = "!dir", text = "", fg = "#d4be98" },
 ]

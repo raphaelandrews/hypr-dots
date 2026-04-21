@@ -32,7 +32,7 @@ border_style  = { fg = "#928374" }
 
 [tabs]
 active   = { fg = "#1d2021", bg = "#b0b846", bold = true }
-inactive = { fg = "#b0b846", bg = "#32302f" }
+inactive = { fg = "#e9b143", bg = "#32302f" }
 
 # : }}}
 
@@ -45,8 +45,8 @@ normal_main = { fg = "#1d2021", bg = "#b0b846", bold = true }
 normal_alt  = { fg = "#b0b846", bg = "#32302f" }
 
 # Select mode
-select_main = { fg = "#1d2021", bg = "#b0b846", bold = true }
-select_alt  = { fg = "#b0b846", bg = "#32302f" }
+select_main = { fg = "#1d2021", bg = "#e9b143", bold = true }
+select_alt  = { fg = "#e9b143", bg = "#32302f" }
 
 # Unset mode
 unset_main = { fg = "#1d2021", bg = "#f2594b", bold = true }
@@ -63,7 +63,7 @@ perm_sep   = { fg = "#928374" }
 perm_type  = { fg = "#b0b846" }
 perm_read  = { fg = "#e9b143" }
 perm_write = { fg = "#f2594b" }
-perm_exec  = { fg = "#b0b846" }
+perm_exec  = { fg = "#f28534" }
 
 # Progress
 progress_label  = { fg = "#e2cca9", bold = true }
@@ -116,7 +116,7 @@ hovered = { fg = "#f28534", bold = true }
 
 [which]
 mask            = { bg = "#32302f" }
-cand            = { fg = "#b0b846" }
+cand            = { fg = "#e9b143" }
 rest            = { fg = "#a89984" }
 desc            = { fg = "#f28534" }
 separator       = "  "
@@ -128,7 +128,7 @@ separator_style = { fg = "#7c6f64" }
 # : Help {{{
 
 [help]
-on      = { fg = "#b0b846" }
+on      = { fg = "#e9b143" }
 run     = { fg = "#f28534" }
 hovered = { reversed = true, bold = true }
 footer  = { fg = "#32302f", bg = "#e2cca9" }
@@ -141,7 +141,7 @@ footer  = { fg = "#32302f", bg = "#e2cca9" }
 [spot]
 border   = { fg = "#b0b846" }
 title    = { fg = "#b0b846" }
-tbl_col  = { fg = "#b0b846" }
+tbl_col  = { fg = "#e9b143" }
 tbl_cell = { fg = "#f28534", bg = "#3c3836" }
 
 # : }}}
@@ -183,7 +183,7 @@ rules = [
 
 dirs = [
 	{ name = ".config", text = "", fg = "#f28534" },
-	{ name = ".git", text = "", fg = "#b0b846" },
+	{ name = ".git", text = "", fg = "#f28534" },
 	{ name = ".github", text = "", fg = "#b0b846" },
 	{ name = ".npm", text = "", fg = "#b0b846" },
 	{ name = "Desktop", text = "", fg = "#b0b846" },
@@ -211,6 +211,6 @@ conds = [
 
 	# Fallback
 	{ if = "dir", text = "", fg = "#b0b846" },
-	{ if = "exec", text = "", fg = "#b0b846" },
+	{ if = "exec", text = "", fg = "#f28534" },
 	{ if = "!dir", text = "", fg = "#e2cca9" },
 ]

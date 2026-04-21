@@ -31,7 +31,7 @@ window#waybar.empty #window {
 tooltip {
   padding: 2px;
   background: #282828;       /* bg1 (same base) */
-  border: 1px solid #928374; /* grey1 for stronger definition */
+  border: 1px solid #a89984; /* grey2 */
   border-radius: 8px;
 }
 
@@ -131,7 +131,7 @@ tooltip label {
 }
 
 #custom-screenrecording-indicator.active {
-  color: @maroon;
+  color: @red;
 }
 
 /*-------------------

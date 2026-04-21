@@ -131,7 +131,7 @@ tooltip label {
 }
 
 #custom-screenrecording-indicator.active {
-  color: @maroon;
+  color: @red;
 }
 
 /*-------------------
