@@ -1,0 +1,102 @@
+## Material
+
+# Dark Hard
+## Main BG
+bg_dim          #141617 - Avoid (too cold / desaturated)
+bg0             #1D2021 - Main background (terminal, main windows)
+bg1             #282828 - Secondary background (panels, splits)
+bg2             #282828 - Same as bg1 (safe reuse)
+bg3             #3C3836 - Elevated surfaces (floating, selection base)
+bg4             #3C3836 - Borders / active containers
+bg5             #504945 - Strong borders / inactive UI
+
+## BG (Contextual / semantic backgrounds)
+bg_diff_red     #3C1F1E - Error background (git diff, warnings)
+bg_diff_green   #32361A - Success background (diff, subtle highlight)
+bg_diff_blue    #0D3138 - Avoid (too cool for this palette)
+
+bg_statusline1  #282828 - Inactive bar
+bg_statusline2  #32302F - Active bar (subtle highlight)
+bg_statusline3  #504945 - Strong contrast sections
+
+bg_current_word #32302F - Cursor word highlight
+
+bg_visual_red   #442E2D - Error selection
+bg_visual_green #333E34 - Soft selection (safe/default)
+bg_visual_blue  #2E3B3B - Avoid (cool tone)
+bg_visual_yellow #473C29 - Primary selection (BEST for your theme)
+bg_visual_purple #3C333B - Rare use (not needed here)
+
+## Foreground
+fg0             #D4BE98 - Main text (default)
+fg1             #DDC7A1 - Bright text / headings
+
+## Accent (semantic roles)
+red             #EA6962 - Errors / destructive / urgent
+green           #A9B665 - Primary (titles, active, success)
+blue            #7DAEA3 - Info / links (use sparingly)
+yellow          #D8A657 - Secondary (highlights, warnings, attention)
+purple          #D3869B - Optional (special cases, not core)
+orange          #E78A4E - Tertiary (accents, icons, emphasis)
+aqua            #89B482 - Subtle accent (hover, soft highlight)
+
+bg_red          #EA6962 - Strong error background (rare)
+bg_green        #A9B665 - Active highlight (rare, use carefully)
+bg_yellow       #D8A657 - Attention background (badges, alerts)
+
+## Grey (neutral UI structure)
+grey0           #7C6F64 - Disabled text
+grey1           #928374 - Secondary text
+grey2           #A89984 - Borders / subtle separators
+
+
+## Mix
+
+# Dark Hard
+## Main BG
+bg_dim          #141617 - Avoid (too cold / desaturated)
+bg0             #1D2021 - Main background (terminal, main windows)
+bg1             #282828 - Secondary background (panels, splits)
+bg2             #282828 - Same as bg1 (safe reuse)
+bg3             #3C3836 - Elevated surfaces (floating, selection base)
+bg4             #3C3836 - Borders / active containers
+bg5             #504945 - Strong borders / inactive UI
+
+## BG (Contextual / semantic backgrounds)
+bg_diff_red     #3C1F1E - Error background (git diff, warnings)
+bg_diff_green   #32361A - Success background (diff, subtle highlight)
+bg_diff_blue    #0D3138 - Avoid (cool tone, breaks palette)
+
+bg_statusline1  #282828 - Inactive bar
+bg_statusline2  #32302F - Active bar (subtle highlight)
+bg_statusline3  #504945 - Strong contrast sections
+
+bg_current_word #32302F - Cursor word highlight
+
+bg_visual_red   #442E2D - Error selection
+bg_visual_green #333E34 - Soft selection (neutral)
+bg_visual_blue  #2E3B3B - Avoid (cool tone)
+bg_visual_yellow #473C29 - Primary selection (BEST fit)
+bg_visual_purple #3C333B - Rare use (optional)
+
+## Foreground
+fg0             #E2CCA9 - Main text (default)
+fg1             #E2CCA9 - Headings / bright text (Mix keeps same tone)
+
+## Accent (semantic roles — adapted to Mix)
+red             #F2594B - Errors / destructive / urgent
+green           #B0B846 - Primary (titles, active, success)
+blue            #80AA9E - Info / links (use sparingly)
+yellow          #E9B143 - Secondary (highlights, warnings, attention)
+purple          #D3869B - Optional (not core)
+orange          #F28534 - Tertiary (accents, icons, emphasis)
+aqua            #8BBA7F - Subtle accent (hover, soft highlight)
+
+bg_red          #DB4740 - Strong error background (rare)
+bg_green        #B0B846 - Active highlight (use carefully)
+bg_yellow       #E9B143 - Attention background (badges, alerts)
+
+## Grey (neutral UI structure)
+grey0           #7C6F64 - Disabled text
+grey1           #928374 - Secondary text
+grey2           #A89984 - Borders / subtle separators
