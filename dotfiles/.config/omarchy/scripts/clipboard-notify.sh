@@ -7,7 +7,6 @@ while true; do
         [ "${#CURRENT}" -gt 120 ] && PREVIEW="${PREVIEW}..."
         notify-send -t 2000 -a "Clipboard" "📋 Copiado" "$PREVIEW"
         LAST="$CURRENT"
-        printf '%s' "$CURRENT" | wl-copy
     fi
     sleep 0.3
 done
