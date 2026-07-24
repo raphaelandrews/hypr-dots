@@ -203,3 +203,8 @@ esac
 
 export PATH=$PATH:$HOME/go/bin
 export PATH="$PATH:$(go env GOPATH)/bin"
+
+# Auto-clear kitty visual selection after copy-on-select
+if [ -n "$KITTY_PID" ] && ! pgrep -f auto-clear-selection >/dev/null 2>&1; then
+    (nohup ~/.config/kitty/auto-clear-selection.sh >/dev/null 2>&1 &)
+fi
