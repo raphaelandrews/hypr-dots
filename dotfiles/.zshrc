@@ -208,3 +208,4 @@ export PATH="$PATH:$(go env GOPATH)/bin"
 if [ -n "$KITTY_PID" ] && ! pgrep -f auto-clear-selection >/dev/null 2>&1; then
     (nohup ~/.config/kitty/auto-clear-selection.sh >/dev/null 2>&1 &)
 fi
+

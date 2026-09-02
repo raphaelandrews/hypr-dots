@@ -16,6 +16,10 @@ vim.keymap.set("n", "<leader>yc", function()
   end
 end, { desc = "Yank diagnostic" })
 
+-- C# class generator
+require("csharp_new_class")
+vim.keymap.set("n", "<leader>cc", "<cmd>CsharpNewClass<CR>", { desc = "New C# class" })
+
 -- ramboe-dotnet-utils helpers (lazy-loaded, require on first use)
 vim.keymap.set("n", "<leader>aa", function()
   require("helpers").HighlightCSharpMethod()
