@@ -2,6 +2,9 @@
 
 Dependencies required for this setup to work on Arch Linux.
 
+> Post-install system config and recurring cleanup (snapper / disk space): see
+> [MAINTENANCE.md](MAINTENANCE.md).
+
 ## Package Manager
 
 Install packages with `pacman` (official repos) or your AUR helper (e.g., `yay`).
