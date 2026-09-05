@@ -10,7 +10,7 @@
           "format": "dddd HH:mm",
           "formatAlt": "d MMMM 'W'ww yyyy",
           "id": "omarchy.clock",
-          "verticalFormat": "HH\n\u2014\nmm"
+          "verticalFormat": "HH\n—\nmm"
         },
         {
           "id": "omarchy.keyboard-layout"
@@ -25,7 +25,7 @@
       "left": [
         {
           "id": "raphael.menu",
-          "text": "\ud83d\udcdf"
+          "text": "📟"
         },
         {
           "id": "omarchy.workspaces"
@@ -38,7 +38,7 @@
         {
           "id": "btop",
           "onClick": "omarchy-launch-or-focus-tui btop",
-          "text": "\udb83\udee0",
+          "text": "󰻠",
           "tooltip": "Open btop",
           "type": "command"
         },
@@ -65,6 +65,14 @@
     "position": "top",
     "transparent": true
   },
+  "cloneSourceRestores": [
+    "raphael.menu",
+    "raphael.lock"
+  ],
+  "disabledPlugins": [
+    "omarchy.menu",
+    "omarchy.lock"
+  ],
   "idle": {
     "lock": 300,
     "screensaver": 150
@@ -74,13 +82,5 @@
       "id": "raphael.lock"
     }
   ],
-  "version": 1,
-  "disabledPlugins": [
-    "omarchy.menu",
-    "omarchy.lock"
-  ],
-  "cloneSourceRestores": [
-    "raphael.menu",
-    "raphael.lock"
-  ]
+  "version": 1
 }

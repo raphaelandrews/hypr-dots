@@ -2,3 +2,10 @@
 use = "gruvbox-material"
 dark = "gruvbox-material"
 light = "gruvbox-material"
+
+[indicator]
+padding = { open = "█", close = "█" }
+
+[status]
+sep_left  = { open = "", close = "" }
+sep_right = { open = "", close = "" }
