@@ -208,7 +208,7 @@ W.register("grid")
 
 W.set_workspace("1", "lua:omarchy-wsl-golden")
 W.set_workspace("2", "lua:omarchy-wsl-golden")
-W.set_workspace("3", "lua:omarchy-wsl-golden")
+W.set_workspace("3", "lua:omarchy-wsl-wide-centre")
 W.set_workspace("4", "lua:omarchy-wsl-golden")
 W.set_workspace("5", "lua:omarchy-wsl-golden")
 W.set_workspace("6", "lua:omarchy-wsl-golden")

@@ -6,7 +6,10 @@
     {
       "name": "default",
       "fallback": "golden",
-      "assignments": {}
+      "assignments": {
+        "1": "golden",
+        "3": "wide-centre"
+      }
     }
   ],
   "layouts": [

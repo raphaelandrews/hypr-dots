@@ -46,3 +46,9 @@ o.bind("SHIFT + ALT + Z", "Pipe", 'wtype "|"')
 -- SUPER+SHIFT+E was Email (preinstalled webapp); now opens yazi.
 hl.unbind("SUPER + SHIFT + E")
 o.bind("SUPER + SHIFT + E", "Yazi", "omarchy-launch-tui yazi")
+
+-- Disable the default workspace-layout toggle.
+hl.unbind("SUPER + L")
+
+-- Reload the top bar / shell.
+o.bind("SUPER + SHIFT + Q", "Reload bar", "omarchy-shell shell rescanPlugins")
