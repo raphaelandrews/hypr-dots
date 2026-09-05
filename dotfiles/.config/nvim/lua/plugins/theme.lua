@@ -1,1 +1,1 @@
-/home/raphael/.config/omarchy/current/theme/neovim.lua
+/home/raphael/.local/state/omarchy/current/theme/neovim.lua

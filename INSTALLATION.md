@@ -1,258 +1,127 @@
 # Installation
 
-Dependencies required for this setup to work on Arch Linux.
+These dotfiles target an **Omarchy** system (an Arch-based distribution with
+Hyprland + the Quickshell shell), v4.x.
 
 > Post-install system config and recurring cleanup (snapper / disk space): see
 > [MAINTENANCE.md](MAINTENANCE.md).
 
-## Package Manager
+## How this fits together
 
-Install packages with `pacman` (official repos) or your AUR helper (e.g., `yay`).
+Omarchy already installs and manages the core desktop stack — Hyprland, the
+Quickshell status bar / notifications, lock / idle / night-light, the
+screen-sharing portal, and the `foot` terminal. You do **not** install those by
+hand. This repository only layers your own config on top:
 
-```bash
-# Official repos
-sudo pacman -S <packages>
-
-# AUR
-yay -S <aur-packages>
+```
+~/.config/hypr/       Hyprland (Lua) overrides
+~/.config/omarchy/    Omarchy shell, themes, hooks, extensions
+~/.config/kitty/      Kitty terminal
+~/.config/btop/       System monitor
+~/.config/fastfetch/  System info
+~/.config/yazi/       TUI file manager
+~/.config/nvim/       Neovim (LazyVim)
+~/.config/fcitx5/     Input method framework
 ```
 
-## Core
+## Prerequisites
 
-| Package | Repo | Purpose |
-|---------|------|---------|
-| `hyprland` | official | Wayland compositor |
-| `uwsm` | official | Wayland session manager |
-| `xdg-desktop-portal-hyprland` | official | Screen sharing portal |
-| `xdg-desktop-portal-gtk` | official | GTK portal backend |
-| `qt5-wayland` `qt6-wayland` | official | Qt Wayland support |
-| `polkit-gnome` | official | Authentication agent |
+- **Omarchy** installed — verify with `omarchy version` (expect `4.x`).
+- **GNU Stow** for linking the dotfiles: `omarchy pkg add stow`.
 
-## Lock / Idle / Screen
+## Install the dotfiles
 
-| Package | Repo | Purpose |
-|---------|------|---------|
-| `hyprlock` | official | Lock screen |
-| `hypridle` | official | Idle daemon |
-| `hyprsunset` | official | Night light |
-
-## Terminal & Shell
-
-| Package | Repo | Purpose |
-|---------|------|---------|
-| `kitty` | official | Terminal emulator |
-| `foot` | official | Terminal emulator |
-| `alacritty` | official | Terminal emulator |
-| `ghostty` | official | Terminal emulator |
-| `tmux` | official | Terminal multiplexer |
-| `zsh` | official | Shell |
-| `oh-my-zsh-git` | AUR | Zsh framework |
-| `zsh-theme-powerlevel10k` | official | Prompt theme |
-| `zsh-autosuggestions` | official | Autosuggestions |
-| `zsh-syntax-highlighting` | official | Syntax highlighting |
-
-## Status Bar
-
-| Package | Repo | Purpose |
-|---------|------|---------|
-| `waybar` | official | Status bar |
-
-## Notifications
-
-| Package | Repo | Purpose |
-|---------|------|---------|
-| `mako` | official | Notification daemon |
-| `libnotify` | official | `notify-send` |
-
-## Wallpaper
-
-| Package | Repo | Purpose |
-|---------|------|---------|
-| `swaybg` | official | Wallpaper setter |
-
-## Screenshot & Screen Capture
-
-| Package | Repo | Purpose |
-|---------|------|---------|
-| `grim` | official | Screenshot |
-| `slurp` | official | Region selector |
-| `wl-clipboard` | official | Clipboard (wl-copy, wl-paste) |
-| `hyprpicker` | official | Color picker |
-| `satty` | AUR | Screenshot annotation |
-| `tesseract` | official | OCR (text extraction) |
-
-## App Launcher
-
-| Package | Repo | Purpose |
-|---------|------|---------|
-| `walker` | AUR | App launcher / runner / clipboard manager |
-
-## Input
-
-| Package | Repo | Purpose |
-|---------|------|---------|
-| `wtype` | official | Virtual keyboard input |
-| `fcitx5` `fcitx5-configtool` `fcitx5-gtk` `fcitx5-qt` | official | Input method framework |
-
-## Audio
-
-| Package | Repo | Purpose |
-|---------|------|---------|
-| `pipewire` `wireplumber` `pipewire-pulse` `pipewire-alsa` `pipewire-jack` | official | Audio server |
-| `playerctl` | official | Media player control |
-| `swayosd` | AUR | On-screen display (volume, brightness) |
-| `pamixer` | official | PulseAudio mixer (CLI) |
-| `wiremix` | AUR | PipeWire mixer (TUI) |
-
-## Bluetooth & Network
-
-| Package | Repo | Purpose |
-|---------|------|---------|
-| `bluetui` | AUR | Bluetooth manager (TUI) |
-| `impala` | AUR | Network manager (TUI) |
-| `networkmanager` | official | Network management |
-| `brightnessctl` | official | Backlight control |
-
-## File Manager
-
-| Package | Repo | Purpose |
-|---------|------|---------|
-| `nautilus` | official | GUI file manager |
-| `yazi` | official | TUI file manager |
-| `fd` | official | Fast file search |
-| `ripgrep` | official | Content search (rg) |
-| `fzf` | official | Fuzzy finder |
-| `zoxide` | official | Smart directory jump |
-
-## Text & Code Editors
-
-| Package | Repo | Purpose |
-|---------|------|---------|
-| `neovim` | official | Terminal editor |
-| `code` | official | VS Code (oss) |
-| `helix` | official | Terminal editor |
-
-## Browsers (install any you use)
-
-| Package | Repo |
-|---------|------|
-| `chromium` | official |
-| `google-chrome` | AUR |
-| `brave-bin` | AUR |
-| `microsoft-edge-stable-bin` | AUR |
-| `vivaldi` | official |
-| `firefox` | official |
-| `zen-browser-bin` | AUR |
-| `librewolf-bin` | AUR |
-| `helium-bin` | AUR |
-
-## Communication
-
-| Package | Repo | Purpose |
-|---------|------|---------|
-| `signal-desktop` | official | Messaging |
-| `telegram-desktop` | official | Messaging |
-
-## Password Managers
-
-| Package | Repo | Purpose |
-|---------|------|---------|
-| `1password` | official | Password manager |
-| `bitwarden` | official | Password manager |
-
-## Productivity
-
-| Package | Repo | Purpose |
-|---------|------|---------|
-| `obsidian` | official | Notes |
-| `gnome-calculator` | official | Calculator |
-
-## System Monitoring
-
-| Package | Repo | Purpose |
-|---------|------|---------|
-| `btop` | official | Resource monitor |
-| `fastfetch` | official | System info |
-
-## Multimedia
-
-| Package | Repo | Purpose |
-|---------|------|---------|
-| `mpv` | official | Media player |
-| `vlc` | official | Media player |
-| `celluloid` | official | Media player |
-| `zathura` `zathura-pdf-mupdf` | official | PDF viewer |
-| `imv` | official | Image viewer |
-| `pinta` | official | Image editor |
-| `obs-studio` | official | Recording / streaming |
-| `kdenlive` | official | Video editor |
-
-## Gaming
-
-| Package | Repo | Purpose |
-|---------|------|---------|
-| `steam` | official | Game platform |
-| `moonlight-qt` | AUR | Game streaming |
-| `retroarch` | official | Emulator |
-
-## Developer Tools
-
-| Package | Repo | Purpose |
-|---------|------|---------|
-| `git` | official | Version control |
-| `jq` | official | JSON processor |
-| `adb` | official | Android debug bridge |
-| `scrcpy` | official | Screen mirroring |
-| `kdeconnect` | official | Phone integration |
-| `docker` `docker-compose` | official | Containers |
-| `lazydocker` | official | Docker TUI |
-| `xdg-utils` | official | xdg-open, etc. |
-
-## Other Utilities
-
-| Package | Repo | Purpose |
-|---------|------|---------|
-| `localsend` | AUR | File sharing |
-| `gum` | official | CLI prompts |
-| `kvantum` | official | Qt theme engine |
-| `exiftool` | official | EXIF metadata |
-| `mediainfo` | official | Media info |
-
-## Fonts
-
-| Package | Repo | Purpose |
-|---------|------|---------|
-| `ttf-jetbrains-mono-nerd` | official | Primary monospace font |
-| `ttf-cascadia-mono-nerd` | AUR | Secondary monospace font |
-
-## One-Line Install (Official Repos)
+The dotfiles are managed with [GNU Stow](https://www.gnu.org/software/stow/).
+From a clone of this repository:
 
 ```bash
-sudo pacman -S --needed \
-  hyprland uwsm xdg-desktop-portal-hyprland xdg-desktop-portal-gtk \
-  qt5-wayland qt6-wayland polkit-gnome \
-  hyprlock hypridle hyprsunset \
-  kitty foot alacritty ghostty tmux \
-  waybar mako libnotify swaybg \
-  grim slurp wl-clipboard hyprpicker tesseract \
-  wtype fcitx5 fcitx5-configtool fcitx5-gtk fcitx5-qt \
-  pipewire wireplumber pipewire-pulse pipewire-alsa pipewire-jack \
-  playerctl pamixer networkmanager brightnessctl \
-  nautilus yazi fd ripgrep fzf zoxide \
-  neovim chromium firefox \
-  signal-desktop telegram-desktop 1password bitwarden \
-  obsidian gnome-calculator btop fastfetch \
-  mpv vlc celluloid zathura zathura-pdf-mupdf imv pinta obs-studio kdenlive \
-  steam retroarch \
-  git jq adb scrcpy kdeconnect docker docker-compose lazydocker \
-  xdg-utils gum kvantum exiftool mediainfo \
-  ttf-jetbrains-mono-nerd
+# 1. Clone the repo where stow.sh expects it
+git clone <this-repo> ~/Documents/projects/hypr-dots
+cd ~/Documents/projects/hypr-dots
+
+# 2. Link the files into $HOME
+./stow.sh
 ```
 
-## One-Line Install (AUR)
+`stow.sh` simply runs:
 
 ```bash
-yay -S --needed \
-  walker satty swayosd wiremix bluetui impala \
-  localsend
+stow -d ~/Documents/projects/hypr-dots/ -t ~/ dotfiles
 ```
+
+It symlinks `.config/*`, `.zshrc`, `.p10k.zsh`, `etc/`, and the rest into
+`$HOME`. Re-run it after pulling updates to pick up new files.
+
+> **If a target already exists** (e.g. Omarchy created `~/.config/kitty`
+> itself), `stow` will refuse to overwrite it. Move it aside or delete it first,
+> then re-run `./stow.sh`.
+
+## Packages
+
+Everything the configs reference should be installed with Omarchy's package
+helper, which only adds missing packages. Most of the shells/TUIs below are
+already present in a stock Omarchy install; the list covers what the dotfiles
+actually use.
+
+### Shell, terminal & tools
+
+```bash
+omarchy pkg add zsh zsh-autosuggestions zsh-syntax-highlighting powerlevel10k
+omarchy pkg add kitty tmux zoxide fd ripgrep fzf bat eza jq
+```
+
+### Monitoring & system info
+
+```bash
+omarchy pkg add btop fastfetch
+```
+
+### Editor
+
+```bash
+omarchy pkg add neovim git lazygit
+```
+
+### File manager
+
+```bash
+omarchy pkg add yazi nautilus
+```
+
+### Containers
+
+```bash
+omarchy pkg add docker docker-compose lazydocker
+```
+
+### Input method
+
+```bash
+omarchy pkg add fcitx5 fcitx5-configtool fcitx5-gtk fcitx5-qt
+```
+
+### Apps (install whichever you use)
+
+```bash
+omarchy pkg add spotify signal-desktop obsidian 1password chromium firefox
+```
+
+### AUR-only
+
+```bash
+omarchy pkg aur add localsend
+```
+
+## Post-install
+
+- **Neovim theme** — Omarchy symlinks `~/.config/nvim/lua/plugins/theme.lua`
+  to the current theme. If you keep `~/.config/nvim` as a symlink into this
+  repo, recreate that link with an absolute path so it resolves:
+  ```bash
+  ln -sfn ~/.local/state/omarchy/current/theme/neovim.lua \
+    ~/.config/nvim/lua/plugins/theme.lua
+  ```
+- **User services** — a clipboard notification service lives in
+  `~/.config/systemd/user/`; enable it with
+  `systemctl --user enable --now clipboard-notify`.
+- **Snapper** — `etc/snapper/configs/root` is included; see MAINTENANCE.md.

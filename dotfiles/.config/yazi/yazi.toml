@@ -1,64 +1,49 @@
 [opener]
 # Edit files (default editor, VSCode on Windows)
 edit = [
-	{ run = '${EDITOR:-nvim} "$@"', desc = "Default Editor", block = true, for = "unix" },
-	{ run = 'code %*',    orphan = true, desc = "VS Code",         for = "windows" },
-	{ run = 'code -w %*', block = true,  desc = "VS Code (block)", for = "windows" },
+	{ run = '${EDITOR:-nvim} %s', desc = "Default Editor", block = true, for = "unix" },
+	{ run = 'code %s',    orphan = true, desc = "VS Code",         for = "windows" },
+	{ run = 'code -w %s', block = true,  desc = "VS Code (block)", for = "windows" },
 ]
 
 # Open with default system handler
 open = [
-	{ run = 'xdg-open "$1"',                desc = "Open (System Default)", for = "linux" },
-	{ run = 'open "$@"',                    desc = "Open (System Default)", for = "macos" },
-	{ run = 'start "" "%1"', orphan = true, desc = "Open (System Default)", for = "windows" },
-	{ run = 'termux-open "$1"',             desc = "Open (System Default)", for = "android" },
+	{ run = 'xdg-open %s1',                desc = "Open (System Default)", for = "linux" },
+	{ run = 'open %s',                     desc = "Open (System Default)", for = "macos" },
+	{ run = 'start "" %s1', orphan = true, desc = "Open (System Default)", for = "windows" },
+	{ run = 'termux-open %s1',             desc = "Open (System Default)", for = "android" },
 ]
 
 # Reveal in file manager
 reveal = [
-	{ run = 'xdg-open "$(dirname "$1")"',           desc = "Reveal", for = "linux" },
-	{ run = 'open -R "$1"',                         desc = "Reveal", for = "macos" },
-	{ run = 'explorer /select,"%1"', orphan = true, desc = "Reveal", for = "windows" },
-	{ run = 'termux-open "$(dirname "$1")"',        desc = "Reveal", for = "android" },
-	{ run = '''clear; exiftool "$1"; echo "Press enter to exit"; read _''', block = true, desc = "Show EXIF", for = "unix" },
+	{ run = 'xdg-open %d1',                desc = "Reveal", for = "linux" },
+	{ run = 'open -R %s1',                 desc = "Reveal", for = "macos" },
+	{ run = 'explorer /select,%s1', orphan = true, desc = "Reveal", for = "windows" },
+	{ run = 'termux-open %d1',             desc = "Reveal", for = "android" },
 ]
 
 # Extract archives
 extract = [
-	{ run = 'ya pub extract --list "$@"', desc = "Extract here", for = "unix" },
-	{ run = 'ya pub extract --list %*',   desc = "Extract here", for = "windows" },
+	{ run = 'ya pub extract --list %s', desc = "Extract here", for = "unix" },
+	{ run = 'ya pub extract --list %s', desc = "Extract here", for = "windows" },
 ]
 
 # Play media
 play = [
-	{ run = 'mpv --force-window "$@"', orphan = true, desc = "Play (mpv)", for = "unix" },
-	{ run = 'mpv --force-window %*', orphan = true,   desc = "Play (mpv)", for = "windows" },
-	{ run = '''mediainfo "$1"; echo "Press enter to exit"; read _''', block = true, desc = "Show media info", for = "unix" },
+	{ run = 'mpv --force-window %s', orphan = true, desc = "Play (mpv)", for = "unix" },
+	{ run = 'mpv --force-window %s', orphan = true, desc = "Play (mpv)", for = "windows" },
 ]
 
-# Open with specific apps depending on file type
-open_with = [
-	# Code files
-	{ run = 'nvim "$@"', block = true, desc = "Neovim", for = "unix" },
-	{ run = 'code "$@"', orphan = true, desc = "VS Code", for = "unix" },
+# PDFs
+pdf = [
+	{ run = 'zathura %s', orphan = true, desc = "Zathura", for = "linux" },
+]
 
-	# Text files
-	{ run = 'mousepad "$@"', orphan = true, desc = "Mousepad", for = "linux" },
-	{ run = 'gedit "$@"', orphan = true, desc = "Gedit", for = "linux" },
-
-	# PDFs
-	{ run = 'zathura "$@"', orphan = true, desc = "Zathura", for = "linux" },
-
-	# Images
-	{ run = 'xdg-open "$@"', orphan = true, desc = "Image Viewer", for = "linux", for_file = "*.png;*.jpg;*.jpeg;*.gif;*.webp;*.bmp" },
-
-	# Videos
-	{ run = 'celluloid "$@"', orphan = true, desc = "Celluloid", for = "linux", for_file = "*.mp4;*.mkv;*.webm;*.avi;*.mov" },
-
-	# Fallback system default
-	{ run = 'xdg-open "$@"', orphan = true, desc = "System Default", for = "linux" },
-	{ run = 'open "$@"', orphan = true, desc = "System Default", for = "macos" },
-	{ run = 'start "" "%1"', orphan = true, desc = "System Default", for = "windows" },
+[open]
+# Open files and directories in the editor (lazyvim).
+rules = [
+	{ url = "*/", use = "edit" },
+	{ url = "*", use = "edit" },
 ]
 
 [pick]
