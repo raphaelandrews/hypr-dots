@@ -10,7 +10,7 @@
           "format": "dddd HH:mm",
           "formatAlt": "d MMMM 'W'ww yyyy",
           "id": "omarchy.clock",
-          "verticalFormat": "HH\n—\nmm"
+          "verticalFormat": "HH\n\u2014\nmm"
         },
         {
           "id": "omarchy.keyboard-layout"
@@ -25,7 +25,7 @@
       "left": [
         {
           "id": "raphael.menu",
-          "text": "📟"
+          "text": "\ud83d\udcdf"
         },
         {
           "id": "omarchy.workspaces"
@@ -36,12 +36,9 @@
           "id": "omarchy.tray"
         },
         {
-          "id": "bjarneo.workspace-layout"
-        },
-        {
           "id": "btop",
           "onClick": "omarchy-launch-or-focus-tui btop",
-          "text": "󰻠",
+          "text": "\udb83\udee0",
           "tooltip": "Open btop",
           "type": "command"
         },
@@ -66,18 +63,24 @@
       ]
     },
     "position": "top",
-    "transparent": false
+    "transparent": true
   },
   "idle": {
     "lock": 300,
     "screensaver": 150
   },
-  "plugins": [],
+  "plugins": [
+    {
+      "id": "raphael.lock"
+    }
+  ],
   "version": 1,
   "disabledPlugins": [
-    "omarchy.menu"
+    "omarchy.menu",
+    "omarchy.lock"
   ],
   "cloneSourceRestores": [
-    "raphael.menu"
+    "raphael.menu",
+    "raphael.lock"
   ]
 }
