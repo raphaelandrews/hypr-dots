@@ -20,6 +20,10 @@ end, { desc = "Yank diagnostic" })
 require("csharp_new_class")
 vim.keymap.set("n", "<leader>cc", "<cmd>CsharpNewClass<CR>", { desc = "New C# class" })
 
+-- Java type generator (class/interface/enum/record/annotation)
+require("java_new_class")
+vim.keymap.set("n", "<leader>jc", "<cmd>JavaNewClass<CR>", { desc = "New Java type" })
+
 -- ramboe-dotnet-utils helpers (lazy-loaded, require on first use)
 vim.keymap.set("n", "<leader>aa", function()
   require("helpers").HighlightCSharpMethod()

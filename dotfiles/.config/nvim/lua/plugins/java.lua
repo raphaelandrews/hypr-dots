@@ -1,3 +1,21 @@
+-- Resolve the real (non-shim) Java 21 home/executable from mise, so JDTLS and the
+-- Spring Boot language server always run on the project's target JDK even when
+-- Java 27 is also installed. `mise where` returns the install dir (e.g.
+-- .../installs/java/21.0.2) which contains bin/java.
+local function java21()
+  local home = vim.fn.trim(vim.fn.system({ "mise", "where", "java@21" }))
+  if home == "" then -- fall back to the active default in case java@21 is unresolved
+    home = vim.fn.trim(vim.fn.system({ "mise", "where", "java" }))
+  end
+  if home ~= "" and vim.fn.filereadable(home .. "/bin/java") == 1 then
+    return home
+  end
+  return nil
+end
+
+local java_home = java21() -- nil when not resolvable
+local java_exec = java_home and (java_home .. "/bin/java") or ""
+
 return {
   { import = "lazyvim.plugins.extras.lang.java" },
 
@@ -10,14 +28,46 @@ return {
     opts = {
       jdtls = function(opts)
         -- Lombok is already passed as -javaagent by the official extra.
-        -- JDK runtimes are omitted until the project JDK is chosen: this
-        -- system uses mise, not /usr/lib/jvm.
-        opts.settings = vim.tbl_deep_extend("force", opts.settings or {}, {
+
+        -- Explicit Java 21 runtime + code quality defaults. Because JDTLS is
+        -- launched *on* this JVM, Java 21 becomes the default project VM too
+        -- (compliance is still read from the project's pom.xml).
+        local settings = {
           java = {
             eclipse = { downloadSources = true },
             maven = { downloadSources = true },
+            -- Keep the language server away from build/test output and VCS state.
+            import = {
+              exclusions = {
+                "**/target/**",
+                "**/build/**",
+                "**/.git/**",
+                "**/node_modules/**",
+              },
+            },
+            inlayHints = {
+              parameterNames = { enabled = "all" },
+            },
           },
-        })
+        }
+        if java_home then
+          settings.java.home = java_home
+          settings.java.configuration = {
+            runtimes = {
+              { name = "JavaSE-21", path = java_home, default = true },
+            },
+          }
+        end
+        opts.settings = vim.tbl_deep_extend("force", opts.settings or {}, settings)
+
+        -- Pass an explicit real Java 21 to the jdtls launcher. Otherwise it
+        -- resolves `java` to the mise shim, and mason's jdtls.py does
+        -- os.execvp(java, exec_args) with the JVM flags as argv[0], which
+        -- makes mise fail with "is not a valid shim" and exit code 1.
+        if java_exec ~= "" and vim.fn.filereadable(java_exec) == 1 then
+          opts.cmd = opts.cmd or {}
+          vim.list_extend(opts.cmd, { "--java-executable", java_exec })
+        end
 
         -- Add Spring Boot's JDT extension jars to the same bundles list that
         -- already contains java-debug-adapter + java-test (from the extra).
@@ -34,7 +84,10 @@ return {
   {
     "JavaHello/spring-boot.nvim",
     ft = { "java", "yaml", "jproperties" },
-    opts = {},
+    opts = {
+      -- Run the Spring Boot language server on Java 21 as well.
+      java_cmd = java_exec ~= "" and java_exec or nil,
+    },
     config = function(_, opts)
       require("spring_boot").setup(opts)
     end,
