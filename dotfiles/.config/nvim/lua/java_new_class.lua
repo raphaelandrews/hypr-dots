@@ -173,6 +173,42 @@ function M.java_new_class(name, kind)
   end)
 end
 
+-- Insert a `serialVersionUID` field on the current line (JDTLS does not expose
+-- "Generate serialVersionUID" as a dependable code action).
+function M.serial_version_uid()
+  local line = "private static final long serialVersionUID = 1L;"
+  local cur = vim.api.nvim_win_get_cursor(0)[1]
+  vim.api.nvim_buf_set_lines(0, cur, cur, false, { line })
+  vim.notify("Inserted serialVersionUID", vim.log.levels.INFO)
+end
+
+-- Rewrite the `package ...;` declaration to match the file's directory. JDTLS
+-- does not reliably offer this as a quick fix, so it's exposed as a command.
+function M.fix_package()
+  local fname = vim.api.nvim_buf_get_name(0)
+  local abs = vim.fn.fnamemodify(fname, ":p")
+  local dir = abs:match("^(.*)/[^/]+$") or abs
+  local pkg = package_from_dir(dir)
+  if not pkg then
+    vim.notify("Cannot infer package for " .. abs, vim.log.levels.WARN)
+    return
+  end
+  local lines = vim.api.nvim_buf_get_lines(0, 0, -1, false)
+  local replaced = false
+  for i, l in ipairs(lines) do
+    if l:gsub("^%s+", ""):match("^package%s+[%w%.]+%s*;") then
+      lines[i] = "package " .. pkg .. ";"
+      replaced = true
+      break
+    end
+  end
+  if not replaced then
+    table.insert(lines, 1, "package " .. pkg .. ";")
+  end
+  vim.api.nvim_buf_set_lines(0, 0, -1, false, lines)
+  vim.notify("Fixed package to " .. pkg, vim.log.levels.INFO)
+end
+
 vim.api.nvim_create_user_command("JavaNewClass", function(opts)
   local args = vim.trim(opts.args)
   if args == "" then
@@ -189,5 +225,13 @@ vim.api.nvim_create_user_command("JavaNewClass", function(opts)
     end
   end
 end, { nargs = "*", desc = "New Java type (class/interface/enum/record/annotation)" })
+
+vim.api.nvim_create_user_command("JavaSerialVersionUID", function()
+  M.serial_version_uid()
+end, { desc = "Insert serialVersionUID" })
+
+vim.api.nvim_create_user_command("JavaFixPackage", function()
+  M.fix_package()
+end, { desc = "Fix package declaration to match file location" })
 
 return M
