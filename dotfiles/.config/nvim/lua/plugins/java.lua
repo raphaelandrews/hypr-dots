@@ -45,8 +45,11 @@ return {
                 "**/node_modules/**",
               },
             },
+            -- Parameter-name inlay hints trigger a Neovim 0.12 bug
+            -- ("Invalid 'col': out of range") after JDTLS edits the buffer
+            -- (e.g. Generate hashCode/equals). Keep them off.
             inlayHints = {
-              parameterNames = { enabled = "all" },
+              parameterNames = { enabled = "none" },
             },
           },
         }
