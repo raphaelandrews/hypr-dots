@@ -37,19 +37,20 @@
   # Zsh >= 5.1 is required.
   [[ $ZSH_VERSION == (5.<1->*|<6->.*) ]] || return
 
-  # 🎨 Material palette
-  local red='#ea6962'
-  local orange='#e78a4e'
-  local yellow='#d8a657'
-  local green='#a9b665'
-  local aqua='#89b482'
-  local blue='#7daea3'
-  local purple='#d3869b'
-  local bg0='#282828'
-  local fg='#d4be98'
-  local grey0='#7c6f64'
-  local grey1='#928374'
-  local grey2='#a89984'
+  # 🎨 Catppuccin Mocha palette
+  local Red='#f38ba8'
+  local Peach='#fab387'
+  local Yellow='#f9e2af'
+  local Green='#a6e3a1'
+  local Teal='#94e2d5'
+  local Blue='#89b4fa'
+  local Mauve='#cba6f7'
+  local Surface0='#313244'
+  local Text='#cdd6f4'
+  local Overlay0='#6c7086'
+  local Overlay1='#7f849c'
+  local Overlay2='#9399b2'
+  local Lavender='#b4befe'
 
   # Left prompt segments.
   typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
@@ -81,39 +82,39 @@
   typeset -g POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
 
   # Prompt symbol colors
-  typeset -g POWERLEVEL9K_PROMPT_CHAR_OK_{VIINS,VICMD,VIVIS}_FOREGROUND=$yellow
-  typeset -g POWERLEVEL9K_PROMPT_CHAR_ERROR_{VIINS,VICMD,VIVIS}_FOREGROUND=$red
+  typeset -g POWERLEVEL9K_PROMPT_CHAR_OK_{VIINS,VICMD,VIVIS}_FOREGROUND=$Teal
+  typeset -g POWERLEVEL9K_PROMPT_CHAR_ERROR_{VIINS,VICMD,VIVIS}_FOREGROUND=$Peach
   typeset -g POWERLEVEL9K_PROMPT_CHAR_{OK,ERROR}_VIINS_CONTENT_EXPANSION='❯'
   typeset -g POWERLEVEL9K_PROMPT_CHAR_{OK,ERROR}_VICMD_CONTENT_EXPANSION='❮'
   typeset -g POWERLEVEL9K_PROMPT_CHAR_{OK,ERROR}_VIVIS_CONTENT_EXPANSION='❮'
   typeset -g POWERLEVEL9K_PROMPT_CHAR_OVERWRITE_STATE=false
 
-  # Virtualenv 
-  typeset -g POWERLEVEL9K_VIRTUALENV_FOREGROUND=$grey1
+  # Virtualenv
+  typeset -g POWERLEVEL9K_VIRTUALENV_FOREGROUND=$Overlay1
   typeset -g POWERLEVEL9K_VIRTUALENV_SHOW_PYTHON_VERSION=false
   typeset -g POWERLEVEL9K_VIRTUALENV_{LEFT,RIGHT}_DELIMITER=
 
   # Directory color
-  typeset -g POWERLEVEL9K_DIR_FOREGROUND=$green
+  typeset -g POWERLEVEL9K_DIR_FOREGROUND=$Teal
 
   # Context format when root: user@host.
-  typeset -g POWERLEVEL9K_CONTEXT_ROOT_TEMPLATE="%F{$red}%n%f%F{$grey1}@%m%f"
-  typeset -g POWERLEVEL9K_CONTEXT_TEMPLATE="%F{$grey2}%n@%m%f"
+  typeset -g POWERLEVEL9K_CONTEXT_ROOT_TEMPLATE="%F{$Peach}%n%f%F{$Overlay1}@%m%f"
+  typeset -g POWERLEVEL9K_CONTEXT_TEMPLATE="%F{$Overlay2}%n@%m%f"
   typeset -g POWERLEVEL9K_CONTEXT_{DEFAULT,SUDO}_CONTENT_EXPANSION=
 
   # Execution time
   typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD=5
   typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_PRECISION=0
   typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_FORMAT='d h m s'
-  typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND=$yellow
+  typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND=$Lavender
 
   # Git
-  typeset -g POWERLEVEL9K_VCS_FOREGROUND=$orange
+  typeset -g POWERLEVEL9K_VCS_FOREGROUND=$Lavender
   typeset -g POWERLEVEL9K_VCS_LOADING_TEXT=
   typeset -g POWERLEVEL9K_VCS_MAX_SYNC_LATENCY_SECONDS=0
 
   # Ahead/behind arrows
-  typeset -g POWERLEVEL9K_VCS_{INCOMING,OUTGOING}_CHANGESFORMAT_FOREGROUND=$blue
+  typeset -g POWERLEVEL9K_VCS_{INCOMING,OUTGOING}_CHANGESFORMAT_FOREGROUND=$Blue
   typeset -g POWERLEVEL9K_VCS_GIT_HOOKS=(vcs-detect-changes git-untracked git-aheadbehind)
   typeset -g POWERLEVEL9K_VCS_BRANCH_ICON=
   typeset -g POWERLEVEL9K_VCS_COMMIT_ICON='@'
@@ -125,29 +126,28 @@
   typeset -g POWERLEVEL9K_VCS_CONTENT_EXPANSION='${${${P9K_CONTENT/⇣* :⇡/⇣⇡}// }//:/ }'
 
   # Time
-  typeset -g POWERLEVEL9K_TIME_FOREGROUND=$grey0
+  typeset -g POWERLEVEL9K_TIME_FOREGROUND=$Overlay0
   typeset -g POWERLEVEL9K_TIME_FORMAT='%D{%H:%M:%S}'
   typeset -g POWERLEVEL9K_TIME_UPDATE_ON_COMMAND=false
 
   # Transient prompt works similarly to the builtin transient_rprompt option. It trims down prompt
   # when accepting a command line. Supported values:
   #
-  #   - off:      Don't change prompt when accepting a command line.
-  #   - always:   Trim down prompt when accepting a command line.
-  #   - same-dir: Trim down prompt when accepting a command line unless this is the first command
-  #               typed after changing current working directory.
+  #   off:      Don't change prompt when accepting a command line.
+  #   always:   Trim down prompt when accepting a command line.
+  #   same-dir: Trim down prompt when accepting a command line unless this is the first command
+  #             typed after changing current working directory.
   typeset -g POWERLEVEL9K_TRANSIENT_PROMPT=off
 
   # Instant prompt mode.
   #
-  #   - off:     Disable instant prompt. Choose this if you've tried instant prompt and found
+  #   - off:      Disable instant prompt. Choose this if you've tried instant prompt and found
   #              it incompatible with your zsh configuration files.
-  #   - quiet:   Enable instant prompt and don't print warnings when detecting console output
-  #              during zsh initialization. Choose this if you've read and understood
-  #              https://github.com/romkatv/powerlevel10k#instant-prompt.
+  #   - quiet:    Enable instant prompt and don't print warnings when detecting console output during
+  #              zsh initialization.
   #   - verbose: Enable instant prompt and print a warning when detecting console output during
   #              zsh initialization. Choose this if you've never tried instant prompt, haven't
-  #              seen the warning, or if you are unsure what this all means.
+  #              seen the warning, or if you are unsure what this means.
   typeset -g POWERLEVEL9K_INSTANT_PROMPT=verbose
 
   # Hot reload allows you to change POWERLEVEL9K options after Powerlevel10k has been initialized.
@@ -166,3 +166,4 @@ typeset -g POWERLEVEL9K_CONFIG_FILE=${${(%):-%x}:a}
 
 (( ${#p10k_config_opts} )) && setopt ${p10k_config_opts[@]}
 'builtin' 'unset' 'p10k_config_opts'
+

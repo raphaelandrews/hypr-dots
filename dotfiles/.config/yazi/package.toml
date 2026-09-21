@@ -4,7 +4,7 @@ rev = "4dc7f1b"
 hash = "f281261ff04ad7ec867c3f802a50835f"
 
 [[flavor.deps]]
-use = "yazi-rs/flavors:gruvbox-material"
+use = "yazi-rs/flavors:catppuccin-mocha"
 rev = "5f56364"
 hash = "c0bf69ad2c44005892d586e9693993c6"
 

@@ -65,16 +65,14 @@
     "position": "top",
     "transparent": true
   },
-  "cloneSourceRestores": [
-    "raphael.menu"
-  ],
-  "disabledPlugins": [
-    "omarchy.menu"
-  ],
   "idle": {
     "lock": 300,
     "screensaver": 150
   },
-  "plugins": [],
+  "plugins": [
+    {
+      "id": "probe.menu"
+    }
+  ],
   "version": 1
 }
