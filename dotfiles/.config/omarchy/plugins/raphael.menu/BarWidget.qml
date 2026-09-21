@@ -12,7 +12,7 @@ BarWidget {
     id: button
     anchors.fill: parent
     bar: root.bar
-    text: "📟"
+    text: "💿"
     fontFamily: "Noto Color Emoji"
     horizontalMargin: 7.5
     onPressed: function(button) {
