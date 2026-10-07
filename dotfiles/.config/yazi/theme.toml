@@ -1,7 +1,7 @@
 [flavor]
-use = "catppuccin-mocha"
-dark = "catppuccin-mocha"
-light = "catppuccin-mocha"
+use = "gruvbox-material"
+dark = "gruvbox-material"
+light = "gruvbox-material"
 
 [indicator]
 padding = { open = "█", close = "█" }
